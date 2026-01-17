@@ -4,7 +4,7 @@ local allowedUsers = {
     "tros2point0",
     "OlizeO",
     "JACKNDUKE555",
-    "bigscarystorm"
+    "bigscarystorm",
     "tros2point03"
 }
 
