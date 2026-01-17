@@ -1,2 +1,1026 @@
+local allowedUsers = {
+    "vMxtic",
+    "26y_PE",
+    "tros2point0",
+    "OlizeO",
+    "JACKNDUKE555",
+    "bigscarystorm"
+}
 
-return(function(...)local q={`84x=`,`PvN7`,`+H2Cs8T=`,`9ji01E==`,`IGsEqzT=`,`a/0=`,`3ONeU4P=`,`fL0WcV==`,`1o7qQGX=`,`kPna`,`iedjnG4=`,`yesBAqf=`,`Hsbs6hP=`,`fVhh/u7=`,`PVIQM9T=`,`BGZZcO5=`,`EB4YdMT=`,`qNngqI2=`,`AulY4oY=`,`Nm8u8mE=`,`ckAoSRx=`,`2vGy`,`rFrlclV=`,`kgw9Ygf=`,`rk6aHGm=`,`au0=`,`9sdEUX0=`,`9uYX7lw=`,`sE==`,`jSXe`,`3IEmAqY=`,`wZQieHY=`,`ZsEo/x0=`,`h0fSVlY=`,`ff2=`,`CIjYBY==`,`PLltLB0=`,`0DDRlT2=`,`v5QavW7=`,`2v8O5ZP=`,`TeDxxa0=`,`Wd34UP==`,`e8+sWUP=`,`jUr7bE==`,`G3vPrWX=`,`KfP=`,`tOIV4OzJ`,`fWFRK20=`,`V+2lKE==`,`iYbQ52f=`,`UDaDQH5=`,`c9QLfIX=`,`/NqI`,`/mfsIWE=`,`9uCpOR0=`,`aNkC`,`wqH8dY==`,`aGgflfV=`,`hcSj5V==`,`xGT=`,`KwPCuQX=`,`PLJryV==`,`BYg4zE==`,`yrjddVV=`,`tOHOEsV=`,`Gdia/P==`,`YgDa6e5=`,`pJbCYxf=`,`bQ7XGd7=`,`6EkN4ow=`,`2b90tLnlT3AW4Oq5ivjuobz0ZOMli6D1jLSu2bXPx/mB4OnWTb9lj6w=`,`LWQO9xV=`,`B/vIGf7=`,`FSh/`,`eOAN2z2=`,`drx=`,`ELRS4EV=`,`4m66kkm=`,`uf9gqK4=`,`3XV=`,`s/qzOd5=`,`4SZ9skT=`,`PiFmgX7=`,`+tikNE==`,`eo5=`,`RTMcLs7=`,`Y35s4P==`,`F17=`,`2PoCXkT=`,`X3gW`,`nuvqQMx=`,`WLctVeV=`,`MkY=`,`bP==`,`eP==`,`n4putY==`,`B66cBYX=`,`zEdt325=`,`mVDCqn5=`,`qVUx`,`ai7=`,`NYskYvw=`,`xQMIrg0=`,`XzXL`,`B+q8UK5=`,`N7IWQA2=`,`lXYCeQ0=`,`/zvE9WT=`,`RC/dxNE=`,`k0V=`,`V25dYSf=`,`o8cDppx=`,`OTeVHt5=`,`tFx=`,`7ptcNSY=`,`L2W6uHm=`,`WU2ArSf=`,`HY6h0Ef=`,`OcpeOOV=`,`SY==`,`dfwY5z4=`,`I4eUSP==`,`l76SCV==`,`HuV26W2=`,`gvpo7X0=`,`tI7Oonx=`,`lAEIyDx=`,`r3zbr22=`,`XleWKP7=`,`GJa87im=`,`6VWkCrE=`,`eEW5bP==`,`n5JLkE==`,`EJu3`,`z/0KXE==`,`zVcNwLE=`,`3P==`,`JwHq8pw=`,`c0AzpY==`,`+CewAP==`,`leHF0o7=`,`ZMTs6pE=`,`t8M7A55=`,`1769VD5=`,`imub/FP=`,`YRZD`,`ODo7P6w=`,`yzdQmfm=`,`dCoV`,`TDhOBV==`,`K52b0fT=`,`5uoDuO7=`,`JM9DKV==`,`oLMOQQV=`,`FATDkzr=`,`hofy`,`iuhLmJE=`,`0ZAP4V==`,`mvo2t+Y=`,`Mt9yOL2=`,`qybDJdx=`,`COX=`,`jLT=`,`LgJq1FX=`,`4pfI2Y==`,`4LSs4bV=`,`NdAvP0X=`,`qciOtHX=`,`YGHFNSr=`,`40y5`,`wtSSerE=`,`Toe0HP==`,`dTBm7SV=`,`6WcO`,`tqw/ler=`,`Gsi4iux=`,`pggpuEr=`,`MpqHrEf=`,`UIvyU/m=`,`gRqnk0V=`,`Ryl2CE==`,`oR0DZ/m=`,`8otfkY==`,`E+KRpsP=`,`51C0fP==`,`UM3hGx4=`,`GED7rxX=`,`QBzYro5=`,`5VvwgQ2=`,`k0m=`,`dY==`,`QgIk`,`+YLen2r=`,`u+LcyIm=`,`y4Df3zm=`,`Zud2SPY=`,`L0K7`,`sRKnedr=`,`IgvZ`,`Es0uDQ0=`,`IzWWLcr=`,`l4gu`,`4kLk`,`aUrVZ52=`,`KcJRovm=`,`3kbM2mm=`,`XrhZv25=`,`3bICmHf=`,`N4OgxDm=`,`QIayIV==`,`6Vf=`,`aQcaKkX=`,`Fd1epY==`,`rE==`,`kNiYShV=`,`tot9`,`6hm40Z4=`,`CTBdMo4=`,`2b9cog4=`,`5y4o8E==`,`83S4gP2=`,`Zusaxpx=`,`t9I/lV==`,`5hQnhE==`,`6gw=`,`xN2btEY=`,`C6x=`,`HnFZgLV=`,`AkFsmt2=`,`CTSqM1x=`,`mg+3`,`HEr=`,`02/ZIoV=`,`XAF4zF4=`,`yRFwhs4=`,`anenVmP=`,`akTkISY=`,`guD+Au0=`,`iSLcr7x=`,`XIrDsg5=`,`EV0=`,`fIU81TX=`,`pCJLS4x=`,`xdoNZY==`,`9Xjc`,`aa4=`,`qFCmO+m=`,`rr9nVx7=`,`EYC5ecV=`,`6CKuq8w=`,`vLRANI4=`,`RBwbqRV=`,`aTvJ`,`2TgwRwm=`,`s2UKTY==`,`fkA8uRr=`,`QCm=`,`DSnKQcT=`,`gYWxggT=`,`G6QFCcf=`,`SP==`,`G01L+Ix=`,`7P==`,`YJTIXY0=`,`j/S7GJV=`,`EpRAp7T=`,`kA8pB9w=`,`6AUs`,`8AVkmHE=`,`I2y+2I4=`,`xbUuAsx=`,`sb7=`,`/aO0`,`QTm4XgY=`,`YAxk0XV=`,`Z2mzZpE=`,`TdEW/r2=`,`1oprkwr=`,`V4v56GY=`,`b6N6/qX=`,`fLE=`,`Ddf=`,`CXPLUE==`,`DpwHOQ0=`,`3EaDMV==`,`GY==`,`ecw=`,`NqwxXfE=`,`YKBYeV==`,`mcP=`,`T3raUE==`,`u6k/zIV=`,`FvX=`,`+EtW`,`rJsz7iP=`,`agn6ukV=`,`mP==`,`74WJodX=`,`c9xvX+2=`,`iW/Jb32=`,`utbDgc0=`,`IRV=`,`co2d/Df=`,`Xq4s1hm=`,`LUjpEfE=`,`6OwG//7=`,`pJEcpR4=`,`Q2kQ`,`o7eFDAY=`,`/er=`,`vaF5MZT=`,`Auf=`,`tGTI`,`oZ4SZ3x=`,`aBXuPP==`,`ozxBY+x=`,`trkqxKY=`,`nLujvd5=`,`UsVs`,`RP==`,`UTvLtiT=`,`i3oyYe0=`,`4XVuHP==`,`Dx+wH30=`,`IxSm1oT=`,`dbjc61E=`,`jdqN+HT=`,`3fYPwxx=`,`X0gRbME=`,`moMLoAx=`,`PBIM/bf=`,`6KMh`,`QpyvGlE=`,`NOmBFY==`,`ZGpw`,`8lnaEnV=`,`mftp9E==`,`a9lUkYx=`,`n5mq4q7=`,`9v9WWCT=`,`MgiOrjE=`,`Bc8Je67=`,`HScj8kE=`,`gGBP`,`xjI38BP=`,`fSqbaE==`,`JV==`,`xsJblDf=`,`Hb4lgQV=`,`9/Ih`,`XcbWMtE=`,`rQnE`,`5yr5ri0=`,`/YNFoy4=`,`ik3fOY==`,`HA3KtCw=`,`XGcIYYP=`,`DelATWr=`,`IK84u25=`,`YDm=`,`jN4=`,`RFmB`,`9U4HwLY=`,`V55UYE==`,`qB4v1Fw=`,`TemZGVf=`,`/tha`,`JZi81V==`,`2J93qfx=`,`SmROcHE=`,`gizy+8x=`,`4dfBwnm=`,`PmsJzkf=`,`q9Y=`,`nCUyjRT=`,`03lXUP==`,`Bnf2XC5=`,`btNmbi5=`,`bkj/ZMP=`,`hTcgDAr=`,`QM0yKbm=`,`ov9l`,`NE2=`,`lxlEoyw=`,`V7hXx6m=`,`7c++ki5=`,`EHrW`,`XkMfQf2=`,`hMHW2lw=`,`0ZYvvWY=`,`22tmOV==`,`e5nK7f4=`,`xqYZcN2=`,`VFBbWE==`,`fzVsVaw=`,`Vn/kK97=`,`FSoEjP==`,`RrzipvE=`,`kKMk`,`MNCut3f=`,`ykTP08V=`,`REfXZP==`,`/P==`,`QP8KSz2=`,`1A+4r/2=`,`glQRjq4=`,`8puZcoE=`,`PHZU8dm=`,`VVRHz7Y=`,`cAE0dLf=`,`IV==`,`wG+Ei4m=`,`0O8zpzx=`,`fPYBuO2=`,`Rh02ij5=`,`X/kL610=`,`BY==`,`Qhb3zbX=`,`aXWuCn7=`,`ZD1bPTf=`,`n5jIEM7=`,`EeOdFJf=`,`H+gI3Y==`,`Muis3v7=`,`sgkdP2V=`,`VFYXuM2=`,`g5fJDU7=`,`i74SzKE=`,`VbmM3tY=`,`5vVZfO2=`,`q15ANbm=`,`pmBytS7=`,`EpTQN44=`,`gOo8GV==`,`oKr1AV==`,`ck+Nvo4=`,`DRkQte4=`,`/m2UeJf=`,`72AmdE==`,`POiMvE==`,`bTIiFE==`,`XV==`,`7b0xAY5=`,`W6crsk7=`,`tex=`,`xV==`,`eqdZhzV=`,`fV==`,`+Wr=`,`Ju/z`,`0suxejm=`,`X5Migq0=`,`iOWCsmY=`,`+4Ec++f=`,`lZQS8Mw=`,`9p4LUhY=`,`8P==`,`aV==`,`gV==`,`UYVa`,`yPkj9wE=`,`XY+lVIE=`,`67GkJFx=`,`lAphn87=`,`fjLYeux=`,`Nit5MH2=`,`G5XEsgY=`,`gi7tGC0=`,`tqipYP==`,`968HKa2=`,`z9r7tF0=`,`g+bYq3x=`,`EhJv66E=`,`WV==`,`cUBruV==`,`IUOdMaf=`,`ffIRDtx=`,`cS5=`,`yLoALUx=`,`+8OXjB0=`,`5lP=`,`GL+b1fE=`,`jazebdw=`,`yxphWiw=`,`vzV97/m=`,`DuyPxE==`,`jY==`,`+5lVZY==`,`Dbay7Xm=`,`rtLqJs2=`,`UnmUP67=`,`VaMd3hf=`,`GwVJGG2=`,`UOHSmVY=`,`tXhEiP==`,`aKd13E==`,`/B9i/Z2=`,`DdMEtcP=`,`X7z75z4=`,`lIPpzV==`,`tCIvKP==`,`9I/Xw04=`,`ZeHmSyX=`,`AiV=`,`suMjmY==`,`qMP=`,`/P8JAKf=`,`fDmtEYX=`,`t5Cnm3X=`,`frg/NIm=`,`UHJhzE==`,`mV3Le1f=`,`PkRPyV==`,`DllvKP==`,`TJP=`,`Zux=`,`R4pEhs5=`,`Am4=`,`1uD9L8V=`,`Hgx1rY==`,`DYm=`,`xdV2`,`XxHAHV==`,`zUFK17x=`,`rtDrmbm=`,`B45lQ5f=`,`fDDX4Y==`,`sfolBn7=`,`jJYVpP==`,`FlTHmzX=`,`ERcUCD0=`,`h+m=`,`+KY0Mgr=`,`j8GnvIX=`,`EHVN`,`T9T=`,`a7ox5i5=`,`4zE=`,``,`B8nC`,`OlqMVaY=`,`k2agnOV=`,`YuVN7V==`,`9pFxiy7=`,`5TA8ifP=`,`OP==`,`a4EXJ74=`,`HiXhj54=`,`RFdR3sx=`,`qBxHLm2=`,`9DvGlp7=`,`lb5NTa5=`,`B/6yaB7=`,`/1aW770=`,`dFO4ReP=`,`2a94EP==`,`nmD2377=`,`UitXD2w=`,`YnVMDPx=`,`6U8+`,`PXgLDV==`,`FHaufW0=`,`F0VUdO4=`,`0Y==`,`z7n7Yg7UopjKxwmu2Y==`,`TJU69eV=`,`MiEDbs0=`,`L56+pP==`,`22hmQK0=`,`8zSJkP==`,`/JE/vH2=`,`5P==`,`j0RpAfV=`,`xHPwXY==`,`RjAf5P==`,`0CfTCGV=`,`YZF6r8m=`,`R9E++bw=`,`frT=`,`9HV9Ykf=`,`X2wtGt4=`,`L7TEgW4=`,`AJBjoRf=`,`Z0rW1hE=`,`5nFYC57=`,`KK4IeW7=`,`xGpKfy4=`,`XVxhCL7=`,`5dXupZT=`,`gikM0P==`,`vpfmfof=`,`iW8ucG2=`,`bz08Es5=`,`4ZOWzLw=`,`qRdTMY==`,`FlkX75X=`,`Cw/A`,`BmT=`,`zjHMJhw=`,`0Cjvskw=`,`YY==`,`O35QgY==`,`42TdGv0=`,`4jNU6hm=`,`6x1NB92=`,`UE==`,`E143zY==`,`GPk+3AX=`,`WOmQYT2=`,`ONyk+mE=`,`cnGYdb0=`,`11F/oGw=`,`3TtzdV==`,`Z2vAc3P=`,`W4gwMY==`,`eE==`,`FEgxwCf=`,`JvtXYY==`,`0qlHu2E=`,`AQ+tDdf=`,`SntExP==`,`QjuGsjE=`,`NVRiBP==`,`mI/b`,`KAGmmRx=`,`u++Vir5=`,`A8UXK/m=`,`Y9/7ZGY=`,`80MBG85=`,`qSqv/L7=`,`zDKx0ZE=`,`7+Bi`,`roIqtiP=`,`Hp7=`,`4ytJJE==`,`taTrz/T=`,`c/NAd00=`,`bwoPjE==`,`eTJVlR2=`,`OwWOkKX=`,`x4Ae4m7=`,`2VljEV==`,`HvleR05=`,`E4nmnV==`,`nZTFxP==`,`lh5=`,`lZq4LY==`,`hF5=`,`xLuCiMX=`,`PKx=`,`I9oSIeV=`,`Fbf=`,`z+o5o20=`,`FfyeZUE=`,`0gKlXY==`,`GopSFMm=`,`S8V=`,`bcFM`,`LInIHR0=`,`eAw=`,`fwoBrnY=`,`6bbeoY==`,`ZV==`,`6LtOq54=`,`ytPBjdw=`,`geY=`,`KyX=`,`IiEem6f=`,`ITj4CE5=`,`RiuV7j0=`,`4UD0FgX=`,`FZNh2Y==`,`qxYVKww=`,`YBV=`,`5Mg/UP==`,`63JM56f=`,`rRtx`,`wA521RE=`,`FcJ4KzV=`,`BiCdxY==`,`ftRbFcm=`,`cQ4=`,`es34CGf=`,`oAw4oV==`,`pnLGt5f=`,`KJUI/8X=`,`27npN7T=`,`s9/9ENY=`,`iMH8yV==`,`T4/TJE==`,`MjxO0tr=`,`C5rMcz5=`,`VUoChV==`,`LTPZ41P=`,`rbOJTG5=`,`Pb10rgV=`,`DXlcSgY=`,`7D8N9IT=`,`RY==`,`jUustvzf`,`PGrkaOm=`,`kWdk8BX=`,`SUGIT35=`,`nKvMUY==`,`zYW4GiV=`,`yXk6LLf=`,`vIkPB6f=`,`DDaAZE==`,`pAs9PsP=`,`qmtb`,`vcY6p1T=`,`GUmITBP=`,`MFvd`,`cdtWVhE=`,`GxXWU7T=`,`LGo3IP==`,`Icbsku7=`,`a5C/jZm=`,`RC3wHq0=`,`QVyHBOT=`,`F8Y=`,`2V==`,`iNUOKW2=`,`pEICqV==`,`ZFw=`,`1miOXH7=`,`nsxkMn4=`,`A0zK`,`eFY3X+7=`,`hbmrQ4f=`,`AuCPmeP=`,`XXORMam=`,`yR1zjVE=`,`6/qdj42=`,`4P+HOPw=`,`Vh/Tmo0=`,`83dpke0=`,`9Y==`,`yEnPD4x=`,`e3B4LBX=`,`2zHlIP==`,`yhdJ`,`WSTaDM7=`,`oKlt31X=`,`eHM/0Gx=`,`95r=`,`9+1g+tX=`,`gKMRM74=`,`9E==`,`/KUfURE=`,`TVMmyf7=`,`BbAVHwV=`,`9xi+O65=`,`BfZDoYx=`,`6qtthD2=`,`yQe8ugY=`,`ggWl8V==`,`HjL86E==`,`HP==`,`jHX=`,`5oQN`,`wHEmuhV=`,`IR8N`,`o8G8ycf=`,`6vxH/zP=`,`cSP=`,`Nw3FCkm=`,`w1/KN3P=`,`ahyr`,`PJGKgmm=`,`Jq3QDRP=`,`rgbA8sV=`,`xaIJplm=`,`Eo8RyT5=`,`znY=`,`9kGOtMm=`,`TK2=`,`TFvAH7E=`,`yEzutH5=`,`KlZVFbx=`,`xE==`,`ke7iF05=`,`KsakFEP=`,`r0nyfE==`,`ZuTE`,`2Fz/FlV=`,`BpBwnE==`,`HAiyuif=`,`purxwXm=`,`lOms4Rw=`,`PpMFCeP=`,`kV==`,`zz3C`,`+6BZpMr=`,`isNrbFE=`,`A3OhZRE=`,`+V==`,`9xwN7P==`,`pJvoRV==`,`FOywztr=`,`1tCejcr=`,`q+q8sY==`,`6gp/`,`q/pA`,`aieAb9f=`,`3otU`,`ipkTaLf=`,`XioJDM5=`,`dTo/sB5=`,`iY19PTT=`,`gd2HN05=`,`xFc2vP==`,`6OgRu14=`,`BSeCuvx=`,`dqP=`,`cSmEm02=`,`fEuWexT=`,`PJgO`,`nV==`,`KRmAfkT=`,`DE==`,`K/1RYPX=`,`a0PJ`,`EdJD+wP=`,`oUWJR87=`,`gF9m5l2=`,`oKb6260=`,`nP==`,`XWZBwjr=`,`jrJOK0V=`,`VaWbqY==`,`pW8sGmm=`,`GCP=`,`3y/HIW5=`,`1/VYDvX=`,`B82Vto4=`,`2bQljvMc`,`kTPupwT=`,`4JLAwY==`,`V7FVCfX=`,`s9qtw3X=`,`kiDSatY=`,`LnF6x2m=`,`C8PTAY==`,`J4JPWV==`,`N9zj`,`AK0=`,`lAFj`,`zmmVoTV=`,`IAw=`,`c05=`,`huaJgu2=`,`RTeq9Y==`,`iIcOdQx=`,`+p7FfoX=`,`82g5WN7=`,`+GQ8aD4=`,`Em22AZr=`,`OPV0+VY=`,`9qmtnXE=`,`c5mn4e4=`,`5/crbc7=`,`umS3+iV=`,`jnbKf67=`,`x5vs`,`wJMy`,`RV==`,`JY==`,`6aX1NrX=`,`Pe+g`,`OIc9ivV=`,`/E==`,`gTNgtw4=`,`pP==`,`yj9s43m=`,`12OUYE==`,`iXer9P==`,`+Q8VQwE=`,`0hy8QBE=`,`MyU4JfV=`,`AffaPJE=`,`7E==`,`3Y==`,`Cfji`,`CVSPNV==`,`YitZDwE=`,`bV==`,`68gieSf=`,`CAN8vd2=`,`16STbvX=`,`OTaDbxP=`,`3LVsWBw=`,`bS9zkV==`,`489Zwp2=`,`Y9fnzsY=`,`6mHP5Y5=`,`+iV1J0r=`,`FYzk7V==`,`6OMtj0Y=`,`1Dtm`,`ZrOFs/Y=`,`FPJwEW4=`,`Znje`,`DBp9d9f=`,`3wJwEVr=`,`KHbybIr=`,`/V==`,`+OXy`,`LuMcjLY=`,`SyuENiw=`,`CKuQF6Y=`,`1fU6CuE=`,`2QXalvx=`,`MY==`,`Hhg2Ay2=`,`QG+Jgr4=`,`cOuJ`,`a4ntkW2=`,`CAcMfl2=`,`n9ExxP==`,`+vnqGeX=`,`F8w=`,`fNSO6g5=`,`LRcUOV==`,`v/9RYY==`,`CCg8dBx=`,`ALhtjyY=`,`SU5BRG7=`,`Z1uB4c7=`,`DaFECZV=`,`AT1dMP==`,`/aV=`,`qc3Qdgw=`,`cNVsBZP=`,`j7+hqCV=`,`D2iRxY==`,`77Mf8dw=`,`Dl1GXb5=`,`8SghcBw=`,`W7ae0Of=`,`fiEjQVm=`,`yTw=`,`Yvquobrao39stY==`,`LogfwA2=`,`wvHcXY==`,`dBBUMY==`,`coPtoE==`,`yk1LuDx=`,`oXdcVNV=`,`YoQLuDw=`,`jSaVb45=`,`FN7GDp5=`,`rcF6yV==`,`krSsM1P=`,`9eY=`,`2GY=`,`5dnb5V==`,`txWGVO7=`,`uPCDh9f=`,`/1t5jP==`,`Yf5Z/n5=`,`IjX3FKr=`,`2eSs/R0=`,`nwdJGVr=`,`4IN7Yhx=`,`6UeUOD5=`,`c+g5IKr=`,`BXbcA87=`,`0ZI8+2Y=`,`TmenIhP=`,`2pV2ZY==`,`llaQb54=`,`HBPDj6feHP==`,`qV==`,`cE==`,`mza4U95=`,`bXNFgP==`,`ctzZ08E=`,`8lY8`,`v05uBgr=`,`rse2`,`un1gEO2=`,`hrKJA0E=`,`eiE=`,`ZeCCRY==`,`dFip8Dm=`,`lZOKmFm=`,`pHfyf1r=`,`kVRuMgT=`,`2lm=`,`6YUBbAX=`,`kRmmRP==`,`NY==`,`yUUEV0x=`,`Ygq7c3f=`,`fNZO/CE=`,`cwe4Y+X=`,`kVMU0MY=`,`TkISJ5P=`,`V0Rj7y0=`,`RimknE==`,`Zq2=`,`onk0JVx=`,`uE==`,`qiYgtY==`,`DZw5VJw=`,`yQn6yDSUydjazww=`,`YrJWfMf=`,`OE==`,`QEsyYV==`,`VXfMEKT=`,`lygxAe2=`,`maAtsV==`,`Y8ia9Tm=`,`teKC`,`TIr=`,`LHX=`,`X1gM1Kf=`,`zH2=`,`IArU`,`xlYNTV==`,`7LnyZ0T=`,`uGcNDF4=`,`kY7q`,`i1MPHM7=`,`42GJmqf=`,`+WJSUDX=`,`wyozFB2=`,`ZP==`,`YJxFPE==`,`MP==`,`b3xwDCY=`,`QJ6JH00=`,`VfKXOVw=`,`5te0iE==`,`tTRP6vx=`,`cjr0SDT=`,`WPr9D5m=`,`BR/A89V=`,`jcLCTeP=`,`0d/KmzY=`,`TRG2aCw=`,`hPyd0/X=`,`dROsn+r=`,`F7Ty/75=`,`C/zBsW5=`,`WLJ6oWf=`,`gMLV9Ww=`,`XqQc7pX=`,`9rOHegw=`,`wecIIPP=`,`xRTM7x7=`,`Dqm=`,`v5OABE==`,`3zNeeV==`,`Kk66aP==`,`70oqwTm=`,`8MSnOY==`,`/bUqCmV=`,`9Q9XDE==`,`V6OX`,`dUuMpV==`,`EwtV`,`JHrU+bx=`,`ysW78lr=`,`KAY=`,`nF0=`,`cb4/+x5=`,`KK6i4r2=`,`IX5Zgpx=`,`M36Qm+E=`,`EiWW2V5=`,`//Sj+Nr=`,`FDvZbE==`,`EbYYuWP=`,`aEfIQTw=`,`ya7P4d0=`,`FyaQ6P==`,`6tV=`,`Tyf=`,`ylYEw64=`,`yAtNsvE=`,`BK7WL1x=`,`JrE9542=`,`stV=`,`LjF3`,`GMMLfo2=`,`4yE4kPP=`,`6P==`,`JYJeuE2=`,`0en9gjV=`,`8j8ulZE=`,`RREbmfV=`,`QA3KXNw=`,`Sp7zE97=`,`4ujBbP==`,`b4+ym00=`,`rLCI0gf=`,`4Uss2P==`,`NFhz`,`raHrlWm=`,`lgW2`,`JP==`,`NHgr6V==`,`vmLnflT=`,`PIe6eV==`,`Uil9EHf=`,`WzYekXY=`,`oHr3JV==`,`g1WS`,`k2v5crX=`,`5eIZM94=`,`4+5KCVf=`,`dLD72gr=`,`Ei23`,`hgK05dY=`,`AUVaAw7=`,`c2gC3u4=`,`LHYet34=`,`yAWVoP==`,`1tkM`,`ovMsjE==`,`XRYRBCX=`,`M1lCKwY=`,`Uz1ngP==`,`P5/KPP==`,`5+J6mF0=`,`Ntyv8tm=`,`62MqRzf=`,`qCvj25x=`,`CGYo0dP=`,`d96fGfw=`,`6TF9B64=`,`RDilyDP=`,`Ged77dV=`,`jDeNhLw=`,`QT2YPjT=`,`W8khtWf=`,`WPhIXRY=`,`ndzWQ25=`,`QY==`,`elgO3sY=`,`N7WuMZw=`,`7GZJiZ4=`,`XJZqOo5=`,`L6bfzn5=`,`Y8DsUTV=`,`j1gmF/X=`,`jE==`,`SOfKkO4=`,`ftF+9GT=`,`4Ek1MGf=`,`5Jg2`,`Fw8yvKE=`,`U7V+`,`2ktoqaP=`,`HUf=`,`sV==`,`c2cohrm=`,`XM75p72=`,`ih0=`,`3yGQO+m=`,`Qr+AeKx=`,`ctUTMP==`,`M96FeBE=`,`ERwwVyf=`,`rVhpS6X=`,`dUG+`,`ZuRtTP==`,`6aS26+Y=`,`kxklDcE=`,`GReYqvw=`,`gdtGiJX=`,`bzj4CL0=`,`8V6sPjw=`,`wGfnjB4=`,`Ky2TXE==`,`h2iD+3x=`,`XOKlVjx=`,`68TcAhT=`,`2lX=`,`6BjDtfX=`,`cQX=`,`guQUAxX=`,`IgF0wF5=`,`Ot8Wa8f=`,`Uz7dLf4=`,`6ePU03E=`,`8xHbwTr=`,`nNvo0E==`,`6zrARX2=`,`iLH8aAw=`,`bVKdc8f=`,`+sPG+LX=`,`+7VqGwP=`,`pKyXoY==`,`+xH7Ha0=`,`ozmjjLw=`,`E9QQOnf=`,`75EY`,`QE==`,`bglCHfV=`,`IEcq+5V=`,`Ff5EQcT=`,`nS4=`,`0BbgUJE=`,`gqkwGa2=`,`dKA5y15=`,`50cRuf7=`,`/ImTXX7=`,`gP93yU5=`,`2+oCtzV=`,`GcevXY==`,`n98GtE2=`,`7cJmhY==`,`BMX/`,`z2Vg+p5=`,`Oh1CPzX=`,`DSjEYOT=`,`SuX=`,`dSrurD5=`,`qtV=`,`yNV=`,`qSdPNT7=`,`T8E=`,`ALTxywE=`,`I/iB/ww=`,`AqNbasE=`,`/P22DuV=`,`pb7k/Z7=`,`gUAQ`,`RSq1f37=`,`d6sxeLr=`,`FxlWEux=`,`pt+0dcr=`,`k+P=`,`0f1GCHY=`,`78urGY==`,`shJ0Y3P=`,`l55M1E==`,`HL4=`,`KrfcKS2=`,`XLTJ`,`pxGMYAT=`,`fsf=`,`SZ2c7WT=`,`ZzxGtOX=`,`cAX=`,`so9rblY=`,`ycw79T4=`,`tuBUALV=`,`O4ZjE9X=`,`/2Og`,`Jryb`,`iUd7lK4=`,`V1RNI42=`,`Scy4Oxw=`,`MS95UhX=`,`0P==`,`Mq4=`,`4riKIP==`,`TCeEZK0=`,`6JxlVOE=`,`n3Rw`,`wIzjhT7=`,`vTZ5Zvm=`,`Ta4oihw=`,`AlX=`,`PLT9ABY=`,`CZr=`,`htIPHEw=`,`4SRlMs4=`,`AwIv`,`fP==`,`pB7=`,`u/b0e3m=`,`m/Ms8FE=`,`TxxJUa0=`,`mQ5SMK2=`,`UXuGWE==`,`slkGoO7=`,`g5M3Rl0=`,`3UtW`,`sA5=`,`eW6Lyu7=`,`R/0=`,`DIyt`,`YbIO`,`7tXwPe4=`,`Mu/6puP=`,`0SwKOP==`,`G6mPQnP=`,`PTjy`,`NzfoMY==`,`tFGpRk7=`,`E0+6i3f=`,`TL/Mpdf=`,`c/Lpbrm=`,`ZRV=`,`q/2=`,`SpUXUdY=`,`C8SL`,`Lx46Nz5=`,`Nvx=`,`Hc76HPf=`,`YuZSaR4=`,`7pudb8x=`,`RaHedP==`,`qLkziV==`,`ZbEj`,`LOV=`,`FMA5sP==`,`AefHuGm=`,`orjSx9jwSwnwSv0=`,`RYDHhE==`,`+9ppX6E=`,`jNbpGa4=`,`U2X=`,`vQ2H6P==`,`ec70nPX=`,`5al6I6P=`,`TtRAeMx=`,`I6N7W87=`,`6b4L`,`wjjHnV==`,`ZL5=`,`ckBLZY==`,`sr3SAX2=`,`0iiTi3w=`,`S2llAB2=`,`JYH6kJ4=`,`bFTDaJ2=`,`M71OuIP=`,`AiVSvY==`,`LTXMVP==`,`OxUQSp7=`,`gM2h`,`VRMsmTX=`,`GFa768f=`,`xIoyrrV=`,`3E2qB1E=`,`rFSehP==`,`wI+9uE==`,`phJ9OPT=`,`hafWeV==`,`W34HAJX=`,`F08jjJE=`,`eHZfy14=`,`lJZKIE==`,`KE5gDE==`,`Xj0FCNY=`,`hQf=`,`aCsn5V==`,`edIia2x=`,`qs+QBsV=`,`x3Wb70f=`,`y2b5uIm=`,`Hx2=`,`A0j+pf0=`,`Zq+hAl5=`,`VIWlF54=`,`Tfb8/V7=`,`ztm=`,`fU6L`,`Xljnx52=`,`q1OC`,`bcuFXd7=`,`cxZGSY==`,`I+uTGn4=`,`+pm=`,`plKSkX7=`,`KbXR`,`ROkVJw2=`,`0p1IrCm=`,`svJlyYT=`,`Pq+s`,`bB4=`,`QvACbyE=`,`VJHaiP==`,`0PekulV=`,`NQHWqTY=`,`JHKmSIT=`,`7y4IC67=`,`EgdEPdf=`,`PTdz8x0=`,`rhgVAZX=`,`ye6E4jw=`,`iX+WMeP=`,`3Vw9Dw2=`,`svYw2jT=`,`PON7PV0=`,`tFR65Tr=`,`RvK7UY==`,`5dizMUV=`,`GArPPLx=`,`EdIkF92=`,`ol5=`,`rrE=`,`GQ5=`,`KS22PE==`,`wlihno5=`,`OjmMN+T=`,`4HPF`,`H0mGv2x=`,`yx3dkH5=`,`UYfT1fP=`,`vPCPFkw=`,`vV==`,`kDQunkf=`,`+wDuBI2=`,`jQ7G`,`gtvv/cT=`,`p41ktxw=`,`t71Nys0=`,`ItBL0E==`,`EcXv3cx=`,`xGP=`,`4gvNuX7=`,`HxvTAA2=`,`/b5=`,`VDpmpY==`,`i7cYA20=`,`Tg7/yxX=`,`blyY`,`jV==`,`PCpz`,`s9wTxLr=`,`7n/YaST=`,`nY95XJ0=`,`oIDbm80=`,`wP==`,`/RDBPnw=`,`jbqaogT=`,`pLWm/2w=`,`kaoCwq5=`,`hqfsPY==`,`E2P/zfr=`,`VY==`,`4Hz42E==`,`rFo9sEf=`,`Uvh6kO5=`,`+voXdgT=`,`iSE=`,`/pdeC/X=`,`yE==`,`i2XvLE==`,`K5lwnTf=`,`SChU`,`IE==`,`ywLTHLE=`,`ZVOB155=`,`AXE=`,`JxoZKY==`,`wwgBrf0=`,`jUTFVkV=`,`AErA7V==`,`LNfqMP==`,`zTkRt95=`,`bWPwUHV=`,`gw/esxw=`,`zUPMidm=`,`GAHVWy4=`,`vVzx7E==`,`UOyD3jr=`,`IPodWY4=`,`xQx=`,`zyaOYP==`,`kdayaQ4=`,`5C88Tkm=`,`2lODblw=`,`Yc7X`,`0E==`,`2CQESEY=`,`0PnnNV==`,`a3LOmbV=`,`g7tGSV==`,`h5+Yp8m=`,`QYX=`,`nhVBdN0=`,`OLkOogT=`,`eJJLSV==`,`YM/rC1E=`,`ebv3`,`eCYlHv7=`,`+O4+tEX=`,`mjhqzfr=`,`8gADHE==`,`mF08l/w=`,`WluFQY==`,`huuE`,`5W2KC7r=`,`QQx=`,`MWHXcP==`,`hyy+0Kx=`,`KVT9xPx=`,`HfW0yfY=`,`0BE0`,`/QiRMX2=`,`H1n9w94=`,`pLcYfE0=`,`lZps`,`1lvJCj7=`,`0GcGEVw=`,`lDTLjWP=`,`HCrdzI2=`,`q6aBn3T=`,`zotLfYX=`,`FVz2EPw=`,`A5DSmVP=`,`Cg8z7gw=`,`n0kHbdm=`,`SV==`,`uY==`,`kE==`,`AFXeBw7=`,`RCCzzP==`,`2MFIPE==`,`3xzu/60=`,`0HFwTcf=`,`sfyKDV==`,`w3TBN4E=`,`cjbN15T=`,`DV7=`,`gZkO+uX=`,`Woc5E2w=`,`3ixhbMV=`,`wV2e5cP=`,`q4HdscV=`,`fEBrNof=`,`JHsJ4nE=`,`eoRdW/2=`,`gVuv`,`UekO`,`tGDMACr=`,`p4m=`,`U9ZR`,`8eg/`,`aYlN1wT=`,`C8LwQSY=`,`qUtbzlw=`,`kqer7vm=`,`oxyE1bf=`,`zk6YlEP=`,`3sFW`,`0FyBLaY=`,`JdVnWax=`,`UV==`,`9hEewH4=`,`sdGC`,`oXor`,`ODLlGE==`,`QzzLdLT=`,`1JvyTBP=`,`m424312=`,`t7Cg1/T=`,`Bi13IV==`,`A8RgwzP=`,`KGY=`,`4d9eNDr=`,`4JayCV==`,`sEOjzAw=`,`KY==`,`SKRacm4=`,`681OplP=`,`tanmhmP=`,`iKQxGox=`,`Oiso0FT=`,`Na2w`,`X0A2kUT=`,`c9Am`,`DEypqoT=`,`dy1L`,`KXlozzX=`,`um0oPbX=`,`GjnqNEE=`,`7bLx87V=`,`EVfpGi7=`,`9wY=`,`uDw=`,`8mXhCb4=`,`LV==`,`UO9JUyV=`,`T1lJzP==`,`5ARriNr=`,`Tox=`,`D8LZvNY=`,`KhJfp55=`,`uNPjj9X=`,`xkgvR57=`,`r4y2xE==`,`jeFk`,`LuMeobY=`,`cxT6CFw=`,`kXpPV97=`,`yRwZ5P==`,`VZx=`,`eqktRP==`,`7NDh`,`jGjEJnY=`,`T5pG`,`vlu2Mz0=`,`GYVvTbr=`,`5SLyKP==`,`XeZYdE==`,`94V=`,`QUE4fSr=`,`TCr=`,`RmgnTU0=`,`IOkJK94=`,`IijeLnP=`,`vmnkHkT=`,`g3+ZvS0=`,`mUSRDe4=`,`+14GuNY=`,`aa6ZSb4=`,`d7QNFzw=`,`V2Of13r=`,`63oh`,`09FUDiE=`,`MB1rFY==`,`BbDAPjw=`,`NAjPsD7=`,`A4fks20=`,`1+HRjO5=`,`hS+j9P==`,`u8VC2fr=`,`6U3sIzx=`,`OZAILwf=`,`VfwE`,`BSWm+p0=`,`gvPm`,`eWFiPNm=`,`MucIaw4=`,`5E==`,`3reXqGX=`,`Y662`,`yfZHNUY=`,`cBV=`,`xojF2W0=`,`nIyd`,`eZpC4vT=`,`RyfdbE==`,`lvugKKf=`,`Yz7bKT0=`,`DdX=`,`J6mKxP==`,`jLP=`,`NW5F`,`QL/NPnw=`,`fTJCEzP=`,`68Z3CmE=`,`6p9NbCP=`,`Pjgv1jT=`,`u9uPYV==`,`ICY=`,`CY==`,`yhE=`,`4AAl`,`F2T=`,`n4N+IDm=`,`2t0=`,`aAd/mhr=`,`cxfcMtV=`,`CWQCSXf=`,`ZUoV`,`D5nNq+m=`,`llgD8b4=`,`7WR5`,`a2LqdE==`,`ekkuywY=`,`ZNl9NWr=`,`AOzDeXE=`,`jwZWVYV=`,`H0Is`,`AE==`,`Kpe+9XT=`,`BTpeDgE=`,`nwx=`,`KpOOOV==`,`LBRVKF2=`,`D7YeAGf=`,`D7wXmmm=`,`yYQsmV==`,`rrs6qom=`,`dqXMWL5=`,`By8aI1r=`,`QQONXR0=`,`aJCvWP==`,`RNAiRO2=`,`0dckdQ2=`,`vWK8tV==`,`cYxd`,`8B0=`,`moOgptx=`,`KpSQ/2Y=`,`sXDTFE==`,`EcvXaqP=`,`s4f8G10=`,`wV==`,`641uClx=`,`8mjT6/7=`,`Qusu4JT=`,`S2yjyaY=`,`YHfh4fE=`,`CyNYQn0=`,`teMYQBV=`,`3m/W`,`pP5Y`,`zp5yLa7=`,`rtE5ED7=`,`t9IcVN5=`,`fDjl`,`Qp4=`,`AL/+`,`9FojfQw=`,`1+zM`,`475d6P==`,`8Ol9eV==`,`sCRsis0=`,`WVrfrt2=`,`KKWm`,`cY==`,`nMZMPtx=`,`yhpGVP==`,`eyY4wCE=`,`/5Uhh60=`,`/Fci2Tx=`,`qGYx3R7=`,`zSW0cRV=`,`tVdVxXx=`,`cNi4NX2=`,`2+C1JM5=`,`8d2o3+T=`,`64KAA/0=`,`hXnHOoP=`,`osK0PW2=`,`7kPPqOf=`,`zd/gT2r=`,`GNwveG2=`,`y2Rv2Y==`,`1zq+aY==`,`v81N5V==`,`r3ofgjf=`,`aNUa4XY=`,`B+S3cO4=`,`nEazKP==`,`YagaFTE=`,`KxcfdF0=`,`zB7bV1V=`,`2vhD`,`dEwrEU7=`,`3E==`,`tgkftt4=`,`FE==`,`W+vHtt5=`,`X7aARP==`,`niN1Qv5=`,`xH7=`,`EvDRnS2=`,`ybBkiKT=`,`zC7S+sX=`,`hkrrZY==`,`uffg`,`w7s2mW7=`,`XGWjQsE=`,`ToIT1q4=`,`m6pDNEX=`,`L8pfGY==`,`7V==`,`Xcx2SUY=`,`M4bW`,`6/XKeSY=`,`+hvMQY==`,`KrDtlP==`,`tSUb4dY=`,`WnJArKE=`,`qQnSfS2=`,`jVjBRX2=`,`LiGM/RY=`,`a7D8pFE=`,`Ac9qTaE=`,`y1MSsFV=`,`vHu2DS5=`,`xW9c21Ag4LxPZv91j/EkiY==`,`5+9MFNT=`,`QBEAzsV=`,`TWM5FY2=`,`sFS4ki4=`,`V3zuKY==`,`AV==`,`bRkE`,`330XJd2=`,`mJP=`,`f7ds2Y==`,`o3hB`,`rPZcYT5=`,`UQgtZSw=`,`R8UOLHV=`,`7Y0MU5E=`,`TwG9CwE=`,`BUEx`,`LhFXIiw=`,`bnZx9QP=`,`/Q9kZY==`,`Wf4VDV==`,`78u28bx=`,`zlb3Miw=`,`8Gcu562=`,`KaN2vz5=`,`jPFhzLV=`,`fDC+WMw=`,`oY==`,`nx/+K4f=`,`xPZuvfX=`,`H4fFym0=`,`p/61ntr=`,`g/V/`,`gY==`,`dpFl2NP=`,`ektGGY==`,`iorAAO7=`,`TxVweZ4=`,`+pU7EE==`,`LIUTTY==`,`83oSMAP=`,`33FpHY4=`,`IHBKdE==`,`xyXwRWX=`,`mhnoMJ0=`,`B2x=`,`yI5=`,`dkUlCG4=`,`RORI5WX=`,`lVa/oTr=`,`6LKjtqm=`,`tbf=`,`qn1tgZT=`,`205suz5=`,`PU30pYY=`,`VFOP+5x=`,`Uls0atf=`,`02N9Ee7=`,`K8w2+C4=`,`CV==`,`AUw=`,`B6nFZAm=`,`f7+Y8gP=`,`mSk0yoX=`,`xxZHNb2=`,`kg7M`,`1Mp5KAP=`,`p40yVE==`,`ITr=`,`eAw2cGx=`,`5iO/`,`UkDvIP==`,`zNGgGC5=`,`9Mcv7kT=`,`xassERr=`,`2bQljvm=`,`yIBfwxX=`,`VQucvP==`,`9Vm3dcE=`,`umZD`,`+ct/`,`hqfY4T0=`,`aYzQ8Rw=`,`gMps`,`s1aC2p5=`,`O6Wb2im=`,`eTFE8oP=`,`CuMg/vP=`,`Vx6pvq4=`,`MrK8HCf=`,`xoTij94=`,`W/DuvV==`,`RAUxDXx=`,`ijpWCr2=`,`eS/ML9X=`,`lMF/zE==`,`P5bDMG2=`,`+k/b1lY=`,`9V==`,`Y9Q8X/5=`,`dHgLBsV=`,`MaAw/V==`,`XIRHHP==`,`xfSXSrE=`,`EGsJAe5=`,`JYZwoV==`,`ZE==`,`BoC71P2=`,`mLf=`,`BD162G2=`,`PHx0`,`r34=`,`0a3ScxV=`,`FnNl7E==`,`SvknzV==`,`QafMYBm=`,`nKUNsV==`,`Xym=`,`GPxh`,`ldyLJdm=`,`avm=`,`dOlt`,`aEP=`,`EmYo`,`6x8UJgr=`,`rA/ign0=`,`HY==`,`cZf=`,`PhhW`,`Bd10Yxm=`,`/UH92O0=`,`g/ll9CX=`,`NSwMCV==`,`+LnJ`,`Kyz76KV=`,`bDhQL6P=`,`UT5B`,`sSWRSWY=`,`sI7p`,`pVYh`,`L0/cnh7=`,`iu1v`,`vd62XV==`,`cG/4fY==`,`IP2B`,`7xmDk82=`,`KwBdXLx=`,`Tj4=`,`i6aywc0=`,`A2KeXr7=`,`8/gnJF5=`,`WxB1OP==`,`zJUU1jT=`,`oZ/jCBr=`,`/nr9YT7=`,`ouFufP==`,`6Glivjm=`,`sgoQH2X=`,`01L9Ljm=`,`z3PMtY==`,`/+da5P==`,`51A/CST=`,`fu3AijP=`,`uHOCYjx=`,`1eE9Sbx=`,`GS/q0V==`,`rEiQfV==`,`BOxGC25=`,`m/rngyP=`,`TB5EeKP=`,`yY==`,`qP==`,`55V/HoT=`,`9cZEwCm=`,`y+PJx4P=`,`hPRxJh7=`,`sdY=`,`19rgVj7=`,`EfzHneX=`,`nFz8AXf=`,`uFRna9X=`,`T6BdwE==`,`oZ+Id7T=`,`wq4=`,`+emlAy5=`,`kY==`,`cvXKx50=`,`sQD0Spf=`,`FqzrbV==`,`416AacT=`,`VUDrhE==`,`9HO9pUx=`,`8m8OoPf=`,`9mti`,`ddVARef=`,`bklhlZY=`,`KOiFRiP=`,`qqcW8P5=`,`82O7`,`X1pORy0=`,`FY==`,`bjlSTYP=`,`Dzew+3m=`,`lWpl25P=`,`TM3i2Om=`,`UpT=`,`ovMsj3z02bDljV==`,`0R2ygV==`,`TzUh`,`ay/lkax=`,`dxfjYX2=`,`0d1QMqP=`,`7O+BCP==`,`9xCatH5=`,`fR0aQWY=`,`jnoqhIY=`,`sz5XiV==`,`9yJxhKX=`,`P9FxH6X=`,`9QyXd6P=`,`Bg5KHCf=`,`YL0=`,`byXrlWE=`,`jLmu5u2=`,`3fYzUjm=`,`oTMoXE==`,`/7FurOV=`,`LmcCIir=`,`COEtyKm=`,`RCXWF0Y=`,`ZG/W+E==`,`XQdjXQV=`,`xzfP7Mf=`,`dV==`,`54cVZkT=`,`988c`,`nMh1ZE==`,`HlEalP==`,`d3XJ1mT=`,`SiIYeY==`,`0BT=`,`ZEBwPX4=`,`mDgOydr=`,`xBdI/E==`,`4UMl4UQ0`,`w4y87I4=`,`fv1dHmX=`,`4fx=`,`UQV=`,`TH4P4L5=`,`O+dwssV=`,`Aza4PwY=`,`w9HBsox=`,`XKQsRY==`,`KvQfW2f=`,`hnO+i5Y=`,`PQMj`,`0xm=`,`vH32NzP=`,`NYbmdY==`,`RWHrYFr=`,`j0CfXu7=`,`TQm=`,`lm2ptL5=`,`Y6iA7Om=`,`8kU7wGT=`,`+0FmMG4=`,`mVQyJP==`,`w6ma1z5=`,`BMGe`,`ae4onY==`,`lUIf`,`IoA2+UX=`,`oE==`,`qqeCIDV=`,`qpySd05=`,`jVOi`,`sJmyt0m=`,`zMT=`,`kyx5v2E=`,`kcNYtT4=`,`ZoSm7p7=`,`SYjFCo2=`,`QrPJ62E=`,`PFTDqzV=`,`+qedP/P=`,`2HzziY==`,`XXE=`,`VS2=`,`noYIg6Y=`,`8w67Lvr=`,`Wi1y`,`iuyoNE==`,`85qRWI7=`,`Ebcl68r=`,`TKYTjE==`,`A06laV==`,`6xqTYE==`,`LmQRto0=`,`k2wlOkP=`,`wWTDjE==`,`60Gsrbf=`,`1lP1wtY=`,`13f=`,`LG7Ck7w=`,`CRf8AE==`,`6pfx`,`8ptgMb5=`,`M606`,`14w5A2m=`,`bo0S1Y==`,`kkdMrDw=`,`CQV=`,`ApTVV2f=`,`rHLdME==`,`Ef9unE==`,`DhQKCz5=`,`e++7uq4=`,`3/qK`,`1gDdieV=`,`63I9eV==`,`FGV76BE=`,`AsE77rT=`,`rgxRPRV=`,`mgz6yn7=`,`rZE=`,`wIo2Uyx=`,`K0w=`,`WE==`,`/yY=`,`9edmSjf=`,`fxmv`,`QhHzrE==`,`synBVFX=`,`OP4tOmr=`,`NcbX`,`Hz4v1o4=`,`cLLPyPf=`,`7ybVyhr=`,`LiP=`,`lP==`,`4+D0jY==`,`2j0=`,`ybV=`,`0fX2JPV=`,`46Km`,`qE==`,`tRtMbNT=`,`tmagfkx=`,`P1eWfR5=`,`pTg8lT0=`,`K0po8V==`,`WP==`,`YATb`,`P/iEbQ2=`,`2hkwIz5=`,`37kOLY==`,`GV==`,`t+6p`,`xtQ98Mr=`,`PraeuaE=`,`6s2eA3m=`,`wmJbLe5=`,`4yUbbV==`,`JZmfKeV=`,`VXw=`,`UucP3AV=`,`CpiEE25=`,`D98A`,`8BThC30=`,`66C26cV=`,`6847hE==`,`HDP7`,`5wv5u1w=`,`S3x=`,`irE1tP==`,`+CHyzQY=`,`1Zhm`,`Dy0=`,`0gCAi4m=`,`qj7=`,`+C4=`,`EDY0GP==`,`QmEwuP==`,`Oa2uwuV=`,`UnWL9BX=`,`nGhlfw0=`,`VQBqtJE=`,`Pg5=`,`7ledh0r=`,`xsErllV=`,`WbQt7Y==`,`xpue`,`kwz5XdY=`,`b34xRF7=`,`EE==`,`F7LX9m4=`,`Ow5ubyE=`,`wuswyJ4=`,`9nTguAr=`,`pAsWQV==`,`5ogsdxf=`,`Yx2QhZ0=`,`kBKc`,`7Y84q1E=`,`zi98LZ7=`,`ZBdfnE==`,`yRiBKIm=`,`L/it`,`WGqLk3r=`,`cWQ5vE==`,`YzyA71Y=`,`DP3l5AX=`,`zweb+qY=`,`Da2=`,`1ktXsuT=`,`HB2D`,`lV==`,`PwhPxFm=`,`TUlSozf=`,`UpGxiTT=`,`rHIdsP==`,`6STXNXm=`,`vbEuAiw=`,`O0QaH7E=`,`1N5P`,`6AxJKSm=`,`hDKhty0=`,`NmJMng5=`,`8VXXCV==`,`3RKH`,`VII1lPE=`,`26Qc0V==`,`wICWJk4=`,`zuJlV5f=`,`AAMqFE==`,`vAJKi6f=`,`okJBWzw=`,`CgKPuE==`,`s33F`,`LetqXP0=`,`sF7H+FP=`,`TV==`,`fUsq3fT=`,`SnM8VNV=`,`2Y==`,`RUUPfT4=`,`+MWRSh5=`,`KA2=`,`UtAATB2=`,`UB/W`,`ABKNDV==`,`4/bvb8w=`,`emRvFS7=`,`LNQxGkr=`,`4mJwQL0=`,`u/L4HbV=`,`uBS6AcY=`,`ErH7ZPm=`,`G/XOCDf=`,`GphBTc7=`,`Na4RPl2=`,`RuO6vrE=`,`wm925M0=`,`sbjXxvx=`,`WBFraU0=`,`XJMYnJ2=`,`ZhP=`,`h+8jUQ7=`,`vwul+B4=`,`rw9y5ET=`,`PY==`,`KUV7oi7=`,`BWymZt5=`,`0XDZJ0x=`,`2RZz0Y==`,`W/H1AaE=`,`7+sg2E==`,`UWLW4/2=`,`fuBwJV==`,`MuWYShV=`,`bzFmuJf=`,`Vvm8aV==`,`xY==`,`OtVw76V=`,`n7ohruP=`,`SNrd6mf=`,`d+ruiP==`,`fleUqE==`,`Onz7wLr=`,`mKX=`,`u0DCmT5=`,`YO8xZs5=`,`OySqLe4=`,`ZiBqkE==`,`odX/XGY=`,`emE6`,`j8H9G5E=`,`YfXv8uX=`,`rPR7N3X=`,`gj79`,`CU/UlVm=`,`9R7Zyxw=`,`kv8EvE==`,`iSux8W2=`,`TOtAeR4=`,`GxdxwfT=`,`MQTJ`,`JS58`,`auQr1Y==`,`lMg2VFT=`,`EQR2uJ7=`,`dvpEVV==`,`y+/sAd7=`,`kM+jSQ5=`,`klTN`,`k1v4oQf=`,`W5hOeKf=`,`+E==`,`gVd+7D7=`,`Su6hr3r=`,`xcSUbjr=`,`K4V8YZE=`,`jAUGnqV=`,`sNlcZQx=`,`VdBSiY==`,`SXtojer=`,`QZY7bNx=`,`c4yJEY==`,`pHbOrmr=`,`dTYYdv4=`,`93fwmoV=`,`LbXzT6T=`,`cs4GsV==`,`ziOX9AX=`,`VLDV+gE=`,`TeQtTiT=`,`17qewE==`,`KHcC89r=`,`1u8rgQX=`,`VjzbslX=`,`BrNHNFY=`,`sjIrDRY=`,`qbP2TV==`,`lIk2`,`TbQp`,`qk1NS64=`,`WHFD+X5=`,`jDtyEE==`,`ngxqoym=`,`1X9DpgE=`,`GD/YLOf=`,`fiRmaOf=`,`iC0=`,`/DmbPsX=`,`aghmVE==`,`/1+Ba+P=`,`UwQo8Y5=`,`ZcZ1Hq5=`,`KYf9`,`kHP=`,`UYNdKE==`,`dgOPW35=`,`/f4L9p0=`,`7noRUJ7=`,`Pk2=`,`ftSamC0=`,`DqylM6Y=`,`wET=`,`tqgK0U2=`,`YPpu7M5=`,`Xau71mf=`,`n6LzeE==`,`dyf=`,`aOw5OcT=`,`suCjRxm=`,`20e3885=`,`Fs/BYXm=`,`iY9ZKs5=`,`JQN1xWT=`,`ZbyZ/Cx=`,`NE==`,`ZV7=`,`OV==`,`aMPX877=`,`kyFAjz2=`,`NQbJLV==`,`rzhjzr7=`,`fY==`,`LoiZxw0=`,`ufvWjm5=`,`IqV6`,`8jTabsm=`,`KBUgKT7=`,`b9bgNqx=`,`BAbFkQw=`,`2r1bWRf=`,`jDHH7fw=`,`q9Qe`,`KawDacm=`,`RSQAU5x=`,`fTYxFP==`,`GjkfhgX=`,`ZF3y9P==`,`kmHnatE=`,`g2dwtZm=`,`gTx8`,`+0kxJ/V=`,`uV==`,`n44YmjV=`,`Ong3iV==`,`GnT=`,`v6/kIDm=`,`k4Ie8N7=`,`//AcjOMgTv7PovM0TY==`,`VmCVFzm=`,`j2Xx9K7=`,`FBp7J6P=`,`5OABl9V=`,`OqBk3nX=`,`gE==`,`Zr92rO7=`,`cj5EmE==`,`08fCsM0=`,`92axfzr=`,`UWbvfWm=`,`zeVqzV==`,`6SLwUPE=`,`yt5OlpP=`,`8aLSo3x=`,`0qQzDQr=`,`dsqEkx0=`,`z97D+u4=`,`sFNbTE7=`,`Xj/dzax=`,`JScrWD5=`,`HjCP8ZT=`,`zsv2`,`UjVrN4f=`,`iutLF65=`,`/Ms/`,`HQMflwT=`,`iE==`,`CPkkav5=`,`NCkMDz5=`,`6fcuwwT=`,`sr/vMP==`,`+C5c`,`eVuXrYr=`,`r25OK02=`,`5Z0XuY==`,`BektIY==`,`VE==`,`r6KtbVr=`,`tcPWJuP=`,`oPMTnc0=`,`Tx/7IdX=`,`YpbI2XT=`,`EUpg3Hx=`,`ccJkvrx=`,`ayQHgpP=`,`low4djT=`,`OY==`,`kT0uEVw=`,`+YplOSE=`,`d6pQ`,`wBLreRw=`,`fu+LeiT=`,`8fdUCo4=`,`H1VJU+T=`,`eBfe+V==`,`bZkqIW5=`,`bYDZkfX=`,`lols`,`GP==`,`na3C3Y==`,`H/z3lE==`,`+boYZE==`,`072=`,`QV==`,`fpjDZY==`,`O4ZMKtx=`,`JE==`,`7BLG`,`Sz2BFcV=`,`NcrwmU5=`,`dFMkikX=`,`mpLrbTE=`,`OH7O8P==`,`AR2+4v4=`,`shP=`,`A6d4BP==`,`qbS0`,`l65=`,`htg1xBX=`,`brmtbP==`,`Y+dc`,`HSJ9nP==`,`luuBT1P=`,`Da2A8iP=`,`cGwy312=`,`RcBL2oX=`,`6E==`,`nGchVMm=`,`7y2IALE=`,`29CL`,`BDzMjjP=`,`k4zsAdT=`,`YAb2MV==`,`lwwtNE==`,`SMXt/V==`,`Vlx/un5=`,`qWjViV==`,`G3XsVl7=`,`pE==`,`SunrRY==`,`DNcR9V==`,`ZIGX`,`tLbVpg4=`,`9mP2xHV=`,`L1bRbB4=`,`D1xc352=`,`uq6N0Zx=`,`WcxwWuV=`,`FQz8XTP=`,`Y0hT+I4=`,`4xYprE==`,`Boya684=`,`zP4FzNP=`,`MV==`,`TAsy`,`b8cvBnP=`,`6QDplQV=`,`L9Hb`,`dyYgpbV=`,`7lrXeUw=`,`fl0=`,`BY0aqY==`,`21QNfSm=`,`MByPhE==`,`keT=`,`EV==`,`LXCgSy5=`,`pY==`,`yMvIvUE=`,`VtNn`,`sZaJqN4=`,`bj2VuE==`,`QRp7LV==`,`xegjV4E=`,`6+nDt391oBAV4UQ5o6sbtOIWtvDaoBPe2b90tLnlTR7aTbQB41nDobYe`,`yGf6gV==`,`INrsFKm=`,`xWMWSx4=`,`uAJGscP=`,`oDDc1V==`,`92uOgg7=`,`Vh6FP1w=`,`ECtR`,`0Nm=`,`xSj5U7E=`,`J9HhsY==`,`0Cx8QhV=`,`jrx7rST=`,`4hWht/0=`,`J5mYyZT=`,`KBkgEox=`,`gCT3yY==`,`oV==`,`8qL6XtX=`,`nNpi+c2=`,`d9RteXP=`,`v1ZcFm4=`,`sjpB3E7=`,`5uwGkJP=`,`CCgLCJE=`,`DfrvMv2=`,`sV/1fWY=`,`hNNp/37=`,`L4FJWY==`,`uf7c`,`sFDDtLx=`,`1npYq74=`,`BhTsFDX=`,`WWw=`,`IKP=`,`g+zGMV==`,`329clV==`,`CP3+uMX=`,`NvbeOE==`,`PPE=`,`aJjNvE==`,`vwSOD0m=`,`XE==`,`gBF4`,`+3khRc0=`,`XTIEWP==`,`X8mugoY=`,`ME==`,`Gx+KkI2=`,`0Sx=`,`THGZSF2=`,`CAB1pA0=`,`U6620Pf=`,`Ua+42P7=`,`waJSG+Y=`,`7dx=`,`WsUVW+Y=`,`0qEN344=`,`Ccb9xt7=`,`FzZ0eXY=`,`zzXnDBY=`,`ceMvtE==`,`AKRAjzw=`,`6N21NP7=`,`tiO14Y==`,`kKGCYP==`,`50NiIDT=`,`L25rkY==`,`UjEeeIV=`,`T2Wb`,`9FrT`,`YVg1`,`pK/ro3V=`,`NNFYerr=`,`ecOxCP==`,`ZK2PGqf=`,`RiAusqY=`,`usPihYT=`,`Q87JdMw=`,`hDFG`,`Cr3A8V==`,`WRP=`,`VTP=`,`mX7=`,`ICOPbT2=`,`xKbThBY=`,`Yax=`,`FcWQ`,`/xX=`,`FF9EPC0=`,`O9JD7sT=`,`FCTWcQY=`,`okk2iyV=`,`hwUZ2z0=`,`cn4=`,`jfP=`,`iKuRnYT=`,`jbC69Am=`,`GQrv`,`2dZbD60=`,`JneylGP=`,`z10v`,`H3VqozV=`,`8Pm2ApX=`,`GUVSjP==`,`lZEfZWX=`,`yhRvry4=`,`iXHv91r=`,`p9sa`,`wx9Ps8X=`,`7E8vp/0=`,`OwHqT3P=`,`u2jRIzr=`,`UfyCZ/4=`,`hgSnkPx=`,`XP==`,`aY==`,`1QBmlL5=`,`Tovg`,`37jyTNf=`,`eTPG`,`M80P0Y0=`,`qcbN9aY=`,`JV2h`,`cmrrUvY=`}for K,A in ipairs{{1,2660},{1,2477},{2478,2660}}do while(A)[1]<(A)[2]do(q)[(A)[1] ],(q)[(A)[2] ],(A)[1],(A)[2]=(q)[(A)[2] ],(q)[(A)[1] ],(A)[1]+1,(A)[2]-1 end end local function a(K)return(q)[K-19026]end do local K,A,p,a,Q,o,W,y,D={k=58,F=31,Z=26,m=60,L=23,[`6`]=2,c=45,P=32,x=12,q=49,[`+`]=39,w=36,[`/`]=18,l=46,[`2`]=28,f=40,T=8,y=30,I=57,W=35,u=53,o=27,V=48,[`0`]=52,X=56,Q=5,A=1,G=63,g=55,[`5`]=44,M=61,e=41,[`1`]=50,a=47,U=54,h=59,E=0,K=11,[`3`]=7,s=33,D=37,H=14,j=25,v=6,b=38,[`9`]=21,p=51,B=34,d=19,S=17,C=15,[`4`]=24,[`8`]=62,n=9,N=42,O=22,z=13,i=10,J=43,Y=16,R=3,r=20,[`7`]=4,t=29},type,string.sub,string.len,table.insert,table.concat,math.floor,q,string.char for q=1,#y,1 do local f=(y)[q]if A(f)==`string`then local A,r,n,B,w=a(f),{},1,0,0 while n<=A do local q=p(f,n,n)local a=(K)[q]if a then B=B+a*64^(3-w)w=w+1 if w==4 then w=0 local K,A,p=W(B/65536),W((B%65536)/256),B%256 Q(r,D(K,A,p))B=0 end elseif q==`=`then Q(r,D(W(B/65536)))if n>=A or p(f,n+1,n+1)~=`=`then Q(r,D(W((B%65536)/256)))end break end n=n+1 end(y)[q]=o(r)end end end do local K=true pcall(function()((getgenv()))[a(20627)]=function()end end)local A,p,q=(string)[a(19543)],function()error(a(21242))end,false local Q,o,W,y=pcall(function()q=true end)and q,(math)[a(19680)],(table)[a(20872)],table and(table)[a(21550)]or unpack local D,f,r,n=o(3,65),0,0,{pcall(function()local K=14972502-a(20157)^1226788 return a(19408)/K end)}local B=(n)[2]local w=tonumber((A(tostring(B),a(19816)))())for p=1,D,1 do local q,Q=(math)[a(19680)](1,100),o(0,255)local W,n,T=o(1,q),o(1,2)==1,B:gsub(a(19816),a(19602)..(tostring(o(0,10000))..a(19602)))local I={pcall(function()if o(1,2)==1 or p==D then local p=tonumber((A(tostring((({pcall(function()local K=4516800-a(19850)^11178504 return a(20647)/K end)}))[2]),a(19816)))())K=K and w==p end if n then error(T,0)end local f={}for K=1,q,1 do(f)[K]=o(0,255)end(f)[W]=Q return y(f)end)}if n then K=K and((I)[1]==false and(I)[2]==T)else K=K and(I)[1]f=(f+(I)[W+1])%256 r=(r+Q)%256 end end local T=loadstring or load or((getfenv(print)))[a(19965)]or((getfenv(print)))[a(20834)]if not T then local K,A=pcall(function()return require(a(19786))end)T=A and(A)[a(19965)]end local I=true if T then local K,p=tonumber((A(tostring((({(T(a(21574)))()}))[2]),a(19816)))()),tonumber((A(tostring((({(T(a(21378)))()}))[2]),a(19816)))())I=K~=p end K=K and(f==r and I)local M=not K and p()if K then else repeat return(function()while true do l1,l2=l2,l1 p()end end)()until true while true do l2=o(1,6)if l2>2 then l2=tostring(l1)else l1=l2 end end return end end local p,K,A=function(K)local A=a(19382)for p=1,#K/2,1 do A=A..(K)[#K/2+(K)[p] ]end return A end do local q,Q,o,W,y,D,f,r,n,B=(math)[a(20276)],(math)[p{1,2,a(20703),a(20655)}],(table)[p{2,1,a(19330),a(19062)}],(string)[a(19942)],0,2,{},{},0,{}for K=1,256,1 do(B)[K]=K end repeat local K=Q(1,#B)local A=o(B,K);(r)[A]=W(A-1)until#B==0 local w={}local function T()if#w==0 then y=(y*61+32145278578787)%35184372088832 repeat D=(D*24)%257 until D~=1 local K=D%32 local A=(q(y/2^(13-(D-K)/32))%4294967296)/2^K local Q=q((A%1)*4294967296)+q(A)local o=Q%65536 local W,f=(Q-o)/65536,o%256 local r,n=(o-f)/256,W%256 local B=(W-n)/256 w={f,r,n,B}end return(table)[p{1,2,a(19062),a(19330)}](w)end local I={}A=setmetatable({},{[p{2,1,a(20490),a(20435)}]=I,[p{1,2,3,a(19752),a(21669),a(19330)}]=false})function K(A,p)local q=I if(q)[p]then else w={}local K=r y=p%35184372088832 D=p%255+2 local Q=(string)[a(19225)](A);(q)[p]=a(19382)local o=173 for Q=1,Q,1 do o=(((string)[a(20969)](A,Q)+T())+o)%256(q)[p]=(q)[p]..(K)[o+1]end end return p end end return(function(q,o,W,y,D,f,r,I,m,w,g,H,i,x,s,F,T,e,E,n,M,Q,B,...)E,g,M,n,x,m,I,F,e,s,Q,i,w,H,T,B=function(K,A,...)local p=I(A)local q=function(...)return Q(K,{},A,p)end return q end,function(K,A,...)local p=I(A)local q=function(q,a,...)return Q(K,{q,a},A,p)end return q end,function(K,...)local A,p=1,(K)[1]while p do(B)[p],A=(B)[p]-1,A+1 if(B)[p]==0 then(B)[p],(n)[p]=nil,nil end p=(K)[A]end end,{},function(K,A,...)local p=I(A)local q=function(q,a,o,W,y,D,...)return Q(K,{q,a,o,W,y,D},A,p)end return q end,function(K,...)(B)[K]=(B)[K]-1 if 0==(B)[K]then(B)[K],(n)[K]=nil,nil end end,function(q,...)for K=1,#q,1 do(B)[(q)[K] ]=1+(B)[(q)[K] ]end if W then local Q=W(true)local o=D(Q);(o)[(A)[K(p{1,2,a(19514),a(20967)},7814696030818)] ],(o)[(A)[K(a(19028),28201238717948)] ],(o)[(A)[K(a(20017),12340107217958)] ]=q,M,function(...)return 420883 end return Q else return y({},{[(A)[K(a(19370),19177924879482)] ]=M,[(A)[K(p{2,1,a(19603),a(20549)},14826698111451)] ]=q,[(A)[K(a(20514),7323572486114)] ]=function(...)return 420883 end})end end,function(K,A,...)local p=I(A)local q=function(q,a,o,W,...)return Q(K,{q,a,o,W},A,p)end return q end,function(K,A,...)local p=I(A)local q=function(...)return Q(K,{...},A,p)end return q end,function(K,A,...)local p=I(A)local q=function(q,a,o,...)return Q(K,{q,a,o},A,p)end return q end,function(Q,W,y,D,...)local MZ,rc,l,N,c,Qc,U,z,u,C,eZ,fZ,RZ,nc,T,mZ,aZ,ac,oc,Wc,xZ,J,oZ,tZ,PZ,lZ,Kc,pZ,L,fc,HZ,Z,iZ,R,sZ,j,BZ,YZ,Dc,h,JZ,cZ,QZ,Bc,G,O,rZ,hZ,d,vZ,nZ,yZ,NZ,v,TZ,t,b,bZ,B,KZ,EZ,CZ,Tc,wc,XZ,ZZ,WZ,M,VZ,zZ,AZ,qZ,jZ,S,X,IZ,FZ,OZ,k,kZ,Ac,qc,dZ,UZ,wZ,V,uZ,r,SZ,pc,Y,P,DZ,yc,I,GZ,LZ,gZ while Q do if Q<8598435 then if Q<4078033 then if Q<2115992 then if Q<1101161 then if Q<600701 then if Q<343806 then if Q<186921 then if Q<138051 then if Q<85045 then if Q<51944 then Q=919681 G=nil Y=nil else r=1 B=100 T=B B=1 z=B B=0 Q=12358935 M=z<B B=r-z end else z=(A)[K(p{4,3,1,2,a(21292),a(21371),a(19258),a(20927)},4939700657487)]Q=(n)[(y)[1] ]r=Q()Q=(n)[(y)[2] ]B=r T=z..B B=nil r=(A)[K(p{2,1,a(20775),a(21225)},30890472097419)]r=(Q)[r]r=r(Q,T)r={}Q=(q)[(A)[K(p{3,1,2,a(20445),a(19210),a(21632)},14686077362403)] ]end else if Q<147381 then Q=11655553 else B=750 Q=(n)[(y)[1] ]r=Q(B)r={}Q=(q)[(A)[K(p{1,3,2,a(21245),a(19035),a(19672)},23158009355915)] ]end end else if Q<309390 then if Q<207829 then if Q<196680 then Q=true r=1(n)[(y)[1] ]=Q B=200 T=B B=1 z=B B=0 Q=3918526 M=z<B B=r-z else Q=X Q=N and 5260659 or 6584195 end else h=(A)[K(p{3,2,1,4,a(21341),a(20261),a(20665),a(20479)},15104666133146)]k=(A)[K(a(19929),3651969732347)]k=(v)[k]Q=1028371 k=k(v,h)b=k end else if Q<322453 then r=(n)[(y)[2] ]z=(A)[K(p{1,2,a(21202),a(20434)},17819287714944)]Q=(r)[z]z=(A)[K(p{2,1,a(21111),a(19341)},24119671052841)]r=(A)[K(p{1,2,3,a(19837),a(19678),a(20158)},18449494889858)]r=(Q)[r]r=r(Q,z)z=r Q=z and 1918510 or 14263876 else Q=1120709 end end end else if Q<481405 then if Q<465567 then if Q<428635 then if Q<393118 then Q=(q)[(A)[K(p{3,1,2,a(19706),a(21278),a(20046)},34932785998974)] ]r={r}else r=(A)[K(a(20723),32893677511525)]L=60 z=1 P=1 Q=(q)[r]r=Q(z)r=(A)[K(a(20204),6365513815371)]Q=(B)[r]z=Q G=(A)[K(p{1,3,2,4,a(19686),a(20972),a(20862),a(21272)},10716098628448)]Q=z-T M=Q r=(A)[K(p{2,1,a(20868),a(20303)},1657597292089)]Q=(n)[(y)[1] ]Y=(n)[(y)[2] ]r=(Q)[r]j=Y(M,P)I=G..j r=r(Q,I)G=(A)[K(p{2,1,4,3,a(20839),a(19648),a(19143),a(21366)},24257969412)]Q=(n)[(y)[3] ]Y=(n)[(y)[2] ]r=(A)[K(p{2,1,a(20971),a(19732)},10346971652434)]P=M*L L=1 j=Y(P,L)I=G..j r=(Q)[r]L=3600 r=r(Q,I)G=(A)[K(p{2,1,3,4,5,a(21295),a(20214),a(19064),a(21554),a(21270)},33683742561665)]Q=(n)[(y)[4] ]r=(A)[K(p{1,2,a(20437),a(20111)},26392531664364)]r=(Q)[r]Y=(n)[(y)[2] ]P=M*L L=1 j=Y(P,L)L=86400 I=G..j r=r(Q,I)Q=(n)[(y)[5] ]G=(A)[K(p{1,4,3,2,a(19213),a(21289),a(20238),a(20301)},32718112907170)]r=(A)[K(p{1,2,a(21523),a(19500)},3770485144223)]Y=(n)[(y)[2] ]P=M*L L=1 j=Y(P,L)r=(Q)[r]I=G..j r=r(Q,I)Q=(n)[(y)[6] ]Y=(n)[(y)[2] ]L=604800 P=M*L G=(A)[K(p{1,4,5,3,2,a(19171),a(20633),a(21297),a(21394),a(20763)},9992631879174)]r=(A)[K(p{1,2,a(19409),a(19070)},29954836060174)]L=1 j=Y(P,L)r=(Q)[r]I=G..j G=(A)[K(p{2,1,3,4,5,a(20571),a(19526),a(20989),a(19279),a(21636)},17644085622755)]L=2592000 r=r(Q,I)Q=(n)[(y)[7] ]Y=(n)[(y)[2] ]P=M*L r=(A)[K(p{1,2,a(20050),a(20890)},20737310064260)]L=1 j=Y(P,L)I=G..j G=(A)[K(p{1,2,4,3,5,a(21360),a(20021),a(21557),a(20532),a(20985)},25016784012624)]L=31536000 r=(Q)[r]r=r(Q,I)Q=(n)[(y)[8] ]Y=(n)[(y)[2] ]P=M*L L=1 M=nil r=(A)[K(p{2,1,a(21188),a(19029)},2108567906089)]j=Y(P,L)r=(Q)[r]I=G..j r=r(Q,I)Q=z T=Q z=nil Q=7428820 end else M=(A)[K(a(19469),11666978335471)]z=(A)[K(a(19687),30413833163537)]T=(q)[z]z=(A)[K(p{2,1,a(20343),a(21167)},21062276494647)]z=(T)[z]z=z(T,M)T=(A)[K(p{1,2,a(20208),a(19054)},28162971574737)]B=(z)[T]T=(A)[K(p{3,1,2,a(20642),a(20677),a(20382)},22326113091478)]r=(B)[T]B=(A)[K(p{2,1,a(20438),a(21182)},31626820506666)]Q=(r)[B]B=Q z=Q Q=B and 14914134 or 4453521 T=B end else if Q<479359 then r=1000000000 Q=B<r Q=Q and 15910724 or 3748298 else G=nil I=nil Q=6881542 end end else if Q<582157 then if Q<542484 then if Q<489518 then P=(A)[K(p{3,4,2,1,a(20024),a(19846),a(20016),a(21259)},31677834719053)]j=(A)[K(a(20236),3464725678717)]Y=(q)[j]j=(A)[K(p{1,2,a(20067),a(21162)},1980135045376)]L=(A)[K(p{2,1,a(19098),a(20496)},21704486563200)]j=(Y)[j]j=j(Y,P)Y=(A)[K(p{2,1,a(21387),a(21074)},30522517781076)]r=(j)[Y]Y=(A)[K(p{1,3,2,a(20682),a(19750),a(21062)},4520551619837)]R=(A)[K(p{2,1,a(19900),a(20385)},26453653371913)]Q=(r)[Y]P=(n)[(y)[1] ]j=(P)[L]P=(A)[K(p{2,1,a(21560),a(19772)},450514648481)]r=(A)[K(p{2,1,a(21522),a(19808)},15290173868784)]U=(A)[K(p{2,1,a(20044),a(20577)},29098064417781)]Y=(j)[P]j=(A)[K(p{1,2,a(20031),a(21672)},17929839508334)]P=5 O=(G)[U]L=true r=(Q)[r]U=(A)[K(a(20314),1626048253651)]v=(O)[U]O=5 r=r(Q,Y,j,I,P,L,R,v,O)j=(A)[K(a(20403),34795848662617)]L=(A)[K(p{2,1,a(20289),a(19762)},28262983820291)]P=(A)[K(p{4,2,1,3,a(21670),a(19954),a(19226),a(19722)},14239166182233)]Y=(q)[j]j=(A)[K(p{2,1,a(19653),a(20200)},15202774145568)]R=(A)[K(p{2,1,a(19372),a(19462)},29194096081251)]U=(A)[K(p{1,2,a(19701),a(19874)},11541517385860)]j=(Y)[j]j=j(Y,P)Y=(A)[K(p{1,2,a(20588),a(21588)},17341015089897)]r=(j)[Y]Y=(A)[K(p{2,1,3,a(21326),a(20171),a(20655)},5828995739462)]Q=(r)[Y]P=(n)[(y)[1] ]j=(P)[L]P=(A)[K(p{2,1,a(19187),a(20689)},9723039729225)]L=true Y=(j)[P]P=5 O=(G)[U]r=(A)[K(p{2,1,a(20654),a(20132)},10069729494961)]j=(A)[K(p{1,2,a(19938),a(20741)},33862687254395)]G=nil U=(A)[K(a(20254),12327441258425)]v=(O)[U]r=(Q)[r]O=5 r=r(Q,Y,j,I,P,L,R,v,O)I=nil Q=9807465 else T=(A)[K(a(21666),22249965126752)]Q=true(n)[(y)[2] ]=Q Q=8493451 B=(q)[T]T=(A)[K(a(20871),34578689141755)]r=(B)[T]B=r();(n)[(y)[3] ]=B end else Q=5671742 end else if Q<584346 then G=(A)[K(p{2,3,1,a(19922),a(20600),a(19637)},26563677011855)]L=5 Y=(A)[K(p{2,1,a(21135),a(19875)},31822680496468)]G=(I)[G]G=G(I,Y,L)Y=w();(n)[Y]=G G=(n)[Y]Q=G and 1257575 or 4943617 else M=(n)[B]z=not M Q=z and 6513481 or 8793794 end end end end else if Q<829580 then if Q<684544 then if Q<653634 then if Q<642994 then if Q<624688 then r=(A)[K(a(19382),10428758981358)]B=(W)[1]T=(A)[K(a(20559),26001630546145)]z=(A)[K(p{1,2,a(20334),a(19958)},31766416830657)]Q=(r)[T]M=900000000 T=(q)[z]z=T(B)T=1 r={Q(z,T,M)}r={o(r)}Q=(q)[(A)[K(p{2,1,3,a(19887),a(20395),a(20336)},34032769885271)] ]else t=(A)[K(a(21634),9305766329875)]U=(A)[K(a(21458),6661948241488)]U=(v)[U]U=U(v,t)O=U Q=U and 8184641 or 14176043 end else Q=false r={Q}Q=(q)[(A)[K(p{2,1,3,a(21409),a(19941),a(19040)},18199300607098)] ]end else if Q<657834 then b=(A)[K(a(21533),19662720692356)]C=(A)[K(p{4,2,3,5,1,a(19254),a(21227),a(21015),a(19778),a(19082)},34642627596234)]b=(v)[b]b=b(v,C)l=Q Q=b and 2630335 or 1924074 V=b else z=(A)[K(p{1,2,3,a(19326),a(21093),a(20928)},6891924078871)]Q=(n)[(y)[1] ]r=Q()Q=(n)[(y)[2] ]B=r I=(n)[(y)[3] ]G=I(B)I=(A)[K(a(20107),15571736125127)]M=G..I T=z..M r=(A)[K(p{2,1,a(19798),a(21120)},12530353918862)]r=(Q)[r]r=r(Q,T)B=nil r={}Q=(q)[(A)[K(p{3,1,2,a(20414),a(19691),a(21032)},17578589936385)] ]end end else if Q<820720 then if Q<753378 then if Q<701617 then Q=w()v=R b=(A)[K(a(20155),8705734023090)];(n)[Q]=O O=Q l=(n)[O]V=(l)[b]C=(A)[K(a(19674),10296619575358)]b=(n)[B]l=(b)[C]t=V~=l U=t Q=t and 16409353 or 4546264 else r={}T=nil B=nil Q=(q)[(A)[K(p{2,3,1,a(19767),a(20782),a(19231)},20827199203761)] ]end else Q=3789389 end else if Q<828303 then Q=true r={Q}Q=(q)[(A)[K(p{2,1,3,a(19112),a(19819),a(19046)},18770939686269)] ]else I=nil M=nil Q=9631525 end end end else if Q<1004699 then if Q<901491 then if Q<851047 then if Q<831557 then T=nil Q=5200756 else r=1000000 Q=B<r Q=Q and 6487374 or 479259 end else M=(A)[K(a(19382),26255057986136)]I=(A)[K(a(20555),29878430938684)]Q=(q)[(A)[K(p{1,3,2,a(21439),a(20185),a(19216)},28169151293167)] ]z=(M)[I]M=z(T);(n)[(y)[3] ]+=M z=(n)[(y)[4] ]r={z}end else if Q<919320 then r=(A)[K(a(19167),6981050283266)]Q=(M)[r];(n)[(y)[2] ]=Q Q=11316042 else M,Y=I(z,M)Q=M and 14505190 or 12301494 end end else if Q<1027926 then if Q<1024566 then T=(n)[(y)[1] ]B=not T Q=B and 10426305 or 12574608 r=B else Q=(n)[(y)[1] ]Q=Q and 4331865 or 13117560 end else if Q<1035864 then V=b Q=C Q=2630335 else Q=t O=U Q=8184641 end end end end end else if Q<1565064 then if Q<1293656 then if Q<1210197 then if Q<1201047 then if Q<1148711 then if Q<1138462 then z=nil T=nil Q=11920095 else r={}Q=(q)[(A)[K(p{1,2,3,a(19739),a(19714),a(21320)},395000995698)] ]end else T=nil Q=2524595 end else if Q<1205394 then Q=(A)[K(p{16,10,21,2,17,5,19,12,20,15,7,24,11,1,22,23,6,3,4,25,9,18,8,14,13,a(19989),a(20743),a(20869),a(21205),a(21660),a(20819),a(21114),a(19081),a(20525),a(20808),a(21374),a(20023),a(21210),a(19857),a(20459),a(20037),a(21013),a(20140),a(21558),a(20641),a(21621),a(19575),a(20516),a(20939),a(21322)},16566700878337)]r=(A)[K(p{1,2,a(20619),a(20970)},25390921399722)]I=B I=nil(q)[r]=Q Q=9476513 else r=(A)[K(p{1,2,a(20675),a(20207)},34393634216387)]Q=(A)[K(p{1,2,3,a(20093),a(21404),a(19478)},14200375641276)]Q=(z)[Q]Q=Q(z,r)M=Q Q=M and 917219 or 11316042 end end else if Q<1255048 then if Q<1250810 then if Q<1227071 then L=w()j=nil(n)[L]=j U=Q j=i(10842562,{L})l=(A)[K(a(20373),8360002969055)];(n)[L]=j t=(q)[l]Q=t and 6814815 or 5557831 v=t else G=(n)[z]Q=G and 11627554 or 14061451 end else Q=1083081 U=z end else if Q<1260496 then O=(A)[K(a(21351),14971648527379)]G=(n)[(y)[3] ]k=(A)[K(a(19329),32074160983272)]v=(n)[Y]R=(v)[O]V=(A)[K(a(20488),8527620889421)]v=2 L=G(R,v)G=(n)[(y)[4] ]C=(n)[B]O=(A)[K(p{2,1,a(19420),a(21425)},26909949954498)]R=(A)[K(p{2,1,a(20066),a(19754)},7747157655674)]b=(C)[k]C=(A)[K(a(19872),22536903066774)]R=(G)[R]l=b..C t=V..l U=L..t v=O..U R=R(G,v)R=(A)[K(p{3,5,1,2,4,a(20253),a(19044),a(19091),a(19399),a(20812)},32075675447570)]v=(A)[K(a(19421),33268335298076)]Q=14475065 G=(n)[Y]R=(G)[R]R=R(G,v)v=i(12430176,{(y)[3],Y,(y)[4],B})G=(A)[K(p{2,1,a(19845),a(19476)},32947490458868)]G=(R)[G]G=G(R,v)L=nil(n)[(y)[5] ]=G else Q=(n)[(y)[1] ]Q=Q and 12570333 or 12850153 end end end else if Q<1458125 then if Q<1392950 then if Q<1341179 then if Q<1301859 then Y=(A)[K(a(20534),3812358024914)]I=(A)[K(a(20724),13669302716913)]I=(B)[I]I=I(B)G=(z)[Y]Y=(A)[K(a(20505),15717226846236)]Y=(G)[Y]Y=Y(G)M=I==Y Q=M and 9691781 or 8458394 else Q=l v=t Q=10268333 end else T,I=z(B,T)Q=T and 6412201 or 3089047 end else if Q<1427666 then r=(A)[K(a(19255),25072621837255)]Q=(q)[r]B=g(2587820,{})r=Q(B)Q=(q)[(A)[K(p{1,3,2,a(19769),a(20136),a(19801)},10035466587717)] ]r={}else J=nil Q=J and 8001298 or 3444416 end end else if Q<1513297 then if Q<1512330 then r=(n)[(y)[2] ]j=2 G=(A)[K(p{3,2,1,4,a(21257),a(19102),a(19747),a(19522)},13018259361264)]B=r()r=(n)[(y)[3] ]Q=13120583 Y=(A)[K(p{2,1,a(19195),a(19591)},14409850440219)]M=(A)[K(p{1,2,3,a(20721),a(21630),a(21673)},33749082652209)]z=(A)[K(a(20152),6497874828143)]I=(A)[K(a(19466),33252684567047)]B=(A)[K(p{2,1,a(19057),a(21629)},23104806608658)]B=(r)[B]T={[z]=M,[I]=G,[Y]=j}B=B(r,T)else Q=4798515 end else if Q<1537964 then Q=(A)[K(p{1,2,a(20752),a(21156)},19287448576794)]r=0(B)[Q]=r Q=false(n)[(y)[1] ]=Q Q=2422057 else M=0 z=T==M Q=z and 13237486 or 14762411 end end end end else if Q<1773483 then if Q<1616961 then if Q<1607607 then if Q<1595753 then if Q<1590543 then Q=r and 7756494 or 315460 else Q=false r={Q}Q=(q)[(A)[K(p{1,3,2,a(19222),a(21474),a(19265)},13411589968729)] ]end else Q=11829304 end else if Q<1611463 then r=(n)[(y)[1] ]Q=not r Q=Q and 4336977 or 5923786 else Q=r and 14315378 or 1148406 end end else if Q<1666919 then if Q<1655972 then if Q<1639779 then j=(A)[K(p{1,2,a(19402),a(19624)},34741212702854)]Q=(n)[(y)[1] ]T=(A)[K(p{2,1,a(21596),a(20223)},15607502612859)]r=Q()B=r M=(A)[K(p{1,3,2,a(21192),a(19818),a(20164)},6822937077150)]r=0.0008 Q=r*B;(n)[(y)[2] ]=Q r=(n)[(y)[3] ]Y=(q)[j]j=(A)[K(p{2,1,a(21045),a(21121)},15443645361067)]Q=(q)[(A)[K(p{2,1,3,a(20141),a(20624),a(19193)},6929561976740)] ]G=(Y)[j]j=(A)[K(a(20979),25133899618516)]B=nil P=(n)[(y)[2] ]Y=G(j,P)G=(A)[K(a(21640),5333710514214)]I=Y..G z=M..I T=(r)[T]T=T(r,z)r={}else Q=5816790 end else Q=2595657 end else if Q<1730329 then Q=5896725 else z=(A)[K(p{2,1,a(21407),a(21572)},944970434980)]M=(A)[K(p{1,2,3,4,a(21546),a(20284),a(20466),a(21070)},26249439356954)]Q=6531726 T=(B)[z]z=(A)[K(p{1,2,3,a(20785),a(19973),a(19284)},29117410254486)]z=(T)[z]z=z(T,M)r=z end end end else if Q<1980847 then if Q<1921225 then if Q<1870227 then if Q<1842003 then Q=753719 else l=Q C=(A)[K(p{2,1,a(21250),a(19048)},18053060902724)]b=(q)[C]t=b Q=b and 1306234 or 2071920 end else I=(A)[K(a(20605),29254414330840)]G=(A)[K(p{3,1,2,4,a(20351),a(21291),a(21088),a(19833)},4903955597974)]M=(q)[I]I=(A)[K(p{1,2,a(19782),a(20837)},18024197767793)]I=(M)[I]I=I(M,G)M=(A)[K(p{2,1,a(20875),a(21663)},26557989976477)]r=(I)[M]G=(A)[K(p{1,2,a(20774),a(19527)},25540758372797)]M=(A)[K(p{3,2,1,a(19140),a(21639),a(21177)},24902017830351)]Q=(r)[M]I=(n)[(y)[2] ]M=(I)[G]I=(A)[K(p{3,1,2,a(21685),a(21115),a(19695)},28697465194375)]I=(M)[I]Y=Q G=(A)[K(p{2,1,a(19743),a(21592)},7086550390567)]I=I(M,G)G=T M=(A)[K(p{2,1,a(19515),a(19829)},17147017637307)]Q=T and 8674273 or 8099601 end else if Q<1932400 then h=(A)[K(p{3,2,1,a(19715),a(19659),a(19982)},2100184575474)]k=(A)[K(a(20660),22389146198213)]k=(v)[k]C=Q k=k(v,h)Q=k and 1028371 or 301378 b=k else Y=nil Q=j j=nil z=Q Q=3238006 end end else if Q<2053993 then if Q<2041940 then z=G L=(A)[K(a(19198),14995171388267)]P=(Y)[L]L=(A)[K(a(21433),29224764615361)]L=(P)[L]L=L(P)P=(A)[K(a(21028),1613460992962)]P=(L)[P]P=P(L,T)Q=P and 14059273 or 9035428 else Q=(q)[(A)[K(p{2,3,1,a(19649),a(21048),a(20278)},10798140196996)] ]r={T}end else if Q<2083235 then C=Q h=(A)[K(p{1,2,a(21647),a(19444)},6461073621805)]k=(q)[h]b=k Q=k and 5980506 or 14912365 else Q=b Q=11166748 t=l end end end end end end else if Q<3309973 then if Q<2776264 then if Q<2502966 then if Q<2270400 then if Q<2231235 then if Q<2204687 then if Q<2181525 then Q=WZ Q=yZ and 3393326 or 9986035 else Q=7694391 end else R=L t=(A)[K(p{2,1,a(20391),a(19914)},34443381630302)]U=(A)[K(a(20606),27057634755717)]U=(v)[U]U=U(v,t)Q=U and 6904619 or 7896562 O=U end else if Q<2258856 then r=(n)[(y)[1] ]B=(A)[K(p{1,2,a(20262),a(20920)},13268631618454)]Q=(r)[B]Q=Q and 7104692 or 6825059 else c=nil aZ=nil Q=3268287 end end else if Q<2430709 then if Q<2421868 then if Q<2335898 then T=(n)[(y)[1] ]z=(A)[K(p{1,2,a(20684),a(20300)},34058264023706)]B=(T)[z]T=(A)[K(p{1,3,2,a(20166),a(20560),a(21452)},35102658541804)]T=(B)[T]z=(A)[K(p{1,2,a(21243),a(21478)},29264644734068)]T=T(B,z)r=T Q=T and 4628975 or 7320608 else G=(A)[K(p{1,3,2,a(21299),a(19449),a(19633)},12279837597166)]G=(B)[G]r=(A)[K(p{1,2,a(21671),a(20281)},15431407429312)]Q=(q)[r]I={G(B)}G={Q(o(I))}z=(G)[2]Q=7410539 M=(G)[3]r=(G)[1]I=r end else Q=(q)[(A)[K(p{3,1,2,a(19596),a(21563),a(21157)},81781609386)] ]B=nil r={}end else if Q<2466704 then I=(A)[K(a(20601),20013706444746)]G=86400 j=86400 R=(A)[K(p{2,1,a(21369),a(19795)},21085161462133)]M=(q)[I]I=(A)[K(a(21444),14656889306610)]z=(M)[I]M=z()I=(A)[K(a(19682),28750652962427)]z=(n)[(y)[3] ]T=M-z M=(q)[I]I=(A)[K(a(21199),35044710690306)]z=(M)[I]I=T/G G=(A)[K(a(20760),33142045677188)]M=z(I)I=(q)[G]G=(A)[K(a(19920),618621905547)]z=(I)[G]Y=T%j P=3600 j=3600 G=Y/j I=z(G)Y=(A)[K(a(20526),8459422183422)]G=(q)[Y]Y=(A)[K(a(19043),30555875343974)]z=(G)[Y]j=T%P P=60 Y=j/P G=z(Y)Y=60 z=T%Y Q=3172829 Y=(n)[(y)[4] ]L=(q)[R]R=(A)[K(p{1,2,a(19882),a(20726)},5387419072309)]j=(A)[K(p{2,1,a(20068),a(19673)},18943806778645)]j=(Y)[j]P=(L)[R]R=(A)[K(p{2,6,4,1,8,3,5,7,a(21384),a(21391),a(19273),a(20790),a(20259),a(19702),a(21549),a(19392)},21784376827471)]L={P(R,M,I,G,z)}G=nil z=nil T=nil I=nil M=nil j=j(Y,o(L))else r=(A)[K(a(20230),30824379536777)]B=i(15129840,{})Q=(q)[r]r=Q(B)r={}Q=(q)[(A)[K(p{3,1,2,a(21119),a(19501),a(20576)},31457863377486)] ]end end end else if Q<2630161 then if Q<2577227 then if Q<2544915 then if Q<2516258 then Q=z Q=r and 9565124 or 1657636 else r={}B=nil Q=(q)[(A)[K(p{1,3,2,a(21536),a(20260),a(19684)},26268692612156)] ]end else qZ=1 X+=qZ QZ=X>Z Q=QZ and 4354253 or 9343439 end else if Q<2593758 then B=(A)[K(a(19641),1909978130591)]r=(q)[B]B=(A)[K(p{1,2,a(20432),a(20562)},17022248406529)]T=(A)[K(p{1,2,a(19454),a(19359)},18134513005208)]z=(A)[K(p{1,2,a(21472),a(19873)},12025008990817)]B=(r)[B]B=B(r,T)r=(A)[K(p{2,3,1,a(19285),a(19983),a(19665)},13358271490936)]Q=(B)[r]B=Q T=(B)[z]Q=T and 1767428 or 6531726 r=T else I=(A)[K(a(21238),30961430183585)]M=(q)[I]T=nil I=(A)[K(a(21343),9058863603768)]z=(M)[I]I=(n)[(y)[10] ]Q=1026432 M=z(I)end end else if Q<2639563 then if Q<2634230 then U=V Q=l Q=10558451 else Q=(n)[(y)[1] ]r=(A)[K(p{2,1,a(21031),a(19560)},18699042272537)]r=(Q)[r]r=r(Q)Q=(q)[(A)[K(p{3,1,2,a(20224),a(20340),a(20464)},23359729974250)] ]r={}end else if Q<2769899 then G=true Q=G and 7198961 or 4593906 else z=(A)[K(a(19382),8182882868157)]T=B~=z r=T Q=14417319 end end end end else if Q<3136920 then if Q<2996678 then if Q<2877119 then if Q<2857175 then if Q<2837873 then G=nil Q=5407161 I=nil else Q=(q)[(A)[K(p{1,2,3,a(19643),a(21064),a(20611)},2408862454958)] ]r={}end else B=(A)[K(a(19219),13361666897447)]r=(q)[B]B=(A)[K(a(20997),29383861680345)]Q=(r)[B]B={}r=Q(B)Q=true r={}(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{2,1,3,a(19993),a(20856),a(20804)},486836188501)] ]end else if Q<2984158 then M=(n)[(y)[1] ]T=Q z=not M Q=z and 16261964 or 12019246 r=z else z=true Q=6265634(n)[(y)[2] ]=z end end else if Q<3089111 then if Q<3041242 then if Q<3012259 then B=w()Q=0 T=F(15234239,{(y)[1],B,(y)[2]})r=(A)[K(a(20777),6205029204342)];(n)[B]=Q Q=(q)[r]r=Q(T)Q=(n)[B]r={Q}Q=(q)[(A)[K(p{1,3,2,a(20797),a(19690),a(21423)},33559636973031)] ]else Q={}T=Q B=(W)[1]z=not B Q=z and 11278140 or 10497339 r=z end else r={}Q=(q)[(A)[K(p{2,3,1,a(20698),a(19843),a(20978)},13879408828115)] ]end else if Q<3135100 then Q=(A)[K(a(20128),32076378972472)]Q=(B)[Q]Q=Q(B)j=(A)[K(p{2,1,a(20722),a(19482)},9313594638465)]T=Q r=(A)[K(a(19160),25770416236351)]Q=nil z=Q Q=(q)[r]G=(n)[(y)[1] ]j=(G)[j]Y={j(G)}G={Q(o(Y))}Q=3136400 r=(G)[1]M=(G)[2]I=(G)[3]G=r else I,j=G(M,I)Q=I and 4198915 or 3238006 end end end else if Q<3244525 then if Q<3176740 then if Q<3168544 then if Q<3144265 then J=nil d=true(n)[M]=d Q=3444416 else B=(W)[1]Q=(n)[(y)[1] ]Q=Q and 8840529 or 10087970 end else Q=6490545 end else if Q<3234154 then Q=6853974 else M=not z Q=M and 15874224 or 5671742 end end else if Q<3258522 then if Q<3251131 then I=B r=(A)[K(p{1,2,a(21166),a(20955)},17840017827417)]Q=(A)[K(p{19,2,16,14,20,6,9,7,13,21,4,18,25,23,8,11,24,5,12,3,1,15,17,10,22,a(20350),a(19990),a(19095),a(19931),a(21022),a(19669),a(19432),a(20645),a(20672),a(20416),a(19335),a(20492),a(20847),a(19521),a(21198),a(20095),a(21033),a(19295),a(21244),a(20803),a(21420),a(20405),a(20057),a(19579),a(19173)},22867596450956)]I=nil(q)[r]=Q Q=12358935 else Q=(q)[(A)[K(p{3,2,1,a(20942),a(21355),a(21100)},12825148132030)] ]G=(A)[K(p{2,8,4,1,3,7,5,6,a(19744),a(20823),a(20607),a(20545),a(20651),a(20088),a(19913),a(20664)},208838882363)]r={G}end else if Q<3268320 then qZ=not pZ S=S+AZ c=S<=KZ c=qZ and c qZ=S>=KZ qZ=pZ and qZ c=qZ or c qZ=14991290 Q=c and qZ c=6052894 Q=Q or c else M=(A)[K(a(20515),9379215143092)]z=(q)[M]G=(A)[K(a(19382),12064882076001)]Y=(A)[K(a(21361),31514632032694)]I=(G)[Y]G=1 Y=20 M=z(I,T,G,Y)r=not M Q=r and 3372383 or 851819 end end end end end else if Q<3635552 then if Q<3431604 then if Q<3355222 then if Q<3349387 then if Q<3341160 then if Q<3337748 then Y=m(Y)Q=15047446 L=m(L)J=nil h=nil u=nil C=nil v=nil N=true U=m(U)b=m(b)j=m(j)T=N Z=nil t=nil l=nil k=nil d=nil else Q=2202777 end else r={}Q=(q)[(A)[K(p{2,3,1,a(21306),a(19907),a(20179)},28441593185810)] ]end else if Q<3353565 then j=2 G=(A)[K(p{3,1,2,a(21476),a(19087),a(21335)},28294299161378)]B=(A)[K(p{1,2,a(20149),a(19836)},8170489873177)]Y=(A)[K(p{1,2,a(19594),a(20826)},20820942319970)]M=(A)[K(p{1,2,3,a(20298),a(20009),a(19953)},10481999499615)]z=(A)[K(a(21565),21684952224553)]r=(n)[(y)[3] ]I=(A)[K(a(21189),16412803754891)]T={[z]=M,[I]=G,[Y]=j}B=(r)[B]B=B(r,T)Q=13120583 else l=C Q=k Q=2105723 end end else if Q<3401824 then if Q<3395091 then if Q<3376096 then r=true Q=7070659(n)[(y)[2] ]=r else Q=(q)[(A)[K(p{1,3,2,a(19435),a(19848),a(20697)},29440636170345)] ]r={l}end else Q=true Q=Q and 10617596 or 9730285 end else if Q<3406927 then B=(A)[K(p{1,2,a(21094),a(20584)},1694388417300)]r=(q)[B]B=(A)[K(p{2,1,3,a(19639),a(19541),a(19027)},15599900817819)]Q=(r)[B]B=(n)[(y)[1] ]r=Q(B)Q=true r={}(n)[(y)[2] ]=Q Q=(q)[(A)[K(p{2,3,1,a(20593),a(19586),a(20580)},24956313485549)] ]else Y=(A)[K(a(21000),29819091895506)]j=(A)[K(a(20705),1164153024608)]Y=(I)[Y]Q=12779476 Y=Y(I,j)G=Y end end end else if Q<3524973 then if Q<3502873 then if Q<3449600 then if Q<3448055 then Q=1441101 else O=(A)[K(p{1,2,a(20494),a(20399)},23321773883812)]Q=(A)[K(a(19293),26290484676642)]Q=(v)[Q]Q=Q(v,O)Q=Q and 16671423 or 11862772 end else Q=false(n)[(y)[4] ]=Q Q=(q)[(A)[K(p{3,2,1,a(19033),a(21622),a(20879)},31340890072603)] ]r={}end else if Q<3512707 then L=(n)[j]P=not L Q=P and 14929100 or 14841188 else b=Q d=(A)[K(a(21105),14291809110788)]h=(n)[O]k=(h)[d]h=(A)[K(p{1,2,a(21655),a(20666)},9070628572903)]C=k~=h l=C Q=C and 11519968 or 2105723 end end else if Q<3556352 then if Q<3527925 then M=(A)[K(p{1,2,a(19588),a(21502)},16099217949110)]Q=(q)[(A)[K(p{2,3,1,a(20012),a(21468),a(20891)},13600745332548)] ]z=(q)[M]I=(n)[(y)[1] ]G={I(T)}M={z(o(G))}r={o(M)}else l=100 Q=9724052 v=1 b=l l=1 C=l l=0 k=C<l l=v-C end else if Q<3573426 then O=1 Q=(A)[K(p{1,2,3,a(21163),a(19041),a(20674)},32198889626747)];(v)[Q]=O Q=12316829 else Q=r and 511748 or 2976462 end end end end else if Q<3831422 then if Q<3764336 then if Q<3724999 then if Q<3689259 then if Q<3644609 then r=(n)[(y)[1] ]B=1 T=B Q=6022302 B=-1 z=B B=0 M=z<B B=r-z else O=U Q=t Q=9928254 end else c=u~=d Q=199925 N=c end else if Q<3748516 then r=1000000000000 Q=B<r Q=Q and 16468214 or 15980754 else Q=6825059 end end else if Q<3805711 then if Q<3790278 then if Q<3780729 then U=w()X=(A)[K(p{1,2,a(20820),a(20690)},6842590071196)]AZ=false S=(A)[K(a(19181),29604629467422)]d=(A)[K(p{2,1,a(20366),a(21542)},5553910353240)]z=i(12932207,{})v=0 C=(A)[K(p{3,2,1,a(20504),a(19264),a(21385)},29520452536196)]L=0(n)[U]=L L=w()t=w()l=(A)[K(a(19411),30398245673714)]J=g(10213419,{U,M,L,t});(n)[L]=v KZ=(A)[K(p{1,3,2,a(19544),a(19710),a(19393)},25411520640633)]h=(A)[K(p{2,1,a(21526),a(19979)},27879985727467)]u=(A)[K(p{2,1,a(20268),a(19346)},13969865841186)]v={}Z=(A)[K(p{1,2,a(19855),a(21667)},26604001943601)];(n)[t]=v k={h}c=(A)[K(p{1,2,a(19815),a(20001)},23488818917541)]h={[d]=J,[Z]=z,[u]=z,[X]=z,[c]=z,[S]=z,[KZ]=AZ}v=(q)[l]b=(q)[C]C={b(k,h)}l=v(o(C))Q=l and 1707564 or 3535448 else v=nil h=nil Q=9724052 end else Q=4942010 end else if Q<3807833 then U=nil vZ=m(vZ)CZ=m(CZ)DZ=m(DZ)hZ=nil fZ=m(fZ)BZ=m(BZ)AZ=m(AZ)XZ=m(XZ)eZ=m(eZ)tZ=m(tZ)T=nil jZ=m(jZ)c=m(c)bZ=nil FZ=nil uZ=m(uZ)t=nil HZ=m(HZ)aZ=m(aZ)Qc=nil u=m(u)oZ=m(oZ)YZ=m(YZ)mZ=nil EZ=m(EZ)SZ=m(SZ)lZ=nil b=m(b)xZ=nil TZ=m(TZ)L=nil GZ=m(GZ)Z=m(Z)cZ=m(cZ)NZ=nil WZ=m(WZ)MZ=m(MZ)S=m(S)qc=m(qc)k=nil KZ=m(KZ)VZ=m(VZ)RZ=m(RZ)rZ=m(rZ)z=m(z)gZ=m(gZ)OZ=m(OZ)X=m(X)r={}M=m(M)Ac=nil wZ=m(wZ)JZ=nil dZ=m(dZ)Kc=nil iZ=m(iZ)QZ=m(QZ)UZ=m(UZ)zZ=m(zZ)pZ=m(pZ)LZ=m(LZ)kZ=m(kZ)ZZ=m(ZZ)sZ=m(sZ)C=nil yZ=m(yZ)h=nil Q=(q)[(A)[K(p{2,3,1,a(19378),a(20418),a(19758)},20423257753691)] ]pc=m(pc)ac=m(ac)IZ=m(IZ)PZ=m(PZ)nZ=m(nZ)else Q=4446253 end end end else if Q<3925232 then if Q<3913563 then if Q<3906478 then if Q<3892876 then Q=0 T=Q B=(W)[1]r=(A)[K(a(21237),14933838105409)]Q=(q)[r]I={Q(B)}r=(I)[1]M=(I)[3]z=(I)[2]I=r Q=7325412 else Q=z Q=T and 14198729 or 6253744 end else M=(n)[(y)[3] ]Q=14006782 T=M end else if Q<3916158 then Q=7192348 else B=B+z r=B<=T I=not M r=I and r I=B>=T I=M and I r=I or r I=6629903 Q=r and I r=16663876 Q=Q or r end end else if Q<3958214 then if Q<3944119 then r=(A)[K(a(19518),8716616865295)]B=(A)[K(p{4,1,2,3,a(19304),a(20640),a(21467),a(20802)},6066573230240)]Q=(q)[r]r=(A)[K(p{2,1,a(21580),a(19625)},8607182997688)]r=(Q)[r]r=r(Q,B)B=r r=(A)[K(a(21171),11992762016142)]Q=(A)[K(p{2,3,1,a(19128),a(21286),a(21190)},15169978180925)]Q=(B)[Q]Q=Q(B,r)T=Q Q=T and 12302822 or 9645154 else l=nil Q=l and 16115351 or 7714810 end else if Q<4018281 then Q=1616890 B=(n)[(y)[2] ]r=B else v=(A)[K(a(21303),28420601756312)]P=(A)[K(p{1,2,a(19895),a(21265)},1498503311789)]Q=(q)[(A)[K(p{1,2,3,a(20250),a(19437),a(20648)},13540849821955)] ]j=(q)[P]R=(q)[v]v=(A)[K(a(19866),28030686167267)]L=(R)[v]R={L(B)}P={j(o(R))}r={o(P)}end end end end end end end else if Q<6412461 then if Q<5404287 then if Q<4640545 then if Q<4355182 then if Q<4259356 then if Q<4196978 then if Q<4144560 then if Q<4115121 then G=(A)[K(a(20714),4050672319914)]Q=(q)[G]Y=s(2310584,{I,(y)[4],(y)[2]})G=Q(Y)Q=15688266 else Q=(q)[(A)[K(p{1,3,2,a(19812),a(20931),a(20591)},11824431505171)] ]r={}end else r=(A)[K(p{2,1,a(19155),a(20781)},32482582774277)]Q=(A)[K(p{2,3,1,a(19277),a(20297),a(21548)},261926059270)]Q=(B)[Q]Q=Q(B,r)T=Q Q=not T Q=Q and 6807162 or 15860059 end else if Q<4204895 then Y=I L=(A)[K(a(21279),8636223707782)]P=(j)[L]L=(A)[K(a(20398),3389557181391)]R=1 L=(P)[L]L=L(P)v=#T P=(A)[K(a(20707),23645592416157)]P=(L)[P]P=P(L,R,v)Q=P==T Q=Q and 1967059 or 11087553 else Q=9929278 end end else if Q<4341364 then if Q<4332616 then if Q<4310791 then z=not T r=z Q=1582875 else Q=(n)[(y)[2] ]r=Q()Q=(n)[(y)[3] ]T=r Q=Q and 10126130 or 2595657 end else r={}Q=(q)[(A)[K(p{3,1,2,a(21217),a(21304),a(20659)},30580376904940)] ]end else if Q<4351315 then R=P t=(A)[K(a(19696),9030403376164)]U=(A)[K(a(20897),32412066525557)]U=(v)[U]U=U(v,t)Q=U and 9928254 or 9126748 O=U else Q=(q)[(A)[K(p{2,1,3,a(19188),a(21175),a(20876)},24759567890752)] ]r={l}end end end else if Q<4577669 then if Q<4476668 then if Q<4447887 then if Q<4398738 then B=(W)[1]r=1000 Q=B<r Q=Q and 6691659 or 831821 else r=(A)[K(a(20497),33493266761508)]Q=(q)[r]B=1 r=Q(B)Q=r and 14580962 or 13017774 end else Q=z z=0 Q=(q)[(A)[K(p{2,1,3,a(20465),a(21027),a(21379)},19995691337030)] ]r=T or z r={r}end else if Q<4545565 then WZ=(A)[K(a(19492),26648252060599)]yZ=(q)[WZ]WZ=1 oZ=(yZ)[WZ]WZ=Q yZ=(A)[K(a(20895),31815500700233)]QZ=(oZ)[yZ]yZ=(A)[K(a(19947),32832073941654)]oZ=(aZ)[yZ]DZ=(n)[b]fZ=DZ(QZ)DZ=(n)[b]rZ=DZ(oZ)nZ=fZ~=rZ yZ=nZ Q=nZ and 2178444 or 15066832 else Q=U and 5988612 or 12188959 end end else if Q<4600509 then if Q<4596358 then Q=14498840 else Q=true T=(A)[K(a(20887),9584306101792)];(n)[(y)[1] ]=Q B=(q)[T]T=(A)[K(a(19414),25027379486184)]Q=14003008 r=(B)[T]T=H(16604241,{(y)[2],(y)[3],(y)[1]})B=r(T)end else if Q<4609427 then P=j j=nil Q=558670 z=P M=nil else B=r Q=B and 8021853 or 2524595 end end end end else if Q<4983684 then if Q<4798833 then if Q<4708054 then if Q<4685987 then if Q<4666369 then Q=830742 else Q=(q)[(A)[K(p{1,3,2,a(19174),a(20048),a(20233)},28379902209445)] ]r={}end else z=(A)[K(p{2,1,a(20885),a(19657)},30573365876184)]Q=(n)[(y)[1] ]I=(A)[K(p{1,2,a(20581),a(20770)},20504759320755)]M=0 r=(A)[K(p{1,3,2,a(19951),a(19104),a(19224)},31071950106582)]T=(q)[z]r=(Q)[r]z=(A)[K(a(19661),3785051234498)]B=(T)[z]z=0 T=B(z,M)M=(q)[I]I=(A)[K(p{3,2,1,a(20145),a(21455),a(20975)},16057624383115)]z=(M)[I]M=(A)[K(p{1,2,a(19842),a(21494)},28661193401818)]B=(z)[M]z=(A)[K(p{2,1,a(21428),a(19238)},3597285207591)]r=r(Q,T,B)r=(A)[K(a(21569),156685691509)]M=0 B=1 Q=(q)[r]r=Q(B)Q=(n)[(y)[1] ]I=(A)[K(p{1,2,a(19322),a(20081)},17119606880388)]T=(q)[z]z=(A)[K(a(20413),889762402161)]B=(T)[z]r=(A)[K(p{2,1,a(20561),a(19962)},29185937527694)]z=0 r=(Q)[r]T=B(z,M)M=(q)[I]I=(A)[K(p{2,3,1,a(20126),a(20370),a(19884)},26779801968399)]z=(M)[I]M=(A)[K(p{2,1,a(21111),a(19368)},12401666067934)]B=(z)[M]r=r(Q,T,B)r={}Q=(q)[(A)[K(p{1,2,3,a(19214),a(20635),a(21020)},17013878796965)] ]end else if Q<4728729 then j=(A)[K(a(21432),31572011221635)]P=H(16359379,{G})Q=(q)[j]j=Q(P)P=(A)[K(p{1,2,3,a(19058),a(19753),a(21099)},29101222433011)]j=(A)[K(a(19067),4615589372885)]Q=(q)[j]j=(A)[K(p{2,1,a(19574),a(19452)},35072718105346)]U=(A)[K(p{3,1,2,a(19731),a(21216),a(19766)},20169611391882)]j=(Q)[j]j=j(Q,P)P=w();(n)[P]=j j=(n)[B]L=(A)[K(a(20870),23777544421969)]Q=(j)[L]j=(A)[K(p{2,1,a(21461),a(20221)},18734083411144)]j=(Q)[j]L=g(4700675,{P})j=j(Q,L)j=(A)[K(a(19275),24566714212038)]O=(A)[K(p{2,1,a(20104),a(19120)},3214420377205)]Q=(q)[j]v=(q)[O]U=(v)[U]O={U(v)}v={Q(o(O))}L=(v)[2]R=(v)[3]Q=13201311 j=(v)[1]else G=false j=w()L=(A)[K(a(20151),18902168330065)];(n)[j]=G P=(q)[L]R=H(6522656,{j})L=(A)[K(a(19296),14978231814963)]G=(P)[L]L=0 Q=14684795 P=G(L,R)L=(A)[K(a(19344),1659641616409)]P=(q)[L]L=(A)[K(a(20960),18177344416826)]G=(P)[L]L=0.1 P=G(L)G=(n)[j]end end else if Q<4943563 then if Q<4941563 then if Q<4838292 then B=(W)[1]T=not B r=T Q=T and 12842692 or 13587219 else B=H(16292219,{})r=(A)[K(a(21658),4948315643095)]Q=(q)[r]r=Q(B)Q=(q)[(A)[K(p{1,2,3,a(20701),a(20706),a(20991)},24215954779730)] ]r={}end else v=true Q=v and 3795537 or 3339893 end else if Q<4963674 then L=(n)[(y)[4] ]Q=14475065 v=(A)[K(p{6,2,3,4,1,5,a(20106),a(20190),a(19629),a(19281),a(19934),a(20227)},26965842862169)]R=(A)[K(p{1,2,a(20851),a(19510)},31752745846228)]R=(L)[R]R=R(L,v)else r=(A)[K(a(19165),24303516646453)]T=w()Q=0 B=w()z=i(3927647,{B,T});(n)[B]=(W)[1];(n)[T]=Q Q=(q)[r]r=Q(z)Q=(n)[T]r={Q}Q=(q)[(A)[K(p{3,2,1,a(21057),a(20341),a(19250)},16088332214120)] ]end end end else if Q<5209355 then if Q<5148751 then if Q<5122126 then if Q<5037111 then Z=true Q=Z and 12725918 or 5817079 else G,Y=M(I,G)Q=G and 9977913 or 5730702 end else T=(A)[K(p{2,1,a(20636),a(19881)},7334802966204)]B=(A)[K(a(19584),13769254905872)]r=(q)[B]B=(A)[K(p{1,2,a(21273),a(20217)},10795188703370)]j=false B=(r)[B]B=B(r,T)r=(A)[K(p{3,2,1,a(20357),a(19569),a(20558)},16250839919311)]Q=(B)[r]B=w()T=(A)[K(p{2,1,a(19528),a(19554)},7489892362174)];(n)[B]=Q r=(A)[K(a(19464),18521757280956)]Q=(q)[r]r=(A)[K(p{1,2,a(20629),a(20456)},28354089126280)]I=(A)[K(a(19283),3636804900521)]r=(Q)[r]r=r(Q,T)M=(q)[I]T=r I=(A)[K(p{2,3,1,a(19757),a(20484),a(19069)},5896613086835)]z=(M)[I]I=(A)[K(a(20123),31012488743723)]Q=(A)[K(p{2,1,4,3,a(20578),a(20061),a(19422),a(21081)},10077628138154)]M=(A)[K(a(19404),5227525711265)]Q=(T)[Q]r=(z)[M]z=false Q=Q(T,r,z)M=(q)[I]I=(A)[K(p{3,1,2,a(19724),a(20251),a(20389)},8395100565690)]z=(M)[I]M=(A)[K(p{2,1,a(19401),a(21282)},18846590772022)]I=(A)[K(p{1,2,a(20653),a(19115)},17951264131806)]r=(z)[M]z=false M=(A)[K(a(21661),30983537181227)]Q=(A)[K(p{4,3,2,1,a(20940),a(20778),a(20115),a(19385)},1804397000218)]Q=(T)[Q]Q=Q(T,r,z)z=(q)[M]M=(A)[K(p{2,1,a(19351),a(19448)},5125300422827)]M=(z)[M]M=M(z,I)z=(A)[K(p{2,1,a(20742),a(21203)},9437911485189)]r=(M)[z]z=(A)[K(p{1,2,a(21108),a(21607)},33764829532714)]Q=(r)[z]z=false r=(A)[K(p{2,1,a(20696),a(21260)},11402578430812)];(Q)[r]=z Q=(n)[B]G=w()z=1000 r=(A)[K(p{5,3,4,2,1,a(20477),a(19868),a(19611),a(19995),a(19534)},20579873218924)];(Q)[r]=z R=(A)[K(p{3,1,2,a(19755),a(21344),a(19333)},28872652713585)]r=(A)[K(a(20144),16153947372501)]Q=(q)[r]z=s(9288315,{})r=Q(z)r=(A)[K(a(19071),10497634727691)]Q=(q)[r]z=g(13224076,{})r=Q(z)z=H(7051013,{B})r=(A)[K(a(20523),32058221854353)]Q=(q)[r]r=Q(z)r=(A)[K(a(21103),9607062451355)]Q=true z=Q Q=(q)[r]M=Q r=(A)[K(p{1,2,a(20377),a(20020)},24216790987486)]Q=(M)[r]I=Q r=(A)[K(p{2,1,a(19156),a(20159)},18124243605633)]Q=(M)[r]r=(A)[K(p{1,2,a(19587),a(19084)},2690947165214)];(n)[G]=Q Q=(I)[r]Y=Q r=0 Q=(A)[K(p{1,3,2,a(20786),a(19689),a(19957)},8748981089959)];(Y)[Q]=r r=0 Q=(A)[K(p{2,3,1,a(20317),a(19823),a(19108)},10259239002468)];(Y)[Q]=r r=0 Q=(A)[K(p{3,1,2,4,a(20402),a(19830),a(21317),a(19254)},28292011675602)];(Y)[Q]=r Q=(A)[K(p{3,1,2,4,a(21681),a(19439),a(19538),a(21579)},21009375115042)]r=0(Y)[Q]=r Q=(n)[G]r=(A)[K(p{1,2,3,a(19431),a(21662),a(20491)},1831694543032)];(Q)[r]=j r=(A)[K(p{1,2,a(19936),a(19449)},31876681152205)]Q=(n)[G]j=9000000000(Q)[r]=j Q=(n)[G]r=(A)[K(p{2,1,a(20427),a(21679)},34184784471995)]j=0(Q)[r]=j R=(M)[R]j=(A)[K(p{1,2,a(20386),a(20153)},22036999707942)]r=(q)[j]j=r()r=(A)[K(p{1,2,a(20175),a(21034)},12144555889738)]Q=(j)[r]j=(A)[K(p{1,2,a(20937),a(20220)},33335776234035)]r=(A)[K(p{1,3,2,a(19879),a(20378),a(21380)},19383936633745)];(Q)[r]=j r=(A)[K(a(20408),30493612196022)]Q=(q)[r]L={R(M)}R={Q(o(L))}j=(R)[2]r=(R)[1]L=r P=(R)[3]Q=7052953 end else if Q<5196891 then z=nil l=true M=m(M)L=m(L)Q=5850055 U=m(U)t=m(t)T=l else r={}Q=(q)[(A)[K(p{1,2,3,a(19610),a(19119),a(19645)},31225904618996)] ]B=nil end end else if Q<5288595 then if Q<5259827 then Q=1385907 M=nil I=m(I)else X=(A)[K(a(21130),31518474408182)]r={l}N=(q)[X]Q=(q)[(A)[K(p{1,2,3,a(19412),a(19784),a(19433)},2428966566453)] ]X=N(Z,u,d)end else if Q<5385513 then Z=(A)[K(a(20116),11639198185166)]J=(A)[K(a(19382),21432109215222)]d=(J)[Z]v=l u=(n)[t]Z=(u)[v]u=(n)[U]X=(n)[U]J=d(Z,u,X)d=(A)[K(a(20595),24735397860879)]h=J==d J=(n)[L]d=v==J Q=d and 15985045 or 16035632 else O=false z=nil Q=11920095 T=nil(n)[(y)[2] ]=T;(n)[(y)[5] ]=z;(n)[(y)[3] ]=O end end end end end else if Q<5921306 then if Q<5662137 then if Q<5523136 then if Q<5513252 then if Q<5507367 then if Q<5412757 then z,G=M(T,z)Q=z and 9348308 or 6736160 else N=(A)[K(a(19901),5190403674252)]d=(n)[b]X=(A)[K(a(21183),28633115878920)]u=(k)[N]N=(h)[X]Z=u==N J=d(Z)S=(A)[K(a(20733),13469971305154)]KZ=(A)[K(a(19642),25426728889981)]d=(n)[b]N=(n)[b]c=(k)[S]X=N(c)N=(n)[b]S=(h)[KZ]c=N(S)u=X==c Z=d(u)C=J~=Z Q=C and 12792430 or 12580667 end else Q=(q)[(A)[K(p{2,3,1,a(19088),a(20806),a(20552)},31727911122772)] ]r={}end else if Q<5518019 then Q=nil B=w()r=(A)[K(a(19239),14419727835842)];(n)[B]=Q Q=(n)[(y)[1] ]r=(Q)[r]r=r(Q)G=(A)[K(a(19498),1886626049741)]T=r Y=(A)[K(p{2,1,a(19799),a(20311)},18899543048172)]r=(A)[K(a(21207),16744090285701)]Q=(q)[r]I=(q)[G]G=(A)[K(p{2,1,a(19916),a(19251)},10559059615959)]G=(I)[G]G=G(I,Y)Y=(A)[K(p{2,1,a(20054),a(21392)},17166167407384)]Y=(G)[Y]I={Y(G)}G={Q(o(I))}M=(G)[3]z=(G)[2]Q=919681 r=(G)[1]I=r else r=(A)[K(a(19080),3403038682514)]Q=(q)[r]B=s(1020223,{(y)[2],(y)[3]})r=Q(B)Q=14396800 end end else if Q<5594680 then if Q<5570451 then if Q<5549287 then B=nil r={}Q=(q)[(A)[K(p{2,1,3,a(20598),a(20176),a(19485)},26737030904734)] ]else b=(A)[K(p{1,2,a(21416),a(21638)},12806884249537)]l=(q)[b]b=(A)[K(p{1,2,a(19248),a(20655)},23805089312757)]t=(l)[b]v=t Q=6814815 end else r={}Q=(q)[(A)[K(p{3,2,1,a(19151),a(21431),a(19804)},1210015810151)] ]end else if Q<5617919 then L=(A)[K(a(19134),33642892543584)]P=(Y)[L]L=(A)[K(p{2,1,3,a(20090),a(20961),a(19628)},19666988775158)]z=G j=P==L Q=j and 6728721 or 14946477 else Q=true(n)[(y)[2] ]=Q r=true(n)[(y)[3] ]=r B=(n)[(y)[4] ]T=B()B=(n)[(y)[5] ]T=B()Q=9693779 end end end else if Q<5816933 then if Q<5683319 then if Q<5672884 then if Q<5666416 then Y=nil G=nil Q=7410539 else Q=z and 1298727 or 8382914 end else B=(A)[K(p{2,1,a(20180),a(19274)},8006845869242)]r=(A)[K(a(21308),30526611973513)]Q=(q)[r]r=(A)[K(p{2,1,a(19149),a(19161)},18754347582627)]r=(Q)[r]r=r(Q,B)Q=(n)[(y)[1] ]Q=Q and 1519215 or 8569686 B=r end else if Q<5745994 then Q=599969 else B=1 r=(A)[K(a(19897),4297771622605)]Q=(q)[r]r=Q(B)Q=r and 10481728 or 12434783 end end else if Q<5848467 then if Q<5823021 then Q=3789389 else r=(A)[K(a(20331),24079699371417)]Q=(q)[r]I=(A)[K(p{2,1,3,a(19718),a(19771),a(20502)},27752849321721)]M=(A)[K(a(20585),1648667281346)]z=(q)[M]M=(A)[K(p{1,2,a(19397),a(19446)},32488228832909)]M=(z)[M]M=M(z,I)I=(A)[K(p{3,1,2,a(19622),a(20356),a(21606)},34913789112100)]I=(M)[I]z={I(M)}M={Q(o(z))}B=(M)[2]Q=13762017 r=(M)[1]z=r T=(M)[3]end else if Q<5872303 then M=(A)[K(p{1,2,a(20025),a(20901)},6971250967509)]t=(A)[K(p{1,2,a(19791),a(19289)},30958691503772)]C=(A)[K(p{1,3,2,a(19336),a(21593),a(19200)},4302878308513)]L=(A)[K(p{1,2,a(20509),a(19034)},17178448870090)]U=(A)[K(p{3,2,1,a(20726),a(19516),a(20676)},35183031396124)]b=(A)[K(p{3,2,1,a(20241),a(19631),a(19617)},13891872487185)]z={M,L,U,t,b,C}M=w()L=(A)[K(a(20324),7702053570549)];(n)[M]=z z=(q)[L]U=(A)[K(p{1,2,a(20527),a(20118)},30632605826957)]L=(A)[K(p{1,2,a(19703),a(20265)},2291021969099)]L=(z)[L]k=(A)[K(a(19533),14847621871093)]t=(A)[K(p{3,2,1,a(20274),a(19535),a(19924)},15333206074022)]L=L(z,U)z=w();(n)[z]=L U=(n)[z]L=(U)[t]U=x(15250875,{M})C=(L)[k]b=U(C)t=not b Q=t and 16045081 or 11610372 else v=true Q=v and 8606842 or 15749173 end end end end else if Q<6171351 then if Q<6036026 then if Q<5983528 then if Q<5969927 then if Q<5929764 then B=s(14987595,{(y)[2]})r=(A)[K(a(19380),4391607838800)]Q=(q)[r]r=Q(B)r={}Q=(q)[(A)[K(p{1,2,3,a(20951),a(20740),a(19130)},5442771208551)] ]else P=1000 j=I>=P G=j Y=Q Q=j and 12877123 or 9398656 end else t=b Q=C Q=1306234 end else if Q<5991828 then U=(A)[K(a(19991),28613471626650)]t=i(14435119,{O})Q=(q)[U]U=Q(t)Q=12188959 else B=B+z I=not M r=B<=T r=I and r I=B>=T I=M and I r=I or r I=7493155 Q=r and I r=6553506 Q=Q or r end end else if Q<6120901 then if Q<6093293 then if Q<6050928 then O=(A)[K(p{1,2,3,a(19597),a(21255),a(20499)},12248382365983)]j=(A)[K(a(20173),16235553266354)]Q=(q)[j]R=(n)[G]O=(R)[O]v={O(R)}R={Q(o(v))}P=(R)[2]j=(R)[1]Q=13383489 L=(R)[3]else Q=3323022 X=nil N=nil end else z=false M=w();(n)[M]=z L=(A)[K(a(21614),6829651279437)]z=(q)[L]v=F(13344239,{M})L=z(v)z=(n)[M]Q=z and 11953201 or 3780219 end else if Q<6151988 then O=false Q=(A)[K(p{1,2,a(20397),a(19364)},21439014359199)];(v)[Q]=O Q=15998363 else Q=12263409 end end end else if Q<6259045 then if Q<6244780 then if Q<6235569 then if Q<6226567 then N=(A)[K(a(21424),23440003546363)]u=(n)[O]Q=10306620 Z=(u)[N]u=(A)[K(p{2,3,1,4,a(20737),a(19183),a(20275),a(21426)},20498042417960)]J=Z~=u h=J else Q=(n)[(y)[1] ]Q=Q and 5656814 or 9693779 end else B=(W)[1]Q=B r={}(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{1,2,3,a(21142),a(20381),a(19266)},18685338522202)] ]B=nil end else if Q<6254148 then T=(n)[(y)[5] ]M=(A)[K(p{1,2,3,a(20342),a(21411),a(20981)},6033953135413)]Q=11375454 z=(A)[K(p{2,1,a(20063),a(20718)},24527497530678)]z=(T)[z]z=z(T,M)else T=(A)[K(p{2,1,a(21507),a(21327)},33222031973588)]M=(A)[K(p{2,1,a(20597),a(19539)},14820608710314)]r=(B)[T]T=(A)[K(p{1,2,4,3,a(19558),a(20618),a(19565),a(21508)},15334080377321)]Q=(r)[T]z=(q)[M]M=(A)[K(a(20501),7587889524415)]Y=-4 r=(A)[K(p{1,2,a(20318),a(20968)},10263495430045)]T=(z)[M]I=155.321 M=-1837.48 G=-5427.79 z=T(M,I,G);(Q)[r]=z T=(A)[K(p{2,1,a(20772),a(20762)},20899397077426)]r=(q)[T]T=(A)[K(a(19230),3202960553215)]Q=(r)[T]G=1000 M=(A)[K(p{1,2,a(19615),a(19461)},12670543102214)]T=(A)[K(a(21116),6240663418103)]j=0 I=1 z=(q)[M]r=Q(T,z)M=(A)[K(p{2,1,a(20263),a(19118)},17209184847677)]T=r r=(A)[K(p{3,4,1,2,a(19253),a(19246),a(19668),a(19172)},22906222787326)]Q=(A)[K(a(19245),30611183095312)];(T)[Q]=r z=(q)[M]M=(A)[K(a(20269),24130761891637)]r=(z)[M]M=1000 z=r(M,I,G)G=(A)[K(p{1,2,a(19395),a(21325)},23179275123923)]Q=(A)[K(a(19366),19391188896952)];(T)[Q]=z I=(B)[G]Q=(A)[K(p{1,2,a(19416),a(19946)},5501915822645)]G=(A)[K(p{3,4,1,2,a(21283),a(19407),a(21089),a(19049)},5344140866989)]M=(I)[G]I=(A)[K(p{2,1,a(19725),a(19451)},7112786427783)]G=(A)[K(p{1,2,a(20156),a(20142)},20307453963269)]z=(M)[I]I=(q)[G]G=(A)[K(a(21219),25995103297378)]M=(I)[G]G=0 I=M(G,Y,j)r=z+I;(T)[Q]=r r=true Q=(A)[K(p{1,2,a(21069),a(19571)},3426004377236)];(T)[Q]=r Q=(A)[K(p{2,1,3,a(20669),a(19215),a(21008)},33331164743712)]r=0.9(T)[Q]=r Q=16100972 T=nil end end else if Q<6296765 then if Q<6267612 then I=true Q=I and 9981457 or 11884507 else Q=B==G Q=Q and 827240 or 479513 I=z end else if Q<6353534 then G,Y=M(I,G)Q=G and 1988385 or 11371650 else L=(A)[K(a(19189),26006595334105)]Q=w();(n)[Q]=I M=T I=Q P=(n)[I]j=(P)[L]P=(A)[K(p{3,1,2,a(21611),a(20511),a(21490)},6893246132038)]Y=j==P Q=Y and 9229704 or 8714783 G=Y end end end end end end else if Q<7250734 then if Q<6808179 then if Q<6553436 then if Q<6494179 then if Q<6487299 then if Q<6453376 then if Q<6448367 then I=(n)[(y)[8] ]z=Q M=T<=I r=M Q=M and 14489593 or 2504130 else r=(n)[(y)[1] ]Q=not r;(n)[(y)[1] ]=Q r=(n)[(y)[1] ]Q=r and 1507209 or 3353501 end else B=(W)[1]Q=B;(n)[(y)[1] ]=Q Q=B and 13115295 or 5547897 end else if Q<6490128 then T=(A)[K(p{2,1,a(21421),a(19429)},15494992483801)]M=1000 r=(q)[T]T=(A)[K(p{1,2,a(21519),a(21248)},30777024326034)]Q=(r)[T]T=(A)[K(a(20257),32418796066019)]z=B/M r={Q(T,z)}r={o(r)}Q=(q)[(A)[K(p{1,2,3,a(19793),a(20976),a(19647)},3918899859500)] ]else r=(A)[K(a(19814),17021581115280)]B=1 Q=(q)[r]r=Q(B)Q=r and 15165110 or 4680773 end end else if Q<6521844 then if Q<6513457 then if Q<6513106 then Y=nil z=nil Q=5069170 else G=(A)[K(a(19382),16107045002677)]I=(n)[B]Q=3904033 M=I~=G T=M end else P=(A)[K(a(20485),28876250656815)]M=(A)[K(a(21664),180223842646)]z=(q)[M]Y=(q)[P]P=(A)[K(p{1,2,a(20613),a(20832)},16929919243888)]P=(Y)[P]L=(A)[K(p{2,1,a(20422),a(21469)},26438127960269)]P=P(Y,L)L=(A)[K(p{1,2,a(19651),a(20346)},7143849399598)]L=(P)[L]Y={L(P)}P={z(o(Y))}G=(P)[3]M=(P)[1]I=(P)[2]Q=6297868 end else if Q<6527128 then Q=true(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{1,2,3,a(19499),a(19280),a(19923)},15891527319906)] ]r={}else Q=r and 6255460 or 16100972 end end end else if Q<6700844 then if Q<6653921 then if Q<6595776 then if Q<6581330 then G=(A)[K(p{3,4,2,1,a(21330),a(21388),a(20846),a(19540)},31122786449846)]z=(A)[K(a(19952),33022461523190)]M=(A)[K(p{2,3,1,a(21477),a(19148),a(19599)},16517082787648)]Q=false(n)[(y)[2] ]=Q j=3 I=(A)[K(a(20299),1591152490364)]Y=(A)[K(p{2,1,a(19606),a(19811)},7441405467694)]T={[z]=M,[I]=G,[Y]=j}B=(A)[K(p{1,2,a(20569),a(20798)},3098615586121)]Q=(q)[(A)[K(p{2,1,3,a(19961),a(19548),a(20161)},14352653065975)] ]r=(n)[(y)[5] ]B=(r)[B]B=B(r,T)r={}else KZ=(A)[K(p{2,1,a(19153),a(19486)},2035331418494)]c=(A)[K(a(19369),16476644428203)]X=(A)[K(a(20162),5196510997048)]S=(A)[K(p{1,2,a(21682),a(20102)},25462244829866)]N={X,c,S,KZ}c=1 Q=3268287 S=#N X=0 KZ=S S=1 AZ=S S=0 pZ=AZ<S S=c-AZ end else Y=H(15605239,{})G=(A)[K(a(19097),17940366290218)]I=B Q=3918526 r=(q)[G]G=r(Y)I=nil end else if Q<6669945 then G=M Q=(n)[(y)[1] ]j=Q(Y)Q=j and 15747316 or 5663584 else r=(A)[K(p{1,2,a(19107),a(20215)},13574674365782)]Q=(q)[r]r={Q(B)}r={o(r)}Q=(q)[(A)[K(p{2,1,3,a(20657),a(21233),a(19827)},29020423602935)] ]end end else if Q<6729475 then if Q<6713883 then Q=753280 z=nil else P=1 j=T+P T=j Q=14946477 end else if Q<6755619 then M=(A)[K(a(19764),436364653369)]z=(q)[M]T=0 R=(A)[K(a(19056),29119732654784)]L=(q)[R]R=(A)[K(p{1,2,a(20053),a(20065)},26713917186487)]P=(L)[R]L=(A)[K(p{3,1,2,a(19826),a(20813),a(20287)},10126048739566)]j=(P)[L]P=(A)[K(p{2,1,a(21422),a(20563)},15555746334273)]Y=(j)[P]P=(A)[K(p{1,3,2,a(19169),a(20974),a(19052)},12361957433318)]P=(Y)[P]j={P(Y)}Y={z(o(j))}Q=9659263 M=(Y)[1]I=(Y)[2]G=(Y)[3]else r={}Q=(q)[(A)[K(p{3,2,1,a(19751),a(19494),a(19310)},15359525100467)] ]end end end end else if Q<7070281 then if Q<6901521 then if Q<6846638 then if Q<6821582 then if Q<6813661 then C=(A)[K(p{2,1,a(21019),a(19935)},14308427699783)]Q=15817664 b=(A)[K(a(20634),11715375175324)]b=(v)[b]b=b(v,C)V=b else Q=U t=(n)[L]U=v(t)v=not T Q=v and 11281919 or 7694391 end else Q=(q)[(A)[K(p{2,1,3,a(20098),a(20202),a(21049)},3136152829894)] ]r={}end else if Q<6866861 then Q=(n)[(y)[1] ]Q=Q and 16702168 or 3472070 else z,G=M(T,z)Q=z and 6270533 or 1592752 end end else if Q<7043484 then if Q<6994387 then if Q<6981575 then Q=O and 6145324 or 15998363 else z=nil r={}M=nil T=nil B=nil Q=(q)[(A)[K(p{1,2,3,a(20062),a(20796),a(20849)},11883414091095)] ]I=nil end else C=(n)[M]b=Q l=C Q=C and 10597855 or 13626702 end else if Q<7051032 then B=(n)[(y)[1] ]T=(A)[K(p{1,2,a(21104),a(19719)},17222352996332)]r=(B)[T]B=(A)[K(a(20130),5468846030549)]Q=(r)[B]r=(A)[K(p{2,1,a(19089),a(21087)},15411871016051)]r=(Q)[r]r=r(Q)r={}Q=(q)[(A)[K(p{1,2,3,a(20005),a(20454),a(19491)},9742464366514)] ]else P,v=L(j,P)Q=P and 4347317 or 6036710 end end end else if Q<7194660 then if Q<7160442 then if Q<7113006 then if Q<7073329 then z=true Q=z and 8761263 or 14074579 else r=(A)[K(a(21154),19537822614823)]I=(A)[K(p{2,1,a(20637),a(19350)},8821555676834)]Q=(q)[r]M=(n)[(y)[1] ]z=(M)[I]I=(A)[K(p{3,2,1,a(19726),a(20191),a(21610)},27062665978559)]I=(z)[I]M={I(z)}z={Q(o(M))}T=(z)[3]Q=9631525 B=(z)[2]r=(z)[1]z=r end else M=(A)[K(a(19309),6053994777371)]z=(q)[M]P=(A)[K(p{2,1,a(20084),a(20543)},29761090098259)]j=(A)[K(a(21010),14766868879655)]Y=(q)[j]j=(A)[K(p{2,1,a(19902),a(20406)},26613313987968)]j=(Y)[j]j=j(Y,P)Q=5069170 P=(A)[K(p{2,1,a(21595),a(21127)},19262315364706)]P=(j)[P]Y={P(j)}j={z(o(Y))}G=(j)[3]I=(j)[2]M=(j)[1]end else if Q<7184563 then Q=(q)[(A)[K(p{2,1,3,a(19430),a(20099),a(20904)},17530318911611)] ]B=m(B)T=nil r={}else Y=true Q=Y and 3913704 or 144604 end end else if Q<7205408 then if Q<7200194 then Q=2751762 else z=nil Q=9645154 end else if Q<7244713 then T,I=z(B,T)Q=T and 9725136 or 16169613 else r={}Q=(q)[(A)[K(p{3,1,2,a(19168),a(21124),a(19893)},25396450135789)] ]end end end end end else if Q<7956827 then if Q<7523742 then if Q<7390453 then if Q<7338763 then if Q<7326720 then if Q<7325266 then z=(A)[K(p{1,2,a(19261),a(19354)},14850187985616)]T=(n)[(y)[1] ]B=(T)[z]T=(A)[K(p{1,2,3,a(19092),a(19555),a(20816)},22707640089703)]T=(B)[T]z=(A)[K(a(21410),27843466378642)]T=T(B,z)r=T Q=4628975 else M,Y=I(z,M)Q=M and 9706694 or 3527538 end else T=(n)[(y)[1] ]z=(A)[K(p{1,2,a(20649),a(20243)},31793115668802)]B=(T)[z]T=(A)[K(p{2,1,3,a(20789),a(21012),a(19481)},7115419104466)]T=(B)[T]z=(A)[K(p{1,2,a(20686),a(19940)},30590315788141)]T=T(B,z)r=T Q=T and 15920783 or 10186080 end else if Q<7353667 then B=H(5516171,{(y)[1],(y)[2],(y)[3],(y)[4],(y)[5]})r=(A)[K(a(20929),31579799799480)]Q=(q)[r]r=Q(B)r={}Q=(q)[(A)[K(p{2,1,3,a(21353),a(20358),a(19859)},22322745230242)] ]else Q=(q)[(A)[K(p{2,3,1,a(21006),a(19400),a(21437)},15602345096139)] ]r={}end end else if Q<7427842 then if Q<7419424 then if Q<7411854 then M,Y=I(z,M)Q=M and 6656583 or 2042206 else R=true Q=13286593(n)[z]=R end else z=not B r=z Q=14157810 end else if Q<7482746 then Q=true Q=Q and 425522 or 11879898 else I=B r=(n)[(y)[2] ]Q=not r Q=Q and 13746047 or 15873044 end end end else if Q<7710574 then if Q<7645580 then if Q<7579215 then if Q<7559059 then z=(A)[K(p{2,1,a(21079),a(20015)},29206088462)]Q=15279685 T=(n)[(y)[1] ]B=(T)[z]z=(A)[K(p{2,1,a(21559),a(19184)},26480746667525)]T=(A)[K(p{2,3,1,a(20844),a(21077),a(21377)},15243669894411)]T=(B)[T]T=T(B,z)r=T else Q=(n)[(y)[1] ]r={Q()}r={o(r)}Q=(q)[(A)[K(p{2,1,3,a(21346),a(19608),a(19111)},9991639828062)] ]end else b=(A)[K(a(19760),31998401063937)]l=Q C=(A)[K(p{2,1,3,a(19524),a(21091),a(20831)},10436661065503)]b=(v)[b]b=b(v,C)Q=b and 15817664 or 6810796 V=b end else if Q<7696393 then z=m(z)L=m(L)Q=5850055 M=m(M)else Q=O and 14198275 or 3448717 end end else if Q<7863177 then if Q<7731601 then Q=3946471 else Q=(q)[(A)[K(p{3,2,1,a(21323),a(19031),a(20078)},25863049727854)] ]r={}end else if Q<7906552 then l=(A)[K(p{1,3,2,a(20060),a(19666),a(20935)},22128004525858)]t=Q V=(A)[K(a(20936),32431262367360)]V=(v)[V]V=V(v,l)U=V Q=V and 10558451 or 657668 else r={}B=nil Q=(q)[(A)[K(p{3,1,2,a(21051),a(19532),a(21393)},34096619770526)] ]end end end end else if Q<8339887 then if Q<8060961 then if Q<8003101 then if Q<8001143 then if Q<7985358 then V=not t Q=V and 12805854 or 8964336 else B=w();(n)[B]=(W)[1]Q=(n)[(y)[1] ]Q=Q and 8870890 or 11518912 end else Q=753719 end else if Q<8017230 then I=r Q=not I Q=Q and 4138975 or 15136784 else z=(A)[K(p{2,1,a(20011),a(20353)},4497913671207)]r=(A)[K(p{4,2,3,5,1,a(21342),a(19083),a(21106),a(20728),a(20998)},13867395594649)]Q=(n)[(y)[2] ]r=(Q)[r]T=(B)[z]r=r(Q,T)z=(A)[K(p{2,1,a(20379),a(21363)},12836199879225)]T=r r=(q)[z]M=(n)[(y)[3] ]z=r(M)Q=T<z Q=Q and 9694679 or 1151764 end end else if Q<8184911 then if Q<8176398 then if Q<8097564 then T=(A)[K(a(20007),7192492921676)]Q=true(n)[(y)[1] ]=Q B=(q)[T]T=(A)[K(a(19332),5171430194247)]Q=5581943 r=(B)[T]T=g(3210996,{(y)[2],(y)[3],(y)[4],(y)[1]})B=r(T)else Q=8674273 G=B end else Q=O and 3565501 or 8747065 end else if Q<8227689 then Q=(q)[(A)[K(p{3,2,1,a(21480),a(21197),a(20784)},16732732376041)] ]r={}else r=z Q=M Q=z and 381680 or 13435845 end end end else if Q<8537859 then if Q<8450075 then if Q<8381852 then if Q<8375711 then M=Y L=(A)[K(a(20730),25375095175653)]P=(j)[L]L=(A)[K(a(20590),9959645259481)]L=(P)[L]L=L(P)P=(A)[K(a(20446),19931233005943)]P=(L)[P]P=P(L,T)Q=P and 4601908 or 8908958 else z=(A)[K(a(20137),16785938269280)]T=(q)[z]z=(A)[K(p{2,1,a(19832),a(21125)},13414111857062)]M=(A)[K(p{2,1,a(20000),a(19298)},18540898503661)]z=(T)[z]z=z(T,M)T=(A)[K(p{3,1,2,a(21615),a(19984),a(20893)},15271075403235)]B=(z)[T]T=(A)[K(p{3,1,2,a(19443),a(19163),a(19406)},23458878947668)]r=(B)[T]B=(A)[K(p{2,1,a(19042),a(19511)},26514771771144)]Q=(r)[B]r=(A)[K(a(21029),24737847563459)]B=Q Q=(B)[r]T=Q Q=7428820 end else L=nil v=false R=nil(n)[(y)[2] ]=L;(n)[(y)[5] ]=R;(n)[(y)[3] ]=v Q=1120709 end else if Q<8482168 then G=z Y=nil(n)[(y)[5] ]=G R=(A)[K(p{2,1,a(19291),a(20347)},34152280686044)]l=(A)[K(p{1,2,3,a(20316),a(20010),a(19853)},9115180956383)]t=(A)[K(a(21599),8707393780445)]O=(A)[K(a(21626),7939860571084)];(n)[(y)[2] ]=Y k=(A)[K(a(19066),3371963880424)]j=false(n)[(y)[3] ]=j U=(A)[K(p{2,1,a(20712),a(19463)},16070945335401)]L=(n)[(y)[4] ]C=(z)[k]k=(A)[K(p{4,1,3,2,a(19986),a(19824),a(19497),a(20431)},6389975946174)]R=(L)[R]b=C..k V=l..b l=(A)[K(p{2,1,a(21505),a(20622)},15973606103027)]b=3 Q=329913 v={[O]=U,[t]=V,[l]=b}R=R(L,v)else z=Q M=(n)[(y)[2] ]Q=M and 3912067 or 14006782 T=M end end else if Q<8569240 then if Q<8546307 then Q=j Q=Y and 11762329 or 14138138 else C=420 b=(n)[t]l=(b)[C]b=(A)[K(a(19852),5581212792490)]v=l~=b Q=v and 13740354 or 6999258 end else if Q<8570225 then Q=2422057 r=(A)[K(p{1,2,a(20013),a(21547)},14188126690544)]T=12(B)[r]=T r=true(n)[(y)[1] ]=r else Q=10697536 end end end end end end end end else if Q<12518566 then if Q<10539533 then if Q<9691950 then if Q<9225830 then if Q<8847148 then if Q<8684506 then if Q<8651059 then if Q<8608742 then if Q<8601795 then B=(W)[1]r={}Q=B B=nil(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{2,1,3,a(19716),a(20553),a(20500)},26906507679218)] ]else Q=5896725 end else Q=9446171 I=nil end else if Q<8676727 then Q=Y r=(A)[K(p{2,1,a(20604),a(21267)},28091554425511)]P=(A)[K(p{1,2,a(19101),a(19593)},1193055568476)]Y=5 j=true r=(Q)[r]v=(A)[K(p{2,1,a(19671),a(21441)},31370496791725)]R=(z)[v]v=(A)[K(a(20746),18980180141471)]L=(R)[v]R=5 r=r(Q,I,M,G,Y,j,P,L,R)Q=14263876 else z=false M=false r=false I=false B=(W)[1]Q=false(n)[(y)[1] ]=Q T={f(2,o(W))}(n)[(y)[2] ]=r Q=(q)[(A)[K(p{2,3,1,a(19646),a(20621),a(19269)},18883229762365)] ];(n)[(y)[3] ]=z G=false(n)[(y)[4] ]=M;(n)[(y)[5] ]=I;(n)[(y)[6] ]=G Y=(n)[(y)[7] ]j={Y(B,o(T))}r={o(j)}end end else if Q<8778844 then if Q<8758947 then if Q<8734374 then Q=G and 14933855 or 5213140 else U=(A)[K(a(20535),12068851377911)]t=(A)[K(p{3,1,2,a(21612),a(20988),a(20239)},9516877547619)]U=(v)[U]U=U(v,t)O=U Q=U and 7709489 or 10827521 end else Q=7070659 end else if Q<8832877 then z=(n)[B]Q=z and 13840375 or 9871332 else Q=(n)[(y)[2] ]G=(A)[K(p{2,1,4,3,5,6,a(20977),a(19086),a(21481),a(19749),a(19257),a(20963)},21967239824659)]r=(A)[K(p{1,2,a(19313),a(20798)},29488504985399)]Y=(A)[K(p{2,1,a(20644),a(20900)},28911168098103)]r=(Q)[r]I=(A)[K(a(20617),5552966181368)]z=(A)[K(a(19917),34441417665133)]j=2 M=(A)[K(p{1,2,a(19675),a(20529)},17443254305018)]T={[z]=M,[I]=G,[Y]=j}r=r(Q,T)Q=(q)[(A)[K(p{2,3,1,a(19517),a(21500),a(19761)},25862448499247)] ]r={}end end end else if Q<9033538 then if Q<8919108 then if Q<8910687 then if Q<8899264 then Q=(n)[(y)[1] ]r=(A)[K(p{2,1,a(20471),a(20905)},14292556969817)]r=(Q)[r]r=r(Q)Q=nil(n)[(y)[1] ]=Q Q=11518912 else Q=12325076 j=nil M=nil end else Q=9929278 end else if Q<8988708 then l=(A)[K(p{7,5,1,2,4,3,6,a(21489),a(20859),a(21484),a(20436),a(20776),a(21566),a(21463)},25560462051606)]C=g(621355,{})b=w()d=(A)[K(p{2,1,a(20899),a(21584)},26377836505100)]J=(A)[K(a(19211),24036094795218)];(n)[b]=C Z=(A)[K(a(20865),19559900434951)]h=(A)[K(p{2,1,a(21053),a(21309)},12345102315359)]k=(q)[h]h=(A)[K(a(20766),4806095720071)]C=(k)[h]h=(A)[K(a(21656),25385516037912)]k=C(h)h=(q)[d]d=(A)[K(a(19556),3146424002891)]C=(h)[d]d=(A)[K(a(20938),23433779451234)]h=C(d)d=(k)[J]J=(h)[Z]C=d~=J Q=C and 15539730 or 5494981 else Wc=(n)[b]Q=3806860 yc=(A)[K(p{2,1,a(20448),a(20423)},15503944740904)]oc=(Wc)[yc]Wc=w()yc=(A)[K(p{1,2,a(21144),a(20428)},21970042003224)]Dc=e(8678325,{S,X,HZ,wZ,kZ,ac,Wc});(n)[Wc]=oc oc=(n)[b]Wc=m(Wc);(oc)[yc]=Dc end end else if Q<9143334 then if Q<9118221 then if Q<9039067 then Q=6297868 Y=nil z=nil else z=(n)[(y)[2] ]Q=12204626 I=(n)[(y)[3] ]G=I(T)M=#G r=z+M;(n)[(y)[2] ]=r end else V=(A)[K(a(20246),20550172653724)]t=Q l=(A)[K(a(21223),9868273833299)]V=(v)[V]V=V(v,l)U=V Q=V and 3661182 or 7631976 end else if Q<9161700 then I=(A)[K(a(19583),33265084143631)]Y=(A)[K(p{4,2,3,1,a(20799),a(20908),a(20824),a(19891)},5800343098657)]r=(n)[M]Q=(r)[I]v=(A)[K(a(19218),33642843573976)]I=(A)[K(p{1,2,a(19299),a(19693)},27732784070451)];(n)[(y)[2] ]=Q r=(n)[(y)[3] ]j=(n)[(y)[4] ]R=(n)[M]L=(R)[v]P=j(L)I=(r)[I]G=Y..P I=I(r,G)r=(n)[(y)[5] ]G=(A)[K(p{3,4,2,1,a(20097),a(21151),a(20630),a(21527)},15953227156790)]I=(A)[K(p{1,2,a(20541),a(20421)},15928355114650)]I=(r)[I]I=I(r,G)r=(n)[M]G=(A)[K(a(20101),21261567271024)]I=(A)[K(p{4,1,3,2,5,a(20352),a(20554),a(21561),a(20631),a(21131)},12384732638627)]I=(r)[I]I=I(r,G)G=H(10487508,{M,(y)[2],(y)[3],(y)[4],(y)[5]})r=(A)[K(p{1,2,a(20982),a(21538)},10811356073933)]r=(I)[r]Q=15854919 r=r(I,G)else G=(n)[j]Q=G and 9637939 or 14684795 end end end end else if Q<9537068 then if Q<9363950 then if Q<9322166 then if Q<9289610 then if Q<9273747 then j=(A)[K(a(21128),30793028405106)]Q=8714783 Y=(n)[I]j=(Y)[j]P=(A)[K(a(21060),20277566672554)]j=j(Y,P)G=j else T=(A)[K(a(21414),26216807995499)]B=(q)[T]T=(A)[K(p{3,2,1,a(21014),a(21402),a(20294)},15520473420390)]r=(B)[T]B=(A)[K(p{1,2,a(19138),a(19906)},9487964899440)]Q=(r)[B]r=(A)[K(p{1,2,a(19209),a(19136)},13929734128573)]r=(Q)[r]r=r(Q)r={}Q=(q)[(A)[K(p{1,3,2,a(21520),a(20295),a(21683)},4285161936370)] ]end else U=1 O=v()O=v(U)Q=13419290 end else if Q<9345932 then oZ=1 QZ=Z==oZ Q=QZ and 4544434 or 10721416 else j=(A)[K(a(20923),1276278639807)]I=z Y=(G)[j]j=(A)[K(p{3,2,1,a(19162),a(21281),a(20810)},28605700116804)]Q=Y==j Q=Q and 12914889 or 2802657 end end else if Q<9450526 then if Q<9436046 then if Q<9409189 then Q=Y Q=G and 10786195 or 10703271 else M=nil Q=true I=nil(n)[(y)[2] ]=Q Q=3751014 end else M=nil z=nil Q=7169964 end else if Q<9482853 then B=B+z r=B<=T I=not M r=I and r I=B>=T I=M and I r=I or r I=1202103 Q=r and I r=9873343 Q=Q or r else r=(n)[(y)[2] ]z=(n)[(y)[3] ]M=z(B)T=#M Q=r+T;(n)[(y)[2] ]=Q Q=10901758 end end end else if Q<9641424 then if Q<9626827 then if Q<9579646 then if Q<9563231 then Q=14138138 else r=(n)[(y)[9] ]z=r()L=(A)[K(p{2,3,5,4,6,1,a(19262),a(19147),a(19886),a(21535),a(20917),a(20758)},15449567271852)]G=(A)[K(a(20729),9255321356598)]Q=1657636 r=false Y=(A)[K(p{1,2,3,a(20582),a(20072),a(19381)},30040004999360)]z=(n)[(y)[6] ]B=r v=(n)[(y)[7] ]j=(A)[K(a(21336),12772787650882)]O=v(T)v=(A)[K(a(20517),15274866147597)]R=O..v P=L..R R=2 M=(A)[K(p{1,2,a(20045),a(20315)},18406630358196)]L=(A)[K(p{1,2,a(21168),a(20756)},16041943758463)]I={[G]=Y,[j]=P,[L]=R}M=(z)[M]M=M(z,I)end else Q=14061451 end else if Q<9633643 then T,I=z(B,T)Q=T and 12051687 or 3751014 else v=g(16394213,{j})R=(A)[K(a(19490),2691030080804)]G=false Q=14841188(n)[j]=G L=(q)[R]R=(A)[K(a(21516),9972915916393)]P=(L)[R]R=2 L=P(R,v)L=(n)[j]P=not L end end else if Q<9655783 then if Q<9651591 then r={}T=nil B=nil Q=(q)[(A)[K(p{1,3,2,a(20896),a(19800),a(21235)},23746095672865)] ]else Q=false r=false(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{1,2,3,a(21132),a(21061),a(20550)},9178451506289)] ];(n)[(y)[2] ]=r r={}end else if Q<9675173 then G,Y=M(I,G)Q=G and 5606964 or 1541946 else U=(A)[K(a(19903),16019723119899)]M=z R=(A)[K(p{1,3,2,a(21055),a(20043),a(20293)},9777669109566)]I=true(n)[(y)[2] ]=M V=(A)[K(a(19418),5504931587663)]v=(A)[K(a(19968),11918693878964)];(n)[(y)[3] ]=I Y=(A)[K(p{1,2,a(21222),a(21216)},14271682425931)]G=(n)[(y)[4] ]L=(A)[K(a(20695),32319959994246)]t=(z)[V]O=U..t U=(A)[K(p{1,2,a(21085),a(19746)},9125102539785)]Y=(G)[Y]Q=329913 t=2 j={[L]=R,[v]=O,[U]=t}Y=Y(G,j)end end end end end else if Q<9978118 then if Q<9814612 then if Q<9726065 then if Q<9723163 then if Q<9704987 then if Q<9694025 then r={}Q=(q)[(A)[K(p{2,1,3,a(19926),a(20845),a(20551)},23437662221037)] ]else z=(A)[K(p{1,2,a(19877),a(20326)},3630799943117)]r=(n)[(y)[2] ]Q=(r)[z]r=(A)[K(p{1,2,3,a(20362),a(21648),a(20433)},8312255207691)]z=(A)[K(p{1,2,a(21475),a(21640)},21993550126649)]r=(Q)[r]r=r(Q,z)z=r Q=z and 10965986 or 11770742 end else G=M G=nil Y=nil Q=1 T+=Q Q=7325412 end else if Q<9724293 then h=not k l=l+C v=l<=b v=h and v h=l>=b h=k and h v=h or v h=5311268 Q=v and h v=8546792 Q=Q or v else M=T Q=w();(n)[Q]=I I=Q j=(n)[I]P=(n)[(y)[4] ]Y=j~=P Q=Y and 14252873 or 9767775 G=Y end end else if Q<9768632 then if Q<9757531 then if Q<9735207 then r={}Q=(q)[(A)[K(p{2,3,1,a(21201),a(19707),a(20954)},32425218056400)] ]else j=true Q=j and 11001582 or 9554917 end else Q=G and 4078336 or 15688266 end else if Q<9800996 then Q=5200756 T=nil else Q=(q)[(A)[K(p{3,2,1,a(21368),a(21506),a(20248)},32814994008107)] ]M=nil B=nil r={}z=nil T=nil end end end else if Q<9919778 then if Q<9870948 then if Q<9867725 then if Q<9859841 then r=(A)[K(a(20639),28235609609979)]Q=(q)[r]T=F(14890058,{})r=Q(T)T=r Q=T and 14595757 or 9785370 else r=(A)[K(a(19357),24282565756115)]Q=(q)[r]B=0.05 r=Q(B)B=(n)[(y)[1] ]r=B Q=B and 11987868 or 11197056 end else z=(n)[(y)[1] ]M=(A)[K(a(21443),10993781506809)]r=(z)[M]Q=(A)[K(p{1,2,3,a(20950),a(19243),a(19441)},34798581905251)]z=5 Q=(T)[Q]Q=Q(T,r,z)z=Q Q=z and 11819745 or 6710970 end else if Q<9872633 then z=(n)[(y)[4] ]I=(A)[K(p{3,2,6,7,4,1,5,a(19861),a(20886),a(20540),a(20805),a(21193),a(20608),a(21213)},14004708007078)]M=(A)[K(p{1,2,a(20302),a(21239)},16429125101705)]M=(z)[M]Q=7169964 M=M(z,I)else r=(A)[K(a(21486),7860136947291)]Q=(q)[r]B=(A)[K(a(20699),4804148371449)]r=Q(B)r={}Q=(q)[(A)[K(p{3,1,2,a(19051),a(19525),a(21277)},27371456770387)] ]end end else if Q<9932598 then if Q<9928323 then Q=O and 14607076 or 641362 else j=true Q=j and 8918720 or 10997242 end else if Q<9954025 then T=(n)[(y)[2] ]B=not T Q=3583607 r=B else L=(A)[K(a(19905),19533664527517)]P=(Y)[L]R=1 L=(A)[K(a(21285),949893979887)]L=(P)[L]L=L(P)P=(A)[K(a(20767),7926930943697)]v=#T P=(L)[P]P=P(L,R,v)z=G j=P==T Q=j and 13652227 or 6512858 end end end end else if Q<10211784 then if Q<10099583 then if Q<10003673 then if Q<9988674 then if Q<9981699 then Q=6265634 else oZ=nil QZ=nil Q=10721416 end else r=(A)[K(a(20858),23812605135435)]B=2 Q=(q)[r]r=Q(B)r=(A)[K(a(19142),9276301037304)]Q=(q)[r]B=g(10519276,{(y)[1],(y)[2],(y)[3],(y)[4],(y)[5]})r=Q(B)r={}Q=(q)[(A)[K(p{1,3,2,a(20003),a(20127),a(21056)},24528329982842)] ]end else if Q<10082782 then Q=false B=Q Q=1026432 else G=(A)[K(a(19559),23644651459444)]j=(A)[K(p{2,1,a(19996),a(20671)},34414608074170)]Q=true(n)[(y)[1] ]=Q T=(A)[K(p{1,2,a(20027),a(19932)},17228070730423)]I=(A)[K(p{3,1,2,a(19185),a(21617),a(21570)},7219487824935)]M=(A)[K(a(19796),5678797562308)]r=(n)[(y)[2] ]T=(r)[T]Y=(A)[K(p{2,1,a(19282),a(21521)},22861273785173)]P=3 z={[M]=I,[G]=Y,[j]=P}I=1 T=T(r,z)T=(A)[K(a(21110),15441231734584)]r=(q)[T]M=(A)[K(a(21038),23564869734404)]z=(A)[K(p{3,4,1,2,a(21123),a(21487),a(19442),a(20285)},34176183593563)]T=(A)[K(p{2,1,a(19871),a(19787)},9258928489742)]T=(r)[T]T=T(r,z)z=w();(n)[z]=T T=(q)[M]M=(A)[K(a(20333),29145406856187)]r=(T)[M]M=B-I I=0 T=r(M,I)B=nil M=w();(n)[M]=T T=(A)[K(a(20228),18649762121910)]r=(q)[T]I=F(3637609,{M,(y)[1],z,(y)[3],(y)[2]})M=m(M)T=r(I)Q=(q)[(A)[K(p{2,3,1,a(20201),a(19038),a(20430)},10016130760035)] ]z=m(z)r={}end end else if Q<10174808 then if Q<10161358 then if Q<10112132 then Q=true r={}(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{3,1,2,a(21585),a(21513),a(20071)},6445683588086)] ]else M=(n)[(y)[4] ]z=T>=M r=z Q=z and 7427784 or 14157810 end else R=(A)[K(p{4,8,6,2,1,3,7,5,a(19208),a(19093),a(19614),a(19545),a(21095),a(19733),a(19196),a(21047)},28208814531844)]Y=(n)[(y)[4] ]L=(A)[K(p{2,1,a(21321),a(20194)},14286564723176)]L=(Y)[L]Q=8610369 L=L(Y,R)end else if Q<10191482 then T=(n)[(y)[1] ]z=(A)[K(p{2,1,a(19828),a(21084)},1774532761970)]Q=15920783 B=(T)[z]T=(A)[K(p{2,1,3,a(21313),a(20830),a(19126)},6456025707974)]z=(A)[K(a(21247),23935442737567)]T=(B)[T]T=T(B,z)r=T else Q=(q)[(A)[K(p{1,3,2,a(20404),a(20086),a(20119)},8621685112034)] ]r={}end end end else if Q<10458017 then if Q<10296248 then if Q<10275269 then if Q<10260641 then B=(W)[1]Q=1 M=(A)[K(a(20310),24926567795021)]T=(W)[2];(n)[(y)[1] ]+=Q z=(q)[M]M=z(T)z=(A)[K(p{2,1,a(20901),a(19997)},2932172849063)]r=M==z Q=r and 3268389 or 2984188 else Q=U Q=v and 11978283 or 2202777 end else Q=5004129 J=true(n)[M]=J end else if Q<10370703 then Q=d C=h Q=3353697 else Q=r and 8201114 or 7331821 end end else if Q<10495564 then if Q<10482401 then r=(A)[K(a(19925),16306926529588)]Q=(q)[r]B=i(1622820,{(y)[1],(y)[2],(y)[3]})r=Q(B)Q=5816790 else r=(n)[(y)[1] ]B=(A)[K(a(21264),13443390808980)]Q=(r)[B]B=Q r=(n)[(y)[2] ]Q=B-r r=(A)[K(p{2,1,a(19361),a(21356)},3289956456227)]M=(A)[K(p{4,3,1,2,a(21098),a(19317),a(21331),a(19371)},18068884055198)]T=Q Q=(n)[(y)[3] ]I=(n)[(y)[4] ]G=I(B)B=nil z=M..G r=(Q)[r]r=r(Q,z)r=(A)[K(p{2,1,a(19509),a(19745)},15270329432063)]M=(A)[K(p{4,2,3,1,a(20286),a(20425),a(20780),a(19507)},14245487712713)]Q=(n)[(y)[5] ]I=(n)[(y)[4] ]G=I(T)z=M..G r=(Q)[r]T=nil r=r(Q,z)Q=(q)[(A)[K(p{2,3,1,a(19477),a(20888),a(21362)},31150416705161)] ]r={}end else if Q<10498649 then Q=11278140 I=(A)[K(p{1,2,3,a(20947),a(19705),a(20799)},34997500029504)]M=(B)[I]z=not M r=z else B=(A)[K(p{2,4,1,3,a(19825),a(19244),a(19203),a(20139)},27110180021613)]r=(A)[K(a(20744),34686598501472)]T=5 Q=(q)[r]r=(A)[K(p{1,2,a(21348),a(19734)},7151492843314)]r=(Q)[r]r=r(Q,B)Q=(A)[K(p{1,3,2,a(20283),a(21604),a(19447)},19740832332572)]B=r r=(A)[K(a(19343),2277059911975)]Q=(B)[Q]Q=Q(B,r,T)T=Q Q=T and 9869612 or 753280 end end end end end end else if Q<11569768 then if Q<11170140 then if Q<10837181 then if Q<10698194 then if Q<10618997 then if Q<10601938 then if Q<10574628 then O=U Q=t Q=6904619 else Q=b Q=l and 16286937 or 5194726 end else B=(A)[K(p{1,2,a(21220),a(19356)},11824948166345)]r=(q)[B]B=(A)[K(p{1,2,a(19252),a(20956)},1080492228905)]Q=(r)[B]B=(A)[K(p{2,1,a(19964),a(20620)},25425673585507)]r=Q(B)Q=true(n)[(y)[1] ]=Q Q=3396766 end else if Q<10668032 then Q=10822537 else r=(A)[K(a(21459),28709720068268)]Q=(q)[r]B=1 r=Q(B)Q=r and 11323350 or 14104411 end end else if Q<10812229 then if Q<10722422 then if Q<10713005 then P=1 j=M>P Q=j and 12577253 or 4063604 else Q=2261962 end else Y=1000 Q=5947275 j=1 G=I/Y Y=M+j M=Y I=G end else if Q<10822900 then G=true Q=G and 13799100 or 1512469 else U=(A)[K(a(20751),2746351291595)]t=(A)[K(a(21035),22607151159747)]U=(v)[U]Q=7709489 U=U(v,t)O=U end end end else if Q<10988553 then if Q<10914908 then if Q<10901880 then if Q<10845319 then Q=(n)[(y)[1] ]r={Q}Q=(q)[(A)[K(p{1,2,3,a(20412),a(19465),a(19217)},14326311904196)] ]else z=(A)[K(p{1,2,a(21228),a(21375)},19209116551723)]T=(n)[(y)[1] ]r=(T)[z]T=r Q=T and 9042373 or 12204626 end else B=(W)[1]Q=B and 13914756 or 13661202 end else if Q<10956377 then B=(A)[K(a(19768),19078271379991)]r=(q)[B]B=(A)[K(a(19834),12572392520434)]Q=(r)[B]B=(n)[(y)[1] ]r=Q(B)Q=true(n)[(y)[2] ]=Q r={}Q=(q)[(A)[K(p{3,2,1,a(20439),a(21551),a(19325)},10509776642016)] ]else I=(A)[K(a(21635),1068324831572)]M=(q)[I]I=(A)[K(p{2,1,a(19841),a(20277)},12237331520724)]j=(A)[K(p{1,2,a(20121),a(19880)},14851719789102)]G=(A)[K(p{2,3,4,1,a(20004),a(20926),a(20374),a(19117)},8748345702591)]I=(M)[I]I=I(M,G)M=(A)[K(p{1,2,a(20187),a(20147)},23687406574850)]r=(I)[M]G=(A)[K(p{1,2,a(21026),a(20463)},3579128506958)]Y=true M=(A)[K(p{3,1,2,a(20662),a(21302),a(20100)},23279343434149)]Q=(r)[M]I=(n)[(y)[2] ]M=(I)[G]G=(A)[K(p{2,1,a(21675),a(20160)},6453084503669)]r=(A)[K(p{2,1,a(20615),a(21065)},12010563199626)]I=(A)[K(p{1,2,3,a(20994),a(19955),a(19736)},29766107887830)]R=(A)[K(p{1,2,a(20396),a(19717)},4617462877041)]I=(M)[I]I=I(M,G)M=(A)[K(p{1,2,a(19202),a(21039)},8499031919479)]G=5 r=(Q)[r]L=(z)[R]R=(A)[K(a(19604),16381561594335)]P=(L)[R]L=5 r=r(Q,I,M,B,G,Y,j,P,L)Q=11770742 end end else if Q<11027697 then if Q<10998175 then Q=1215291 else Q=9741700 end else if Q<11166214 then Y=nil j=nil Q=3136400 else U=t Q=V Q=4546264 end end end end else if Q<11370843 then if Q<11281194 then if Q<11241478 then if Q<11201869 then if Q<11185235 then l=true Q=l and 15298595 or 10193097 else Q=r and 5521183 or 14396800 end else r={T}Q=(q)[(A)[K(p{1,3,2,a(21619),a(19487),a(21674)},9406514670233)] ]end else if Q<11265606 then Q=true r=g(7571263,{(y)[2]});(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{1,3,2,a(19883),a(20946),a(19885)},20251809071843)] ]r={r}else Q=r and 11229639 or 2419846 end end else if Q<11335452 then if Q<11319304 then if Q<11297202 then U=Q l=(A)[K(a(20296),11854192852958)]t=(q)[l]v=t Q=t and 10268333 or 1847834 else M=nil Q=7202766 end else r=(A)[K(a(20992),12409904420943)]B=g(113447,{(y)[1],(y)[2]})Q=(q)[r]r=Q(B)Q=10697536 end else if Q<11355087 then b=(A)[K(a(19655),24056193253400)]U=(A)[K(p{1,2,a(19154),a(19863)},23074797840302)]v=(q)[U]l=(q)[b]b=(A)[K(p{2,1,a(21209),a(19918)},3550005163790)]t=(l)[b]l={t()}t=(A)[K(p{1,2,a(19305),a(19467)},28939592217320)]C=(A)[K(a(20188),6932117653689)]U=v(o(l))v=(q)[t]b=(q)[C]C=(A)[K(p{2,1,a(21023),a(19838)},15654947832153)]l=(b)[C]b={l()}t=v(o(b))L=U==t Y=L Q=8545241 else G=(A)[K(p{2,1,a(21512),a(20077)},2435332494536)]I=(A)[K(p{1,2,3,a(19076),a(20623),a(20211)},31691013108163)]I=(M)[I]I=I(M,G)Q=I and 8011401 or 13107640 r=I end end end else if Q<11427647 then if Q<11375572 then if Q<11373929 then if Q<11371398 then O=true(n)[z]=O Q=7965970 else Q=8793794 end else Q=(q)[(A)[K(p{2,3,1,a(20556),a(20487),a(21082)},26668767321687)] ]r={}B=m(B)end else if Q<11407866 then r=(A)[K(a(20328),14791950219276)]Y=(A)[K(a(21668),15614335767528)]Q=(q)[r]G=(q)[Y]Y=(A)[K(p{2,1,a(20953),a(19206)},19045489812857)]I=(G)[Y]G=(A)[K(p{2,3,1,a(19129),a(20075),a(19228)},33490930469469)]M=(I)[G]I=(A)[K(p{2,1,a(20193),a(20596)},28414686813951)]z=(M)[I]I=(A)[K(p{1,3,2,a(19937),a(20518),a(21059)},634088418591)]I=(z)[I]M={I(z)}z={Q(o(M))}B=(z)[2]T=(z)[3]r=(z)[1]Q=1385907 z=r else M=w()z=w()r=false(n)[z]=r r=nil(n)[M]=r r=i(11264461,{z,M});(n)[M]=r I=(n)[M]G=(A)[K(a(20761),33073129052092)];(q)[G]=I G=(n)[z]Q=G and 3342137 or 14498840 end end else if Q<11519527 then if Q<11491867 then j=(A)[K(a(21415),33083886591018)]Q=0 B=Q r=(A)[K(a(19634),13254994107724)]Q=(q)[r]Y=(q)[j]j=(A)[K(p{1,2,a(20006),a(20143)},11114389259452)]G=(Y)[j]Y=(A)[K(p{3,1,2,a(20852),a(20828),a(20244)},12295702869151)]I=(G)[Y]G=(A)[K(p{2,1,a(19116),a(20308)},23048017427868)]M=(I)[G]G=(A)[K(p{3,1,2,a(21186),a(19715),a(19988)},24396259278859)]G=(M)[G]I={G(M)}M={Q(o(I))}T=(M)[2]r=(M)[1]Q=5407161 z=(M)[3]M=r else r=(n)[B];(n)[(y)[2] ]=r z=Q M=(n)[B]T=M Q=M and 6513133 or 3904033 end else if Q<11524821 then k=Q J=(n)[O]Z=(A)[K(a(19878),13245708027238)]d=(J)[Z]J=(A)[K(p{2,1,a(21045),a(19352)},27096105171587)]h=d~=J Q=h and 15646375 or 3353697 C=h else B=(W)[1]Q=B and 2773729 or 14417319 r=B end end end end end else if Q<12050031 then if Q<11868953 then if Q<11768682 then if Q<11648992 then if Q<11628968 then if Q<11620234 then b=(A)[K(a(20282),3701015419957)]AZ=(A)[K(a(20332),1592301651375)]c=(A)[K(p{1,2,a(20513),a(19939)},31858350417214)]C=(A)[K(p{1,2,a(19908),a(21134)},25189924514020)]t=(q)[b]Z=(A)[K(p{2,3,1,a(19445),a(20203),a(19247)},10286815285786)]u=(A)[K(a(19312),28526171272911)]b=(A)[K(p{1,2,a(20877),a(21594)},29554107448854)]aZ=110 b=(t)[b]rZ=180 yZ=180 h=(A)[K(a(20566),13973999183296)]kZ=(A)[K(p{1,4,3,5,2,a(19314),a(20769),a(21518),a(20594),a(21224)},5323238783424)]b=b(t,C)KZ=(L)[AZ]C=(A)[K(p{3,1,4,2,a(19398),a(21307),a(20105),a(21212)},18582730035952)]AZ=(A)[K(a(19459),15472221825262)]S=KZ..AZ WZ=255 X=c..S wZ=255 wc=34 c=(A)[K(p{2,1,a(20059),a(20212)},33501507088296)]sZ=(A)[K(a(20426),19674087769631)]t=(A)[K(p{1,2,a(20205),a(20916)},6638514760397)]S=5 t=(b)[t]k={[h]=Z,[u]=X,[c]=S}t=t(b,C,k)b=(A)[K(p{1,2,a(21096),a(21230)},30459335344719)]AZ=66 h=(A)[K(p{6,14,8,12,15,7,4,3,10,5,9,11,17,13,2,16,1,a(19662),a(19170),a(20533),a(20462),a(19327),a(20365),a(20528),a(21092),a(20894),a(21266),a(20165),a(19619),a(19319),a(19840),a(20838),a(19037),a(21097)},13900119687922)]c=11 yc=(A)[K(p{2,1,a(20749),a(19220)},17049446574553)]Z=(A)[K(p{1,2,a(20573),a(19694)},24713363293873)]k=(A)[K(a(21254),31475476578212)]oZ=255 Tc=104 t=(q)[b]C=(q)[k]Z=(C)[Z]k={Z(C,h)}X=(A)[K(p{1,2,a(20716),a(20734)},1552802125596)]b=t(o(k))nZ=50 t=b()mZ=(A)[K(a(20787),31804765380648)]pZ=27 fZ=60 h=(A)[K(a(20330),26630010895971)]b=w()DZ=110(n)[b]=t t=(n)[b]IZ=(A)[K(p{1,2,a(19384),a(19383)},3227940722813)]u=(q)[X]X=(A)[K(p{2,1,a(20213),a(19194)},15111413483390)]C=(A)[K(p{1,2,a(19221),a(21036)},30519094159707)]S=41 Z=(u)[X]X=18 u=Z(X,c,S)Wc=false S=(A)[K(p{2,1,a(19664),a(19345)},20280460929050)]Z=(A)[K(p{1,2,a(19740),a(19177)},4930901103291)]c=(q)[S]S=(A)[K(p{2,1,a(19321),a(19360)},34531764287523)]X=(c)[S]S=39 KZ=13 c=X(S,KZ,AZ)X=(A)[K(p{1,2,a(20226),a(21078)},276878757864)]AZ=(A)[K(p{2,1,a(19300),a(21445)},19932534248090)]KZ=(q)[AZ]AZ=(A)[K(p{1,2,a(20866),a(19347)},18499227879775)]S=(KZ)[AZ]AZ=60 lZ=(A)[K(a(19316),5728666586260)]KZ=S(AZ,pZ,aZ)S=(A)[K(a(21214),3470253546881)]aZ=(A)[K(p{2,1,a(20117),a(20958)},6520225294388)]QZ=255 BZ=96 pZ=(q)[aZ]aZ=(A)[K(p{2,1,a(19676),a(20280)},8723891109484)]AZ=(pZ)[aZ]aZ=255 pZ=AZ(aZ,QZ,oZ)AZ=(A)[K(p{3,2,1,a(19927),a(19644),a(20108)},27036544875070)]oZ=(A)[K(p{1,2,a(19267),a(21023)},11742961874056)]QZ=(q)[oZ]oZ=(A)[K(p{1,2,a(20400),a(21118)},32224168128426)]aZ=(QZ)[oZ]oZ=200 QZ=aZ(oZ,yZ,WZ)WZ=(A)[K(p{2,1,a(20687),a(19114)},21029860685529)]yZ=(q)[WZ]WZ=(A)[K(p{2,1,a(21504),a(20965)},1458339701339)]oZ=(yZ)[WZ]WZ=70 uZ=51 aZ=(A)[K(p{1,2,a(19976),a(21042)},18428689345583)]yZ=oZ(WZ,nZ,DZ)DZ=(A)[K(p{1,2,a(19956),a(20356)},6011813579400)]nZ=(q)[DZ]C=(t)[C]DZ=(A)[K(p{1,2,a(20568),a(19909)},32327156296877)]xZ=(A)[K(a(20783),26342596355329)]WZ=(nZ)[DZ]oZ=(A)[K(p{1,2,a(21101),a(19317)},15845822853094)]DZ=90 nZ=WZ(DZ,fZ,rZ)WZ=(A)[K(a(19870),21305932777629)]rZ=(A)[K(p{1,2,a(19549),a(21342)},28920584693185)]fZ=(q)[rZ]rZ=(A)[K(p{2,1,a(19145),a(21347)},24895918552114)]DZ=(fZ)[rZ]oc=(A)[K(p{2,1,a(19775),a(20014)},548794703625)]rZ=140 fZ=DZ(rZ,BZ,wZ)k={[h]=u,[Z]=c,[X]=KZ,[S]=pZ,[AZ]=QZ,[aZ]=yZ,[oZ]=nZ,[WZ]=fZ}Z=(A)[K(a(20925),23984643191861)]C=C(t,k)pZ=(A)[K(a(21340),9084284049708)]c=(A)[K(p{2,1,a(21337),a(19985)},25145634356020)]C=(n)[b]X=(A)[K(p{2,4,1,3,a(19471),a(19249),a(19367),a(19681)},6716075426265)]aZ=96 k=(A)[K(p{1,2,a(20878),a(21280)},29312365416775)]k=(C)[k]u=(A)[K(p{2,1,a(19129),a(20680)},20388892609672)]AZ=(q)[pZ]t=(A)[K(p{1,4,5,6,2,3,a(19794),a(19340),a(21122),a(21454),a(21641),a(20731)},5178856167895)]pZ=(A)[K(p{1,2,a(19152),a(20811)},33262387837277)]KZ=(AZ)[pZ]wZ=(A)[K(p{1,2,a(19933),a(20557)},2787638573506)]AZ=(A)[K(p{2,1,a(20135),a(21276)},9581981782627)]S=(KZ)[AZ]KZ=(A)[K(p{3,1,2,a(19457),a(19240),a(21349)},22817953315238)]AZ=F(14020131,{})OZ=(A)[K(p{5,2,4,3,1,a(20008),a(20603),a(21126),a(19077),a(21451)},29260303924193)]h={[Z]=t,[u]=X,[c]=S,[KZ]=AZ}c=(A)[K(p{3,2,5,4,1,a(20512),a(21496),a(20570),a(20848),a(19030)},3579010266496)]pZ=(A)[K(p{2,1,a(21070),a(19960)},27794180705857)]u=(A)[K(a(21011),11875750903009)]X=(A)[K(a(19523),11619259327026)]S=(A)[K(a(20231),18172304546204)]Z=(A)[K(a(21684),18013857333837)]k=k(C,h)AZ=(q)[pZ]QZ=255 rZ=(A)[K(a(21298),5420918159719)]pZ=(A)[K(p{2,1,a(20091),a(19105)},10534835269363)]KZ=(AZ)[pZ]pZ=140 C=(A)[K(a(20411),27838911101716)]C=(k)[C]AZ=KZ(pZ,aZ,QZ)YZ=(A)[K(p{1,2,a(20189),a(21211)},9350503948715)]h={[Z]=u,[X]=c,[S]=AZ}AZ=(A)[K(p{1,6,13,3,18,16,2,11,10,14,15,17,7,4,8,9,5,12,a(19783),a(21204),a(21544),a(21150),a(19428),a(20234),a(19748),a(20451),a(21256),a(20460),a(21109),a(21067),a(20626),a(21178),a(20322),a(19065),a(21578),a(19263)},29957876346304)]X=(A)[K(p{2,1,3,a(20467),a(21090),a(21556)},8395919525208)]u=(A)[K(a(21200),11666646718674)]C=C(k,h)Z={[u]=X}S=(A)[K(p{12,6,7,3,5,18,15,14,11,4,10,13,16,8,17,1,9,2,a(19290),a(20291),a(19546),a(19626),a(21470),a(20225),a(20880),a(21381),a(19073),a(19813),a(19039),a(19376),a(19373),a(20469),a(19865),a(19176),a(21372),a(21510)},13201150978867)]X=(A)[K(a(19788),2571240452025)]h=(A)[K(p{1,2,a(19656),a(19568)},30753298058865)]h=(C)[h]h=h(C,Z)KZ=t..AZ c=S..KZ u={[X]=c}Z=(A)[K(a(21315),14716760114296)]Z=(h)[Z]X=(A)[K(a(21453),30853749911321)]Z=Z(h,u)BZ=(A)[K(p{2,3,1,a(21649),a(21083),a(21251)},32774967961033)]Z=(A)[K(a(19434),2143432433622)]AZ=w()GZ=(A)[K(p{1,4,5,3,2,a(20586),a(19945),a(19970),a(21657),a(20325)},7562165564756)]Z=(h)[Z]KZ=w()c=(A)[K(p{5,1,4,3,2,a(20364),a(21009),a(20114),a(21164),a(19699)},701207675921)]u={[X]=c}XZ=153 X=(A)[K(p{2,1,3,a(21208),a(20338),a(19542)},27993001538342)]c=w()Z=Z(h,u)u=(n)[z]Z=(u)[X]hZ=(A)[K(a(19338),16437472010072)]u=w()eZ=(A)[K(p{5,3,2,4,1,a(19175),a(21021),a(20964),a(20941),a(19270)},11484276227023)];(n)[u]=Z X=w()Z=false S=w()dZ=(A)[K(a(20163),20805558238417)];(n)[X]=Z pZ=g(4374652,{})Z=false(n)[c]=Z Z=false(n)[S]=Z Z=false aZ=s(4802585,{});(n)[KZ]=Z Z=false(n)[AZ]=Z Z=w();(n)[Z]=pZ pZ=w();(n)[pZ]=aZ QZ=F(3014687,{pZ})gZ=(A)[K(p{1,2,a(21650),a(21412)},30823525371093)]aZ=w();(n)[aZ]=QZ QZ=w()oZ=F(2996736,{u,aZ});(n)[QZ]=oZ WZ=g(13320207,{QZ})yZ=H(16149496,{c,X,b})oZ=w();(n)[oZ]=yZ Qc=(A)[K(p{1,2,a(20889),a(19867)},9153951905256)]yZ=w();(n)[yZ]=WZ WZ=(n)[yZ]iZ=false nZ=WZ()WZ=w();(n)[WZ]=nZ FZ=(A)[K(p{1,2,a(21530),a(20443)},34165262406095)]TZ=g(6453119,{X,oZ,b})nZ=w()DZ=g(15687913,{KZ,S,yZ,WZ})zZ=(A)[K(a(20337),9808214240952)]fZ={[rZ]=BZ,[wZ]=TZ}rZ=(A)[K(a(20056),14961275343584)];(n)[nZ]=DZ wZ=(A)[K(p{1,2,a(20410),a(19896)},5236558043826)]DZ=(A)[K(p{2,1,a(20754),a(19307)},27376071987661)]MZ=s(10902474,{u,b,S,AZ,nZ})DZ=(h)[DZ]BZ=(A)[K(p{3,1,2,a(21300),a(19358),a(20579)},9935701855642)]DZ=DZ(h,fZ)TZ=false DZ=(A)[K(p{1,2,a(20051),a(20405)},1111250571106)]DZ=(h)[DZ]fZ={[rZ]=BZ,[wZ]=TZ,[IZ]=MZ}BZ=F(6226722,{AZ,S,X,nZ,oZ})DZ=DZ(h,fZ)rZ=E(9653851,{S,X})fZ=E(434627,{})TZ=w()DZ=w();(n)[DZ]=fZ wZ=w()fZ=w();(n)[fZ]=rZ rZ=w()UZ=(A)[K(p{1,4,5,3,2,a(21252),a(20745),a(19912),a(20702),a(20572)},23282400903537)];(n)[rZ]=BZ MZ=w()IZ=w()BZ=false(n)[wZ]=BZ BZ=30000(n)[TZ]=BZ BZ=3000(n)[IZ]=BZ BZ=1.5 EZ=i(6453435,{wZ,b,DZ,AZ,TZ,fZ,Z,IZ,rZ,MZ});(n)[MZ]=BZ HZ={[mZ]=eZ,[gZ]=iZ,[FZ]=EZ}BZ=(A)[K(p{1,2,a(21534),a(21236)},27042532135429)]BZ=(h)[BZ]BZ=BZ(h,HZ)FZ=(A)[K(p{1,2,a(20218),a(19178)},15720694515263)]gZ=(A)[K(a(20360),22735065298957)]BZ=false HZ=w();(n)[HZ]=BZ pc=(A)[K(p{2,1,a(19137),a(20307)},30015345482478)]BZ=w()mZ=H(3166656,{HZ,b,u})EZ=s(13469788,{BZ});(n)[BZ]=mZ iZ=(A)[K(p{1,4,3,5,2,a(21258),a(19835),a(19436),a(20312),a(21575)},25005417831835)]eZ={[gZ]=iZ,[FZ]=EZ}gZ=(A)[K(a(21305),30109328236498)]mZ=(A)[K(p{2,1,a(20655),a(19405)},26420965514046)]mZ=(h)[mZ]EZ=F(183125,{BZ})mZ=mZ(h,eZ)FZ=(A)[K(p{2,1,a(21450),a(19654)},18179318196732)]mZ=(A)[K(p{2,1,a(21598),a(19773)},15195136528350)]iZ=(A)[K(p{1,4,3,2,5,a(21406),a(19480),a(20694),a(20237),a(21370)},18061694440499)]eZ={[gZ]=iZ,[FZ]=EZ}mZ=(h)[mZ]EZ=g(15231846,{BZ})cZ=(A)[K(p{3,4,1,2,a(21491),a(20861),a(20022),a(19806)},8274261940884)]FZ=(A)[K(p{2,1,a(20209),a(21503)},2449082801466)]LZ=76 vZ=255 mZ=mZ(h,eZ)iZ=(A)[K(p{2,3,4,5,1,a(20371),a(19353),a(20921),a(20041),a(19977)},27691185961045)]gZ=(A)[K(a(21483),10302157495372)]mZ=(A)[K(p{1,2,a(21528),a(21357)},4109131965076)]eZ={[gZ]=iZ,[FZ]=EZ}gZ=(A)[K(a(21063),13260079969580)]mZ=(h)[mZ]iZ=(A)[K(p{3,2,1,4,a(21571),a(19308),a(21517),a(20708)},10865071397834)]FZ=(A)[K(p{4,1,3,2,a(20506),a(21293),a(19692),a(19496)},20393102386588)]mZ=mZ(h,eZ)mZ=(A)[K(a(20419),31831244596408)]eZ={[gZ]=iZ}EZ=(A)[K(p{1,3,2,4,a(19164),a(20216),a(20717),a(20026)},12473377826553)]mZ=(h)[mZ]mZ=mZ(h,eZ)iZ=(A)[K(a(21625),1574704889698)]gZ={[iZ]=FZ}eZ=w();(n)[eZ]=mZ FZ=(A)[K(a(20489),6698957258835)]mZ=(A)[K(a(21294),3780393792185)]mZ=(h)[mZ]mZ=mZ(h,gZ)iZ={[FZ]=EZ}gZ=w();(n)[gZ]=mZ mZ=(A)[K(a(21155),29945926621175)]mZ=(h)[mZ]FZ=(A)[K(a(21537),2314207625768)]mZ=mZ(h,iZ)iZ=w();(n)[iZ]=mZ EZ=H(3807887,{DZ,eZ,Z})mZ=(q)[FZ]RZ=(A)[K(p{5,1,4,3,2,a(21488),a(21613),a(19616),a(19144),a(19698)},24917067075018)]FZ=mZ(EZ)EZ=s(1650140,{QZ,WZ,gZ})FZ=(A)[K(a(21139),13328031150114)]mZ=(q)[FZ]FZ=mZ(EZ)FZ=(A)[K(a(19342),10706257038772)]EZ=s(8595598,{QZ,iZ})mZ=(q)[FZ]FZ=mZ(EZ)jZ=(q)[YZ]mZ=(A)[K(a(19553),15782320820064)]EZ=(A)[K(a(21511),22782296088523)]YZ=(A)[K(p{2,1,a(20481),a(19950)},23629411650693)]mZ=(k)[mZ]PZ=(jZ)[YZ]CZ=(A)[K(p{2,1,a(21448),a(20249)},25235270698769)]YZ=106 jZ=PZ(YZ,LZ,vZ)FZ={[EZ]=xZ,[sZ]=GZ,[zZ]=jZ}mZ=mZ(k,FZ)sZ=(A)[K(p{3,2,1,a(21058),a(20271),a(21651)},33362276698428)]JZ=(A)[K(p{1,2,a(19776),a(21023)},1314738604792)]xZ=(A)[K(a(20319),28452777830366)]EZ={[xZ]=sZ}GZ=(A)[K(a(21417),3342269676185)]FZ=(A)[K(p{2,1,a(20240),a(20018)},18877081140695)]FZ=(mZ)[FZ]FZ=FZ(mZ,EZ)zZ=(A)[K(p{1,5,4,6,3,2,a(20087),a(20599),a(19777),a(20857),a(21616),a(20503)},18992859875827)]EZ=w()LZ=(A)[K(p{5,4,1,3,2,a(20124),a(19301),a(19869),a(20182),a(21052)},1011497247410)]vZ=(A)[K(p{1,5,3,2,4,a(20372),a(19256),a(21654),a(20103),a(19971)},33805455435136)]sZ={[GZ]=zZ}xZ=g(12046577,{})jZ=(A)[K(p{3,4,1,2,a(21680),a(20393),a(21086),a(20493)},24416248043029)];(n)[EZ]=xZ PZ=(A)[K(p{3,1,2,4,a(19377),a(20792),a(21464),a(19618)},1469623636943)]zZ=(A)[K(a(21165),29740645301917)]xZ=(A)[K(a(19652),34380957883268)]GZ={[zZ]=PZ}xZ=(FZ)[xZ]xZ=xZ(FZ,sZ)sZ=w();(n)[sZ]=xZ PZ=(A)[K(a(21140),5631257780253)]Ac=(A)[K(a(19382),22847391264045)]xZ=(A)[K(a(19141),4324870673368)]zZ={[PZ]=jZ}xZ=(FZ)[xZ]xZ=xZ(FZ,GZ)GZ=w();(n)[GZ]=xZ xZ=(A)[K(a(21608),32666422440691)]xZ=(FZ)[xZ]xZ=xZ(FZ,zZ)YZ=(A)[K(p{2,4,1,3,a(19679),a(20510),a(21501),a(19179)},10303280436554)]jZ=(A)[K(a(19627),2237665685093)]PZ={[jZ]=YZ}zZ=w();(n)[zZ]=xZ xZ=(A)[K(a(19700),19031323712715)]xZ=(FZ)[xZ]YZ=(A)[K(a(21066),15209982643593)]xZ=xZ(FZ,PZ)jZ={[YZ]=LZ}SZ=(A)[K(a(20809),23617492425681)]PZ=w();(n)[PZ]=xZ xZ=(A)[K(a(21555),21457281117927)]xZ=(FZ)[xZ]xZ=xZ(FZ,jZ)jZ=w();(n)[jZ]=xZ LZ=(A)[K(a(20258),23354583463840)]YZ={[LZ]=vZ}xZ=(A)[K(a(19561),29899602289609)]xZ=(FZ)[xZ]tZ=(A)[K(p{3,1,5,2,4,a(19839),a(20987),a(19638),a(19730),a(19094)},18561568055189)]vZ=(A)[K(a(19438),31171999675238)]LZ={[vZ]=tZ}xZ=xZ(FZ,YZ)YZ=w()tZ=(A)[K(a(20264),30328885205278)];(n)[YZ]=xZ xZ=(A)[K(a(20827),15620623259140)]xZ=(FZ)[xZ]xZ=xZ(FZ,LZ)LZ=w()vZ={[tZ]=UZ}(n)[LZ]=xZ UZ=(A)[K(a(21419),2815529773430)]xZ=(A)[K(a(21397),11556695515369)]xZ=(FZ)[xZ]xZ=xZ(FZ,vZ)vZ=w();(n)[vZ]=xZ xZ=(A)[K(a(20384),29318603021138)]tZ={[UZ]=OZ}xZ=(FZ)[xZ]xZ=xZ(FZ,tZ)OZ=(A)[K(a(19741),12525303407635)]tZ=w()UZ={[OZ]=RZ}RZ=(A)[K(a(20029),20217682530189)]OZ=w();(n)[tZ]=xZ xZ=(A)[K(a(20944),27349342048447)]xZ=(FZ)[xZ]xZ=xZ(FZ,UZ)UZ=w();(n)[UZ]=xZ xZ=0(n)[OZ]=xZ xZ=(q)[RZ]VZ=H(9989828,{u,OZ,GZ,EZ,zZ})RZ=xZ(VZ)VZ=w()xZ=nil RZ=w();(n)[RZ]=xZ xZ=false bZ=s(12574267,{AZ,VZ,RZ,sZ});(n)[VZ]=xZ xZ=(q)[lZ]lZ=xZ(bZ)lZ=(A)[K(a(20030),28248963227144)]bZ=g(8381207,{PZ,EZ,jZ,YZ,LZ,vZ,tZ,UZ})xZ=(q)[lZ]lZ=xZ(bZ)ZZ=(q)[JZ]JZ=(A)[K(p{2,1,a(19068),a(19311)},5907887566974)]NZ=(ZZ)[JZ]xZ=(A)[K(a(20472),30047567795888)]JZ=102 bZ=(A)[K(a(20033),7920026924235)]ZZ=NZ(JZ,uZ,XZ)lZ={[bZ]=CZ,[hZ]=kZ,[dZ]=ZZ}hZ=(A)[K(p{2,1,3,a(21043),a(20873),a(20321)},11823141738963)]xZ=(k)[xZ]dZ=(A)[K(p{2,1,a(20219),a(20172)},28480320099316)]kZ=(A)[K(p{1,2,5,4,3,a(20913),a(21050),a(19449),a(20181),a(21514)},25701267212758)]xZ=xZ(k,lZ)lZ=(A)[K(p{1,2,a(19090),a(20755)},3046986869277)]CZ=(A)[K(a(21686),33767528676094)]bZ={[CZ]=hZ}NZ=E(5135338,{b})lZ=(xZ)[lZ]lZ=lZ(xZ,bZ)hZ=(A)[K(a(19488),19578658805567)]CZ={[hZ]=kZ,[dZ]=NZ}dZ=(A)[K(p{1,2,a(20609),a(21173)},5460870334920)]bZ=(A)[K(p{2,1,a(19506),a(19396)},17571272652518)]bZ=(lZ)[bZ]NZ=s(4940673,{})fc=(A)[K(p{1,2,a(20409),a(20461)},32855888629666)]kZ=(A)[K(p{1,2,a(19781),a(21418)},4123573690713)]hZ=(A)[K(a(20196),31060263185307)]bZ=bZ(lZ,CZ)CZ={[hZ]=kZ,[dZ]=NZ}NZ=s(1394595,{})kZ=(A)[K(p{2,1,3,a(19315),a(19483),a(19415)},4108580379443)]dZ=(A)[K(p{1,2,a(19320),a(20711)},4223195085299)]bZ=(A)[K(p{2,1,a(21598),a(19723)},12757446565639)]bZ=(lZ)[bZ]bZ=bZ(lZ,CZ)hZ=(A)[K(a(20178),7654503250927)]bZ=(A)[K(p{2,1,a(21623),a(20453)},30057012419004)]bZ=(lZ)[bZ]CZ={[hZ]=kZ,[dZ]=NZ}hZ=(A)[K(a(20039),3706784632811)]NZ=E(2502733,{})bZ=bZ(lZ,CZ)bZ=(A)[K(p{1,2,a(21184),a(19581)},25059382576859)]bZ=(lZ)[bZ]kZ=(A)[K(p{2,1,a(19113),a(20962)},30037819300881)]dZ=(A)[K(p{1,2,a(19121),a(20564)},20121038487575)]CZ={[hZ]=kZ,[dZ]=NZ}dZ=(A)[K(p{2,1,a(20170),a(20455)},8736986052182)]NZ=(A)[K(p{2,1,a(21187),a(19297)},15717007032517)]kZ=(A)[K(a(19779),16529410704918)]bZ=bZ(lZ,CZ)CZ=w()bZ=true(n)[CZ]=bZ bZ=(A)[K(p{1,2,a(19598),a(19836)},3598806528203)]Kc=(A)[K(p{2,1,3,a(20109),a(19770),a(19163)},20937113818206)]ZZ=i(5673646,{CZ})bZ=(lZ)[bZ]hZ={[kZ]=dZ,[NZ]=ZZ}kZ=(A)[K(a(19363),32991974872499)]dZ=(A)[K(p{1,3,2,a(20883),a(20670),a(20035)},33858296379401)]bZ=bZ(lZ,hZ)hZ={[kZ]=dZ}bZ=(A)[K(p{1,2,a(19621),a(19503)},21972822090573)]kZ=w()bZ=(xZ)[bZ]bZ=bZ(xZ,hZ)NZ=(A)[K(a(19382),8377051459254)]hZ=false uZ=(A)[K(a(21429),15658465471862)]dZ=w();(n)[kZ]=hZ hZ=nil ZZ=w();(n)[dZ]=hZ;(n)[ZZ]=NZ hZ=(A)[K(a(19382),28206020539628)]JZ=(q)[uZ]XZ=E(15747651,{kZ,dZ,u})NZ=x(4967354,{})uZ=JZ(XZ)JZ=nil uZ=w()XZ=w();(n)[uZ]=JZ JZ=false(n)[XZ]=JZ qc=x(11533289,{z,dZ,XZ,b,uZ})JZ=(A)[K(p{2,1,a(21624),a(19890)},34947018642749)]ac={[SZ]=cZ,[Kc]=Ac,[pc]=qc}pc=(A)[K(p{1,2,a(19146),a(21603)},2067570701617)]qc=i(6238628,{kZ})cZ=(A)[K(p{3,4,2,1,a(19581),a(20773),a(19851),a(20587)},20142716119233)]Kc=(A)[K(p{2,1,a(19489),a(21262)},12014522058765)]JZ=(bZ)[JZ]SZ=(A)[K(a(19963),32335014581736)]Ac=false JZ=JZ(bZ,ac)ac={[SZ]=cZ,[Kc]=Ac,[pc]=qc}JZ=(A)[K(p{2,1,a(20424),a(20854)},12613223142091)]SZ=w()JZ=(bZ)[JZ]Ac=(A)[K(a(19844),2543376989349)]qc=(A)[K(a(20306),1011338599045)]JZ=JZ(bZ,ac)JZ=false cZ=w()ac=w()nc=(A)[K(p{1,2,a(19605),a(19592)},3514127644302)];(n)[ac]=JZ JZ=1e59(n)[SZ]=JZ JZ=false(n)[cZ]=JZ Kc=(q)[Ac]Ac=(A)[K(p{2,1,a(20094),a(19374)},13674052427654)]Ac=(Kc)[Ac]Dc=s(8599146,{cZ})pc=(A)[K(p{2,1,a(21436),a(19944)},11679397423612)]JZ=nil Ac=Ac(Kc,pc)Kc=(A)[K(p{2,1,a(21396),a(19529)},6835684226726)]pc={[qc]=Qc,[oc]=Wc,[yc]=Dc}Kc=(bZ)[Kc]Kc=Kc(bZ,pc)qc=(A)[K(a(19331),20674425986677)]Wc=false pc=(q)[qc]qc=(A)[K(p{2,1,a(21232),a(21072)},31627899122311)]Qc=(A)[K(p{1,2,a(21159),a(19966)},13289741423388)]qc=(pc)[qc]qc=qc(pc,Qc)pc=(A)[K(p{2,1,3,a(19697),a(19805),a(19074)},10724610713767)]Kc=(qc)[pc]Dc=s(14329754,{ac,b,SZ})Qc=(A)[K(p{2,1,a(19688),a(21627)},1468934364259)]yc=(A)[K(p{2,1,a(21499),a(20709)},6557134559193)]pc=(A)[K(p{2,1,a(20957),a(21427)},32451222589269)]qc=i(1610213,{cZ,u})oc=(A)[K(p{1,2,a(20368),a(20993)},15308291015482)]pc=(Kc)[pc]pc=pc(Kc,qc)Kc=(A)[K(p{2,1,a(19106),a(19712)},10322205668626)]qc=(A)[K(a(20134),7304373460187)]Kc=(bZ)[Kc]pc={[qc]=Qc,[oc]=Wc,[yc]=Dc}Kc=Kc(bZ,pc)qc=E(13629705,{ac,SZ,z,u})oc=(A)[K(a(19536),12808029786195)]pc=(A)[K(p{1,2,a(21314),a(20748)},20580438761395)]Wc=(A)[K(p{1,2,3,a(20442),a(20903),a(19609)},30760168518804)]Dc=(A)[K(a(19382),27071643535410)]Kc=(Ac)[pc]Qc=(A)[K(p{2,1,3,a(21240),a(21249),a(20821)},31462034101010)]pc=(A)[K(p{2,1,a(21076),a(19894)},32460208951618)]pc=(Kc)[pc]pc=pc(Kc,qc)qc=(A)[K(a(20186),33571203621632)]yc=(A)[K(p{2,3,1,a(19330),a(20610),a(20272)},13222538779189)]Kc=(A)[K(a(21221),17026663542598)]pc={[qc]=Qc}Kc=(bZ)[Kc]Kc=Kc(bZ,pc)pc=w();(n)[pc]=Kc Kc=nil qc=w()rc=s(7996943,{qc,ZZ,b,EZ,pc})Qc={[oc]=Wc,[yc]=Dc,[fc]=rc}Wc=(A)[K(a(20222),17114187710876)];(n)[qc]=Kc Dc=(A)[K(p{4,2,5,1,3,a(19607),a(19580),a(20375),a(20815),a(19974)},22518452231147)]fc=(A)[K(a(20475),1390908208757)]Kc=(A)[K(p{1,2,a(20305),a(20625)},3683030440614)]oc=(A)[K(a(19278),21389872027838)]Kc=(bZ)[Kc]Kc=Kc(bZ,Qc)Bc=(q)[nc]yc=(A)[K(a(19774),32307674269217)]nc=(A)[K(p{1,2,a(21179),a(19125)},26020943725382)]rc=(Bc)[nc]Kc=(A)[K(a(21311),28209709897032)]nc=62 Bc=rc(nc,wc,Tc)Qc={[oc]=Wc,[yc]=Dc,[fc]=Bc}Kc=(k)[Kc]Kc=Kc(k,Qc)rc=s(13915674,{b})yc=(A)[K(p{2,3,1,a(19943),a(21482),a(21296)},30396244805424)]Qc=(A)[K(p{2,1,a(19765),a(20678)},21910505819950)]Wc=(A)[K(a(20058),17810741426950)]Qc=(Kc)[Qc]oc={[Wc]=yc}Dc=(A)[K(p{2,4,1,3,a(20910),a(20148),a(21386),a(20681)},26149024665672)]Qc=Qc(Kc,oc)oc=(A)[K(a(19036),14516974559987)]yc=(A)[K(a(19348),25669396154623)]oc=(Qc)[oc]fc=(A)[K(p{2,1,a(21333),a(20909)},11276079844538)]Wc={[yc]=Dc}Dc=(A)[K(p{3,1,2,a(21618),a(20836),a(20646)},32007262275048)]oc=oc(Qc,Wc)oc=(A)[K(p{2,1,a(21421),a(19426)},378627575887)]yc=(A)[K(a(19803),21780107656336)]Wc={[yc]=Dc,[fc]=rc}yc=(A)[K(a(21354),28532018409760)]oc=(Qc)[oc]oc=oc(Qc,Wc)rc=(A)[K(p{1,2,a(21071),a(21434)},7451123404101)]Wc=(q)[yc]fc=(n)[b]Dc=(fc)[rc]yc=Wc(Dc)Wc=(A)[K(p{1,2,a(20930),a(19708)},2235029370696)]oc=yc==Wc Q=oc and 9015555 or 3806860 else Q=12263409 end else G=(A)[K(a(19456),14602781757616)]r=(n)[(y)[2] ]M=(A)[K(a(19063),8774079336493)]j=(A)[K(p{1,2,3,4,5,a(20720),a(21531),a(19531),a(19123),a(20167)},18679342327316)]P=(n)[(y)[3] ]Q=16764514 I=(A)[K(p{2,1,a(21161),a(20449)},16172911533237)]Y=j..P j=(A)[K(p{2,1,a(21449),a(20146)},22434020156607)]T=(A)[K(p{1,2,a(20537),a(19302)},10343346811354)]P=2 T=(r)[T]z={[M]=I,[G]=Y,[j]=P}T=T(r,z)end else if Q<11717583 then j=Q l=(A)[K(a(20616),16788200820265)]t=(A)[K(a(19551),3389629322979)]U=(q)[t]t=(A)[K(p{1,2,a(19455),a(20288)},8055071230050)]v=(U)[t]U=v()t=(q)[l]l=(A)[K(p{1,2,a(19473),a(19289)},29950257426092)]v=(t)[l]t=v()L=U==t Q=L and 8545241 or 11351314 Y=L else Q=9741700 Y=true(n)[z]=Y end end else if Q<11834087 then if Q<11825599 then if Q<11805751 then Q=1151764 z=nil else M=5 r=(A)[K(p{1,2,a(21004),a(19998)},7457735670533)]Q=(A)[K(p{1,3,2,a(20547),a(21181),a(20757)},12755751674766)]Q=(z)[Q]Q=Q(z,r,M)M=w();(n)[M]=Q Q=(n)[M]Q=Q and 9149595 or 15854919 end else z=nil Q=z and 12125768 or 1595975 end else if Q<11849375 then l=(A)[K(p{1,2,a(19470),a(20924)},10647006010937)]V=(A)[K(a(20376),33644740507714)]V=(v)[V]V=V(v,l)U=V t=Q Q=V and 15138156 or 15694924 else t=(A)[K(a(20279),8489455325148)]U=(A)[K(a(19365),35109302038500)]U=(v)[U]U=U(v,t)Q=U and 13248157 or 11840737 O=U end end end else if Q<11980009 then if Q<11930592 then if Q<11898743 then if Q<11880608 then B=nil r={}Q=(q)[(A)[K(p{3,2,1,a(20863),a(19663),a(20247)},22593330687962)] ]T=nil else r={}T=nil B=nil Q=(q)[(A)[K(p{1,3,2,a(20691),a(19910),a(20520)},14320966525715)] ]end else Q=(q)[(A)[K(p{3,2,1,a(19658),a(20052),a(20822)},10192198179208)] ]B=nil r={}end else if Q<11953742 then z=nil Q=1595975 else v=(A)[K(p{3,1,5,10,2,9,7,4,8,6,a(19241),a(20369),a(21040),a(21253),a(19576),a(19158),a(21117),a(19513),a(20814),a(19032)},2681511844376)]Q=(q)[(A)[K(p{2,3,1,a(19458),a(19079),a(19127)},12422054522785)] ]r={v}end end else if Q<11991469 then if Q<11987008 then Y=w()G={}j=1(n)[Y]=G G=(n)[Y]P=(n)[Y];(G)[j]=P j=(A)[K(a(20255),2038116092093)]G=(q)[j]P=F(10939231,{Y,z})j=G(P)P=E(2862303,{z})j=(A)[K(a(19980),31662828251002)]G=(q)[j]j=G(P)G=(n)[z]Q=G and 3251318 or 1248932 else Q=11197056 B=(n)[(y)[2] ]r=B end else if Q<12020888 then Q=T Q=r and 16672401 or 8493451 else Y=(A)[K(a(21342),32018494143580)]j=(A)[K(a(20390),10647026028057)]P=(A)[K(a(21196),24663244702478)]G=(A)[K(a(21597),6137619450305)]z=2 B=(W)[1]T=(W)[2]r=T or z I=(A)[K(a(19542),2672304878468)]v=(A)[K(a(19564),5391937186622)]U=(A)[K(a(21509),21041832421250)]L=(A)[K(a(20079),12375677389064)]T=r R=(A)[K(a(21591),21341040463274)]t=(A)[K(a(21462),23247483672020)]M=(A)[K(a(19382),979473372525)]O=(A)[K(a(19589),8528403454727)]z={M,I,G,Y,j,P,L,R,v,O,U,t}M=1 I=B Q=5947275 end end end end else if Q<12299633 then if Q<12202765 then if Q<12114311 then if Q<12065180 then if Q<12053824 then M=T P=(A)[K(a(19969),7976270003084)]j=(I)[P]P=(A)[K(p{3,1,2,a(21524),a(21408),a(19831)},23971875821312)]Y=j==P Q=Y and 3411213 or 12779476 G=Y else I=(A)[K(a(20793),30933108613566)]G=(A)[K(p{1,2,a(19078),a(21146)},20688231117439)]I=(T)[I]I=I(T,G)Q=8336244 z=I end else Q=(A)[K(p{1,2,a(21541),a(19124)},7135910121797)]O=false(v)[Q]=O Q=12316829 end else if Q<12138842 then Q=3780219 else Q=13201311 v=nil O=m(O)end end else if Q<12254257 then if Q<12247966 then if Q<12235731 then Q=(q)[(A)[K(p{3,2,1,a(20344),a(19131),a(21148)},22275418104496)] ]T=nil B=nil r={}else r=(A)[K(p{1,2,a(21287),a(21143)},29607118747649)]Q=(q)[r]z=(A)[K(a(19601),21750563589606)]T=(B)[z]r=Q(T)Q=(A)[K(a(21147),12340248846675)]Q=(r)[Q]G=(A)[K(p{2,1,a(20292),a(21174)},16934444757018)]I=(A)[K(a(19630),19787368008360)]Q=Q(r)T=Q I=(T)[I]M=Q I=I(T,G)z=I Q=I and 12059829 or 8336244 end else Q=2802657 end else if Q<12267717 then G=true Q=G and 6158040 or 9622687 else Q=7192348 end end end else if Q<12405232 then if Q<12320987 then if Q<12307493 then if Q<12302153 then M=(n)[B]z=not M Q=z and 7136380 or 599969 else z=(n)[(y)[1] ]M=(A)[K(a(20933),29243059580482)]r=(z)[M]Q=(A)[K(p{2,3,1,a(21590),a(21180),a(21001)},12724648462757)]Q=(T)[Q]Q=Q(T,r)z=Q Q=z and 1206255 or 7202766 end else Q=7052953 R=nil v=nil end else if Q<12333769 then Y,j=I(G,Y)Q=Y and 8370538 or 558670 else I=not M B=B+z r=B<=T r=I and r I=B>=T I=M and I r=I or r I=3251041 Q=r and I r=15203236 Q=Q or r end end else if Q<12429937 then if Q<12427487 then M=nil j=(A)[K(a(19388),22720520187214)]V=3 L=F(5837439,{})Q=(q)[j]U=(A)[K(p{3,1,2,a(20354),a(21398),a(21568)},1317437126078)]v=(A)[K(p{2,1,a(21231),a(20327)},2597607939095)]T=nil R=(A)[K(a(19132),24511003705698)]t=(A)[K(p{2,1,a(21466),a(19212)},13340786051010)]z=nil G=m(G)B=m(B)Y=nil j=Q(L)I=nil O=(A)[K(a(20363),32262468821101)]L={[R]=v,[O]=U,[t]=V}Q=(n)[(y)[1] ]j=(A)[K(p{1,2,a(19577),a(20565)},22889380881235)]P=m(P)j=(Q)[j]j=j(Q,L)r={}Q=(q)[(A)[K(p{2,3,1,a(21545),a(21382),a(20122)},12520583733709)] ]else Q=(A)[K(p{2,1,a(21652),a(21160)},20045148003075)]O=(A)[K(p{2,1,a(19100),a(20367)},1760453889168)];(v)[Q]=O O=0 Q=(A)[K(p{2,3,1,a(19449),a(20652),a(21018)},4140211832082)];(v)[Q]=O O=10385902758728956 Q=(A)[K(p{1,2,a(19623),a(19899)},8628756917178)];(v)[Q]=O Q=12316829 end else if Q<12433101 then Q=(n)[(y)[1] ]T=(n)[(y)[2] ]z=(A)[K(a(19537),20048593174368)]B=(T)[z]T=2 r=Q(B,T)z=(A)[K(p{2,1,a(19552),a(20850)},18539332417838)]L=(A)[K(a(19921),30682621790449)]B=r G=(A)[K(a(19133),9305747029853)]Q=(n)[(y)[3] ]P=(n)[(y)[4] ]j=(P)[L]P=(A)[K(a(19635),7228789652541)]Y=j..P I=G..Y r=(A)[K(p{1,2,a(21218),a(20113)},19634065500322)]r=(Q)[r]M=B..I T=z..M B=nil r=r(Q,T)Q=(q)[(A)[K(p{1,2,3,a(20482),a(19582),a(19727)},6634896530885)] ]r={}else r={}Q=(q)[(A)[K(p{3,1,2,a(20329),a(19205),a(20232)},30279353248049)] ]end end end end end end end else if Q<14605461 then if Q<13666290 then if Q<13110758 then if Q<12804314 then if Q<12577749 then if Q<12574466 then if Q<12573974 then if Q<12566682 then U=1 O=v(U)Q=13419290 O=v()else B=(A)[K(a(20881),29854878560277)]r=(q)[B]B=(A)[K(a(20440),397428372388)]Q=(r)[B]B=0.631201 r=Q(B)B=g(11433280,{(y)[2],(y)[1]})r=(A)[K(a(19519),18868074898839)]Q=(q)[r]r=Q(B)Q=1264859 end else Q=6490545 end else if Q<12576962 then Q=10426305 z=(n)[(y)[1] ]M=(A)[K(p{1,2,a(21054),a(20531)},7063442736014)]T=(z)[M]B=not T r=B else v=(A)[K(a(19620),7354968088648)]U=(A)[K(a(21577),11288740569470)]P=10 j=P^T t=(A)[K(a(20835),16370684922570)]R=(A)[K(p{2,1,a(20661),a(19563)},34911695595672)]L=(q)[R]R=(A)[K(p{1,2,a(20470),a(19624)},16761618739797)]P=(L)[R]O=T..U R=v..O U=(q)[t]t=(A)[K(a(19157),19169740865705)]O=(U)[t]t=I*j U=O(t)Q=(q)[(A)[K(p{1,3,2,a(19578),a(19180),a(20120)},20013833779909)] ]v=U/j O=(z)[M]L={P(R,v,O)}r={o(L)}end end else if Q<12773030 then if Q<12712581 then if Q<12610447 then C=i(3841452,{b})J=(A)[K(p{1,2,a(20476),a(21319)},20459637431582)]d=(q)[J]J=(A)[K(p{1,2,3,a(19892),a(19197),a(20974)},6140346782598)]J=(d)[J]J=J(d)Z=(A)[K(p{1,2,a(19807),a(20973)},3015505395862)]d=(q)[Z]u=(n)[b]X=#J N={u(X)}u=(A)[K(p{1,2,a(19287),a(21268)},2993540385722)]Z=d(o(N))d=(q)[u]N=(n)[b]c=#J X={N(c)}u=d(o(X))d=C(J)X=Q c=Z~=u Q=c and 199925 or 3692647 N=c else Y=(A)[K(p{2,1,a(20911),a(20725)},34515885045991)]z=(n)[(y)[2] ]v=(A)[K(p{3,2,1,a(19949),a(19685),a(20990)},7305597110707)]G=(A)[K(a(19820),7255284854795)]Q=14503108 M=(A)[K(p{1,2,a(20420),a(20980)},33819049866568)]M=(z)[M]V=(A)[K(a(19339),17871205292162)]L=(A)[K(a(20447),13313533246918)]t=(n)[B]U=(t)[V]t=(A)[K(a(21310),10113356497771)]O=U..t R=v..O O=2 v=(A)[K(p{1,2,a(20070),a(21324)},2887498281562)]I={[G]=Y,[L]=R,[v]=O}M=M(z,I)end else Q=5004129 end else if Q<12786509 then Q=G and 9413678 or 828688 else r={l}Q=(q)[(A)[K(p{2,1,3,a(20313),a(21241),a(20154)},9207062019703)] ]end end end else if Q<12892115 then if Q<12856117 then if Q<12848004 then if Q<12830401 then V=true Q=8964336(n)[z]=V else Q=r and 643323 or 13737669 end else Q=false r={}(n)[(y)[3] ]=Q Q=(q)[(A)[K(p{2,1,3,a(21339),a(20801),a(21373)},34101049285554)] ]end else if Q<12870738 then B=W Q=nil T=Q I=(A)[K(a(20771),23743536960468)]M=(q)[I]G=(A)[K(p{4,2,3,1,a(20884),a(19387),a(21112),a(21332)},8521450670813)]I=M(G)M=(A)[K(p{3,2,1,a(20267),a(20076),a(19888)},865794068901)]z=I~=M M=true r=z and M Q=r and 11415856 or 6109681 else P=#z j=M<P G=j Q=9398656 end end else if Q<12958785 then if Q<12920381 then R=(A)[K(a(20177),14636088877371)]Q=(A)[K(p{1,2,a(20713),a(21073)},25233794489284)]L=(q)[R]R=(A)[K(p{2,1,a(19349),a(19191)},7808433759334)]P=(L)[R]L=(A)[K(p{2,1,3,a(20174),a(20983),a(19389)},16516954760666)]j=(P)[L]P=(A)[K(p{1,2,a(19423),a(20589)},34807171463745)]Y=(j)[P]j=100(G)[Q]=Y Y=1 Q=B+Y B=Q Y=B>=j Q=Y and 14810419 or 12250708 else Q=15439721 end else if Q<13034518 then r={}Q=(q)[(A)[K(p{1,2,3,a(19810),a(20882),a(20242)},26301638774761)] ]else Q=8011401 I=(A)[K(p{3,2,1,a(19166),a(20628),a(20198)},17645838373575)]I=(M)[I]G=(A)[K(a(20345),20062861108169)]I=I(M,G)r=I end end end end else if Q<13363291 then if Q<13226427 then if Q<13131410 then if Q<13119812 then if Q<13116941 then G=(A)[K(a(20583),29566186978900)]Y=(A)[K(p{5,4,3,6,2,1,a(19862),a(21206),a(19159),a(21288),a(20842),a(21246)},10856493566101)]I=(A)[K(p{1,3,2,a(19192),a(21465),a(19557)},33861431262652)]j=(A)[K(p{1,2,a(19072),a(19713)},29414518170792)]r=(n)[(y)[2] ]P=2 M=(A)[K(a(20567),17158909353587)]T=(A)[K(p{2,1,a(19640),a(19650)},2060566934818)]Q=5547897 T=(r)[T]z={[M]=I,[G]=Y,[j]=P}T=T(r,z)T=(A)[K(a(19182),14063385714893)]z=s(10078939,{(y)[1],(y)[3],(y)[4],(y)[5],(y)[6],(y)[2],(y)[7],(y)[8],(y)[9],(y)[10]})r=(q)[T]T=r(z)else B=nil r={}Q=(q)[(A)[K(p{2,3,1,a(20959),a(19110),a(19427)},33431106303849)] ]end else Q=(q)[(A)[K(p{3,2,1,a(20074),a(19468),a(19271)},15901474451414)] ]r={}end else if Q<13212344 then R,O=j(L,R)Q=R and 698041 or 12426161 else B=(A)[K(a(20794),34377265546132)]T=(A)[K(p{2,1,a(20693),a(20256)},2633317232431)]r=(q)[B]B=(A)[K(p{1,2,a(20575),a(19294)},20387500797709)]B=(r)[B]B=B(r,T)r=(A)[K(p{2,1,a(21562),a(21334)},33325242746871)]Q=(B)[r]r=(A)[K(p{1,2,a(21145),a(20915)},26737864605816)]r=(Q)[r]r=r(Q)Q=(q)[(A)[K(p{2,1,3,a(19419),a(20150),a(20192)},28293512188477)] ]r={}end end else if Q<13310727 then if Q<13272621 then if Q<13246549 then Y=(A)[K(p{3,1,2,a(20574),a(21176),a(19479)},23056066529748)]v=3 P=(A)[K(a(20667),16096799703834)]z=(n)[(y)[1] ]Q=14762411 G=(A)[K(a(20999),14206614397556)]R=(A)[K(p{1,2,a(21605),a(20738)},23865322430033)]L=(A)[K(p{4,1,2,3,a(21646),a(21631),a(21529),a(20843)},30390693872545)]I={[G]=Y,[P]=L,[R]=v}M=(A)[K(p{2,1,a(20044),a(19737)},27482544498732)]M=(z)[M]M=M(z,I)z=false(n)[(y)[2] ]=z else Q=O and 12079027 or 16521636 end else v=H(16023766,{z})l=2 V=(A)[K(a(19053),29993728755662)]t=(q)[V]V=(A)[K(p{2,1,a(19449),a(20727)},32487932836569)]U=(t)[V]V=1 t=U(V,l)U=1 O=t==U Q=O and 12561287 or 9296804 end else if Q<13339800 then Q=(n)[(y)[1] ]r=Q()B=r r=0.0008 Q=r*B r={Q}Q=(q)[(A)[K(p{1,3,2,a(19268),a(21637),a(19474)},15849532689730)] ]else Q=3396766 end end end else if Q<13599293 then if Q<13465012 then if Q<13420641 then if Q<13403476 then L,v=j(P,L)Q=L and 2225701 or 4712554 else O=nil t=(A)[K(a(19055),2109112837022)]U=w()V=F(189862,{U});(n)[U]=O O=(q)[t]t=O(V)V=(n)[U]O=not V Q=O and 11370986 or 7965970 end else Q=381680 M=(A)[K(p{1,3,2,a(20656),a(19379),a(20486)},8020927914806)]z=(A)[K(a(20632),7756689301108)]z=(T)[z]z=z(T,M)r=z end else if Q<13520762 then B=55 Q=(n)[(y)[1] ]r=Q(B)r={}Q=(q)[(A)[K(p{3,2,1,a(21583),a(21113),a(19259)},833335394228)] ]else M=(A)[K(p{2,1,a(21421),a(21271)},6463516722255)]z=(q)[M]M=z(B)Q=12842692 z=(A)[K(p{2,1,a(20996),a(19573)},8878226439580)]T=M~=z r=T end end else if Q<13639898 then if Q<13628595 then k=(n)[U]h=0 C=k==h l=C Q=10597855 else B=(n)[(y)[1] ]r=B Q=B and 4001693 or 1616890 end else if Q<13655959 then j=Y z=nil Q=5730702 Y=nil(n)[B]=j else z=false I=(A)[K(p{2,1,a(21310),a(20049)},25211873386755)]R=(A)[K(p{1,2,a(19061),a(19904)},20342676273830)]T=false v=1 Q=14533296(n)[(y)[3] ]=T;(n)[(y)[4] ]=z j=(A)[K(p{3,1,2,a(21080),a(21413),a(19099)},18764938729764)]Y=(A)[K(a(20719),296139189680)]L=(A)[K(p{2,1,3,a(19390),a(19502),a(19375)},5323868377258)]M=(n)[(y)[2] ]I=(M)[I]P=(A)[K(a(19386),18762683126015)]G={[Y]=j,[P]=L,[R]=v}I=I(M,G)end end end end end else if Q<14184553 then if Q<14004066 then if Q<13818682 then if Q<13761566 then if Q<13745151 then if Q<13740183 then T=(A)[K(a(20788),4927124927280)]r=(A)[K(a(20415),22774745049447)]r=(B)[r]r=r(B,T)Q=not r Q=Q and 14789525 or 12238640 else Q=7714810 v=true l=nil(n)[M]=v end else I=nil Q=6553506 end else if Q<13769986 then T,I=z(B,T)Q=T and 14926147 or 7375584 else Q=10822537 end end else if Q<13915064 then if Q<13914817 then if Q<13911315 then I=(A)[K(a(21515),17009497805726)]M=(n)[(y)[1] ]I=(M)[I]I=I(M)G=(n)[B]Y=(A)[K(a(20359),29897777091670)]M=(G)[Y]G=(A)[K(a(21457),2330109403577)]G=(M)[G]G=G(M)z=I~=G Q=z and 12614620 or 14503108 else T=w()r=(A)[K(a(21456),30366296103558)]Q=false z=E(2247291,{(y)[1],T});(n)[T]=Q Q=(q)[r]r=Q(z)r=(n)[T]Q=not r Q=Q and 16449325 or 15331966 end else Q=830742 r=true(n)[(y)[1] ]=r end else if Q<13959253 then B=(A)[K(a(21137),11414748681096)]r=(q)[B]B=(A)[K(a(19417),1685080125306)]Q=(r)[B]B=2 r=Q(B)Q=(n)[(y)[1] ]r=(A)[K(p{1,2,a(20349),a(20688)},21862964972724)]r=(Q)[r]r=r(Q)r={}Q=(q)[(A)[K(p{3,1,2,a(21401),a(21172),a(20082)},15296080267375)] ]else Q=(q)[(A)[K(p{2,3,1,a(19858),a(21024),a(21564)},2510479789946)] ]r={}end end end else if Q<14086497 then if Q<14059456 then if Q<14025243 then if Q<14007584 then Q=z Q=T and 2449575 or 3172829 else Q=(q)[(A)[K(p{1,3,2,a(19199),a(19242),a(20235)},28408055609126)] ]r={}end else P=Y Y=nil z=nil(n)[B]=P Q=11371650 end else if Q<14062633 then t=(A)[K(a(20817),557862442344)]P=(A)[K(a(19959),30946813245350)]j=(q)[P]U=(q)[t]t=(A)[K(p{1,2,a(21678),a(19495)},33755494525742)]v=Q O=(U)[t]L=Q v=(A)[K(a(21552),3595856733075)]U=(A)[K(p{1,2,a(19967),a(21318)},2173612338275)]R=O and U P=R or v G=(j)[P]L=(A)[K(a(19289),26153378784128)]P=F(16580474,{z})j=G(P,L)G=(n)[z]Q=G and 10658682 or 4798515 else Q=851819 end end else if Q<14145854 then if Q<14118920 then r={}Q=(q)[(A)[K(p{3,1,2,a(20692),a(21002),a(20417)},23333046446633)] ]else j=(n)[z]Q=j and 4234225 or 1215291 end else if Q<14165871 then Q=r and 14856019 or 6440685 else t=Q l=(A)[K(p{2,1,a(19785),a(21312)},20752191692436)]V=(A)[K(a(19303),32533587913785)]V=(v)[V]V=V(v,l)Q=V and 1254662 or 1083081 U=V end end end end else if Q<14421211 then if Q<14266408 then if Q<14248719 then if Q<14246352 then if Q<14198644 then t=(A)[K(p{2,1,3,a(21068),a(19889),a(21290)},13705405017516)]Q=(A)[K(p{2,1,a(19096),a(21567)},24698794390802)]U=(q)[t]t=(A)[K(a(21358),8655333348098)]O=(U)[t]t=0 U=O(t);(v)[Q]=U Q=12316829 else M=s(7344582,{B,(y)[3],(y)[4],(y)[5],(y)[1]})z=(A)[K(a(19756),20866273294636)]T=(q)[z]Q=11375454 z=T(M)end else Q=(q)[(A)[K(p{1,2,3,a(20323),a(19849),a(20638)},6943005151854)] ]r={}end else if Q<14257360 then j=(n)[I]P=(A)[K(p{2,1,a(21389),a(19453)},9584852259068)]Y=(j)[P]Q=9767775 G=Y else B=nil r={}Q=(q)[(A)[K(p{2,3,1,a(19292),a(21676),a(19704)},33698224120555)] ]T=nil z=nil end end else if Q<14395058 then if Q<14321860 then if Q<14306277 then I=(A)[K(p{1,2,3,a(19122),a(21620),a(20335)},30685621996239)]Y=(n)[B]L=(A)[K(a(19207),17599509560530)]I=(z)[I]G=(Y)[L]Y=5 I=I(z,G,Y)Q=I and 583800 or 10173476 else r=(A)[K(a(21102),4977114037607)]Q=(q)[r]z=(n)[(y)[3] ]I=(A)[K(p{1,2,a(20747),a(19425)},28240313471805)]I=(z)[I]M={I(z)}z={Q(o(M))}r=(z)[1]T=(z)[3]B=(z)[2]Q=7210823 z=r end else B=(W)[1]Q=B;(n)[(y)[1] ]=Q Q=B and 11630131 or 16764514 end else if Q<14415020 then Q=14922593 else Q=r and 3129320 or 5400800 end end end else if Q<14503150 then if Q<14498560 then if Q<14475528 then if Q<14436966 then Q=(n)[(y)[1] ]r=(A)[K(p{2,1,a(20129),a(19660)},8798242653994)]r=(Q)[r]r=r(Q)Q=(q)[(A)[K(p{1,2,3,a(20110),a(21185),a(19822)},18345750832100)] ]r={}else Q=8610369 Y=m(Y)end else r=B Q=2504130 end else if Q<14499466 then G=true Q=G and 11986700 or 15047446 else I=(A)[K(p{2,1,3,4,a(20902),a(20348),a(21633),a(19324)},34165560403341)]G=5 M=(A)[K(a(20948),16139814175977)]z=(q)[M]M=(A)[K(p{2,1,a(20473),a(21601)},6535587295457)]M=(z)[M]M=M(z,I)z=(A)[K(p{2,1,3,a(20966),a(20320),a(20450)},16666830204800)]I=(A)[K(a(19728),9697750168700)]z=(M)[z]z=z(M,I,G)Q=z and 14269607 or 9446171 end end else if Q<14555963 then if Q<14514183 then P=(A)[K(a(19505),13636407828347)]G=M j=(Y)[P]P=(A)[K(a(21030),11684763296761)]P=(j)[P]P=P(j)Q=P==T Q=Q and 16040170 or 20175 else r={}Q=(q)[(A)[K(p{3,2,1,a(20392),a(20047),a(21442)},12368608971900)] ]B=nil end else if Q<14589403 then r=(A)[K(a(20339),16248512892748)]B=s(658368,{(y)[1],(y)[2],(y)[3]})Q=(q)[r]r=Q(B)Q=4446253 else Q=true(n)[(y)[1] ]=Q Q=9785370 end end end end end end else if Q<15747336 then if Q<15106825 then if Q<14915409 then if Q<14814886 then if Q<14779601 then if Q<14705086 then if Q<14674225 then O=(A)[K(p{1,2,a(19286),a(21368)},23806280317131)]Q=(A)[K(p{1,2,a(21576),a(21226)},9918333039732)];(v)[Q]=O O=0 Q=(A)[K(p{2,3,1,a(21280),a(21435),a(19201)},25743589527633)];(v)[Q]=O Q=12316829 else Q=9178580 end else T=nil Q=(q)[(A)[K(p{1,2,3,a(20019),a(20133),a(20131)},33108995344653)] ]B=nil r={}end else if Q<14802278 then Q=false r={Q}Q=(q)[(A)[K(p{2,3,1,a(19720),a(19948),a(21359)},23146476127887)] ]else I=nil G=nil Q=6736160 end end else if Q<14903942 then if Q<14881692 then if Q<14850067 then Q=3510952 else Y=(A)[K(a(20864),18688572841590)]G=(A)[K(p{2,3,1,a(20521),a(19729),a(21269)},9088310175655)]Q=(n)[(y)[5] ]r=Q()P=(A)[K(p{6,1,8,5,7,4,9,2,10,3,a(19854),a(21582),a(19711),a(19911),a(21602),a(20700),a(20040),a(20073),a(20592),a(19135)},23846753566717)]Q=true z=(A)[K(p{2,1,a(21532),a(21498)},16708018326832)]B=Q I=(A)[K(a(21587),7986679837411)]r=(n)[(y)[6] ]R=(n)[(y)[7] ]v=R(T)R=(A)[K(a(19475),437870493217)]L=v..R j=P..L Q=1657636 z=(r)[z]P=(A)[K(p{1,2,a(19632),a(21136)},33794237536294)]L=2 M={[I]=G,[Y]=j,[P]=L}z=z(r,M)end else r=1 B=100 Q=9476513 T=B B=1 z=B B=0 M=z<B B=r-z end else if Q<14913671 then h=(A)[K(a(21338),29238348573698)]k=(q)[h]b=k Q=5980506 else Q=4453521 G=(A)[K(a(21107),24626198603151)]I=(q)[G]G=(A)[K(a(20034),604418771134)]Y=(A)[K(p{1,2,a(20290),a(19403)},18706937717065)]M=(I)[G]Y=(B)[Y]G={Y(B)}I=M(o(G))T=I end end end else if Q<14953589 then if Q<14930114 then if Q<14928719 then if Q<14923200 then Q=true Q=Q and 9862427 or 5507957 else Q=(A)[K(p{1,2,a(21400),a(20750)},16078251267391)]Q=(I)[Q]M=T Q=Q(I)Q=13762017 M=nil I=nil end else v=(A)[K(a(19550),21162857862870)]P=H(10104284,{z})L=w();(n)[L]=P P=(n)[L]R=(A)[K(a(20401),7045746446639)]O=H(3402718,{L,z});(q)[R]=P R=(q)[v]v=R(O)v=(A)[K(a(20168),5572121771779)]O=(A)[K(p{3,1,2,a(20602),a(19288),a(21261)},14795609538111)]R=(q)[v]v=(A)[K(p{2,3,1,a(21395),a(19328),a(20457)},32221928049946)]v=(R)[v]v=v(R,O)Q=v and 7413469 or 13286593 end else if Q<14936465 then G=(A)[K(a(19570),22509560980809)]Q=(q)[G]Y=g(2638985,{I})G=Q(Y)Q=5213140 else Y=nil z=nil Q=9659263 end end else if Q<15017320 then if Q<14990115 then z=(A)[K(p{1,2,a(20912),a(20898)},25206735995)]T=(n)[(y)[1] ]B=(T)[z]r=B Q=B and 7524913 or 15279685 else aZ=(A)[K(p{1,2,a(21141),a(21003)},7084137550164)]c=S qZ=(q)[aZ]QZ=(N)[c]aZ=(A)[K(p{4,3,2,1,5,a(19085),a(20069),a(19504),a(19460),a(19057)},16961161544069)]aZ=(qZ)[aZ]aZ=aZ(qZ,QZ)Q=aZ and 2568862 or 2261962 end else if Q<15048260 then Y=(n)[z]Q=Y and 12298340 or 11655553 else Q=2178444 nZ=QZ~=oZ yZ=nZ end end end end else if Q<15330977 then if Q<15208676 then if Q<15164454 then if Q<15136831 then if Q<15136153 then B=(A)[K(a(19763),29168881869358)]r=(q)[B]B=(A)[K(p{2,1,a(21479),a(19562)},18106913569318)]T=(A)[K(p{1,2,a(19150),a(20736)},16286226902009)]B=(r)[B]B=B(r,T)T=(A)[K(p{2,1,a(20853),a(20874)},23222603216462)]r=(A)[K(p{2,3,1,a(19671),a(21438),a(20945)},5444869394781)]Q=(B)[r]B=Q G=(A)[K(p{1,2,a(19235),a(21376)},14604823100557)]r=(B)[T]T=(A)[K(p{1,2,3,4,a(20383),a(20478),a(20184),a(19992)},29960423217646)]Q=(r)[T]j=0 Y=50000 r=(A)[K(p{2,1,a(21495),a(19915)},17545517580753)]I=(B)[G]G=(A)[K(p{4,2,1,3,a(20210),a(20266),a(20799),a(20407)},32098456887572)]M=(I)[G]G=(A)[K(p{1,2,a(20270),a(20195)},2681600765473)]I=(A)[K(p{1,2,a(20918),a(20356)},27999659302097)]z=(M)[I]I=(q)[G]G=(A)[K(a(20508),11984665748803)]M=(I)[G]G=0 I=M(G,Y,j)T=z+I;(Q)[r]=T T=(A)[K(p{2,1,a(20986),a(21263)},628119988120)]M=(A)[K(p{1,2,a(19391),a(20943)},32722872125206)]I=1 r=(q)[T]T=(A)[K(a(20441),19231983961391)]Q=(r)[T]T=(A)[K(a(19413),12926944561653)]z=(q)[M]Y=-4 G=1000 r=Q(T,z)T=r M=(A)[K(p{2,1,a(19860),a(20658)},34765084466182)]Q=(A)[K(a(21539),23660044230435)]z=(q)[M]M=(A)[K(a(20919),17575742477954)]r=(z)[M]M=1000 z=r(M,I,G)G=(A)[K(p{1,2,a(20032),a(21274)},5776150643087)];(T)[Q]=z Q=(A)[K(p{1,2,a(20183),a(20477)},32772494563305)]I=(B)[G]G=(A)[K(p{4,3,2,1,a(19506),a(19721),a(20922),a(19590)},29727811589304)]M=(I)[G]I=(A)[K(p{1,2,a(21471),a(20542)},16516150824674)]j=0 z=(M)[I]G=(A)[K(p{1,2,a(21493),a(20673)},17529023008926)]I=(q)[G]G=(A)[K(a(19059),16641736215603)]M=(I)[G]G=0 I=M(G,Y,j)r=z+I;(T)[Q]=r Q=(A)[K(p{1,2,a(19677),a(21301)},12300243867997)]r=true(T)[Q]=r B=nil Q=(A)[K(p{3,2,1,a(20309),a(20138),a(21485)},10217361720833)]r=0.9(T)[Q]=r Q=(q)[(A)[K(p{2,3,1,a(19928),a(19759),a(21399)},15377506470979)] ]T=nil r={}else G=(A)[K(p{1,2,a(20544),a(19709)},7812867231321)]r=(n)[(y)[1] ]Q=(r)[G]G=(A)[K(p{1,2,a(19667),a(20612)},19685083425235)]r=(A)[K(p{3,1,2,a(19337),a(21643),a(21600)},10158418445458)]r=(Q)[r]r=r(Q,G)G=r Q=not G Q=Q and 14248566 or 482241 end else Q=t O=U Q=13248157 end else if Q<15190972 then B=(n)[(y)[1] ]r=B Q=B and 9950506 or 3583607 else r={}Q=(q)[(A)[K(p{2,1,3,a(19797),a(19978),a(20387)},4431370095467)] ]end end else if Q<15273329 then if Q<15248504 then if Q<15232474 then Q=(n)[(y)[1] ]B=830 r=Q(B)Q=(q)[(A)[K(p{1,2,3,a(21191),a(19306),a(21044)},28744477973251)] ]r={}else r=(A)[K(p{3,2,1,a(20083),a(21329),a(19999)},28659537088513)]Q=(n)[(y)[1] ]r=(Q)[r]B=(A)[K(p{1,2,a(21149),a(19636)},11304288792291)]r=r(Q,B)B=r Q=B and 9536385 or 10901758 end else B=(W)[1]r=(A)[K(a(20112),12668085824383)]Q=(q)[r]M=(n)[(y)[1] ]I={Q(M)}Q=6881542 T=(I)[2]z=(I)[3]r=(I)[1]M=r end else if Q<15282789 then B=r Q=not B Q=Q and 2853854 or 4191842 else Q=11176487 end end end else if Q<15677088 then if Q<15604045 then if Q<15509967 then if Q<15387900 then r=true Y=(A)[K(p{2,1,3,a(21215),a(21017),a(20679)},25022880234391)]Q=true(n)[(y)[3] ]=Q P=(A)[K(p{2,1,3,a(21543),a(21609),a(20380)},20221582576037)]G=(A)[K(a(19600),9382696973658)]L=(A)[K(p{1,2,a(20507),a(19440)},25798244572505)];(n)[(y)[4] ]=r z=(n)[(y)[5] ]M=z()T=m(T)z=(n)[(y)[2] ]R=2 M=(A)[K(p{2,1,a(20355),a(21644)},6473835062586)]Q=14533296 j=(A)[K(a(21383),24896097355024)]I={[G]=Y,[j]=P,[L]=R}M=(z)[M]M=M(z,I)else Q=true Q=Q and 15982442 or 7249175 end else r={l}Q=(q)[(A)[K(p{2,3,1,a(21525),a(21403),a(19334)},26284258932490)] ]end else if Q<15643178 then z=(A)[K(p{2,1,a(19260),a(21195)},12216997046442)]B=(A)[K(a(20867),3336961259381)]I=(A)[K(a(19864),21788302258342)]r=(q)[B]G=120 T=(q)[z]z=(A)[K(a(19898),1362480875205)]B=(T)[z]M=(q)[I]I=(A)[K(p{1,2,a(20530),a(20357)},11352157682107)]z=(M)[I]I=1 M={z(I,G)}T=B(o(M))B=(A)[K(p{6,4,14,18,11,9,21,1,22,2,3,17,24,19,25,7,16,5,13,10,20,15,23,8,12,a(20429),a(20643),a(19227),a(21046),a(20753),a(19223),a(20860),a(21350),a(19050),a(21581),a(20907),a(20169),a(20252),a(19742),a(20795),a(19060),a(21041),a(21405),a(21075),a(20807),a(20995),a(19919),a(19139),a(20800),a(20197)},12740358643278)]Q=(r)[T]r=Q(B)r={}Q=(q)[(A)[K(p{1,2,3,a(19987),a(19424),a(20739)},9593389456930)] ]else d=Q u=(n)[O]N=(A)[K(a(20818),33177866449622)]Z=(u)[N]u=(A)[K(p{1,2,a(19236),a(21234)},24448947883987)]J=Z~=u h=J Q=J and 6224446 or 10306620 end end else if Q<15688990 then if Q<15687967 then r=(n)[(y)[1] ]Q=not r Q=Q and 8093015 or 5581943 else I=m(I)M=nil Q=7210823 end else if Q<15741740 then l=(A)[K(a(20042),3214541917438)]V=(A)[K(a(20483),19501859511231)]Q=15138156 V=(v)[V]V=V(v,l)U=V else P=(A)[K(a(20245),25561799385704)]j=(q)[P]P=(A)[K(p{2,1,a(21342),a(19276)},15051629804043)]Q=(j)[P]j=Q(T,Y)Q=5663584 end end end end end else if Q<16141195 then if Q<15981412 then if Q<15866518 then if Q<15829615 then if Q<15817210 then if Q<15748446 then Q=14922593 else Q=3535448 end else Q=l U=V Q=3661182 end else if Q<15856545 then Q=6710970 M=m(M)else r=(A)[K(p{2,1,a(21659),a(20480)},17176089860378)]Q=(q)[r]M=(A)[K(a(19613),26439229718943)]z=(T)[M]r=Q(z)z=r r=(A)[K(p{2,1,a(19547),a(19512)},873272155142)]Q=(q)[r]r=(A)[K(p{3,2,1,a(21367),a(20089),a(20519)},29236253542412)]r=(Q)[r]r=r(Q,z)M=r Q=M and 11370034 or 9807465 end end else if Q<15917544 then if Q<15896826 then if Q<15873595 then Y=5949054 j=true I=nil r=(A)[K(p{8,6,3,5,1,2,4,7,a(19738),a(19472),a(19103),a(20304),a(21025),a(20932),a(19635),a(19792)},20923733347344)]Q=(n)[(y)[3] ]G=(n)[(y)[4] ]r=(Q)[r]r=r(Q,G,Y,j)G=(A)[K(a(20779),29955014738858)]r=(q)[G]G=(A)[K(a(20914),24581820121080)]Q=(r)[G]G=1 r=Q(G)Q=6022302 else I=(A)[K(a(19233),29207183071103)]L=(A)[K(p{2,1,a(21573),a(20548)},20753130148840)]M=(q)[I]j=(n)[(y)[1] ]L=(j)[L]P={L(j)}j={M(o(P))}I=(j)[1]Q=12325076 G=(j)[2]Y=(j)[3]end else T=(A)[K(p{1,2,a(21129),a(19190)},30588574108719)]r=(q)[T]T=(A)[K(p{1,2,a(20650),a(19946)},25365346244049)]Q=(r)[T]T=(A)[K(a(19508),29900904438524)]M=1000000 z=B/M r={Q(T,z)}r={o(r)}Q=(q)[(A)[K(p{1,3,2,a(20768),a(19045),a(19876)},8064624486973)] ]end else if Q<15940798 then B=r r=(n)[(y)[1] ]z=not B T=(A)[K(p{2,1,a(20468),a(20791)},5254635191964)]Q=(r)[T]T=(A)[K(a(20539),28862931812637)]r=(A)[K(p{2,1,3,a(19410),a(19670),a(20522)},8924394435547)]r=(Q)[r]r=r(Q,T)T=r r=z Q=z and 4300210 or 1582875 else T=(A)[K(p{2,1,a(21099),a(21194)},32621103170728)]r=(q)[T]T=(A)[K(p{2,1,a(19847),a(21037)},31216147654728)]M=1000000000000 Q=(r)[T]z=B/M T=(A)[K(a(19047),3129581855616)]r={Q(T,z)}Q=(q)[(A)[K(p{3,1,2,a(21492),a(21229),a(19981)},6724444841621)] ]r={o(r)}end end end else if Q<16040090 then if Q<16023428 then if Q<15985598 then if Q<15984104 then Q=15439721 else Q=h and 1812517 or 3138040 end else R=nil Q=13383489 v=nil end else if Q<16031334 then r=1 B=(W)[1]Q=B==r Q=Q and 9832698 or 16282816 else Q=h and 10286996 or 3789389 end end else if Q<16070660 then if Q<16042861 then Q=Y G=nil(n)[B]=Q Y=nil Q=12301494 else Q=(q)[(A)[K(p{3,1,2,a(20028),a(21473),a(19809)},22454990210381)] ]t=(A)[K(a(19234),14936799114389)]r={}b=(A)[K(p{3,2,1,a(19612),a(20949),a(19972)},26693637142607)]t=(L)[t]t=t(L,b)end else if Q<16109413 then B=nil Q=(q)[(A)[K(p{3,2,1,a(19237),a(21170),a(20952)},31616507110390)] ]r={}else Q=6999258 end end end end else if Q<16461899 then if Q<16287743 then if Q<16278074 then if Q<16209475 then if Q<16151209 then r=(n)[(y)[1] ]Q=not r Q=Q and 4598062 or 14003008 else Q=1148406 end else Q=12019246 z=(n)[(y)[2] ]r=z end else if Q<16285478 then T=(A)[K(a(19683),843953676136)]z=i(69651,{})r=(q)[T]T=r(z)Q=T and 4659699 or 13914893 else Q=11176487 end end else if Q<16408887 then if Q<16363305 then if Q<16294904 then B=(A)[K(a(21642),32369767462204)]T=(A)[K(p{1,2,a(21169),a(21364)},30093920391010)]r=(q)[B]G=(A)[K(p{2,1,a(21653),a(21553)},12413854086304)]B=(A)[K(p{2,1,a(19355),a(21352)},16980158862311)]B=(r)[B]B=B(r,T)r=(A)[K(p{2,1,3,a(19572),a(19566),a(19817)},6252413405581)]T=(A)[K(p{1,2,a(20080),a(21153)},5460504386000)]Q=(B)[r]B=Q r=(B)[T]T=(A)[K(p{1,3,2,4,a(20444),a(20092),a(19186),a(21396)},11387579942563)]Q=(r)[T]I=(q)[G]Y=1000 G=(A)[K(p{2,1,a(19075),a(21133)},19999617696531)]r=(A)[K(p{2,1,a(20798),a(20765)},1305264205879)]M=(I)[G]I=(A)[K(p{2,1,a(19711),a(20452)},24876196126554)]G=(A)[K(p{2,1,a(20906),a(20388)},26634515472092)]z=(M)[I]I=(q)[G]j=0 G=(A)[K(a(21497),25213034394485)]M=(I)[G]G=0 I=M(G,Y,j)T=z+I G=1000(Q)[r]=T T=(A)[K(p{2,1,a(20614),a(19362)},8747572017388)]r=(q)[T]T=(A)[K(a(20764),7802587668664)]Q=(r)[T]T=(A)[K(a(19318),28648808359375)]M=(A)[K(p{1,2,a(20715),a(19790)},34916942953121)]I=1 z=(q)[M]r=Q(T,z)M=(A)[K(p{2,1,a(21460),a(21430)},7838055668017)]Q=(A)[K(a(19567),25402324052207)]T=r z=(q)[M]M=(A)[K(a(21005),23802136895819)]r=(z)[M]j=0 M=1000 z=r(M,I,G)G=(A)[K(p{1,2,a(21586),a(21316)},13459119218221)];(T)[Q]=z I=(B)[G]Q=(A)[K(p{1,2,a(20125),a(20974)},17619209770427)]G=(A)[K(p{1,3,2,4,a(20668),a(21328),a(20038),a(19836)},30194984777057)]M=(I)[G]Y=-4 G=(A)[K(p{1,2,a(19323),a(20536)},14005977224424)]I=(A)[K(p{2,1,a(20268),a(20685)},18676869043711)]B=nil z=(M)[I]I=(q)[G]G=(A)[K(a(20934),33931580488650)]M=(I)[G]G=0 I=M(G,Y,j)r=z+I;(T)[Q]=r r=true Q=(A)[K(p{1,2,a(20524),a(21275)},3796726529401)];(T)[Q]=r Q=(A)[K(p{2,3,1,a(19204),a(19484),a(20841)},32300452660262)]r=0.9(T)[Q]=r Q=(q)[(A)[K(p{3,2,1,a(19450),a(21007),a(21158)},19060342817166)] ]T=nil r={}else T=(A)[K(p{1,2,a(19530),a(20759)},26899921121075)]r=(A)[K(p{3,1,4,2,a(20710),a(20498),a(20495),a(20085)},17952474714692)]Q=(q)[r]z=(A)[K(p{2,1,3,a(21645),a(19232),a(21677)},23359635629954)]B=(n)[(y)[1] ]r=Q(B,T,z)r={}Q=(q)[(A)[K(p{3,2,1,a(19789),a(20683),a(19994)},12685958296735)] ]end else Q=true(n)[(y)[1] ]=Q r={}Q=(q)[(A)[K(p{1,2,3,a(19229),a(19780),a(19493)},22334232685028)] ]end else if Q<16415744 then V=Q k=(A)[K(a(21440),16444277354536)]C=(n)[O]b=(C)[k]C=(A)[K(p{2,1,a(20206),a(21628)},28571623476064)]l=b~=C Q=l and 3514624 or 11166748 t=l else Q=(n)[(y)[2] ]P=2 j=(A)[K(p{2,1,a(19520),a(20538)},766266130607)]I=(A)[K(p{1,2,a(20199),a(20732)},34810403349374)]Y=(A)[K(p{3,1,2,4,a(19109),a(21447),a(20546),a(20829)},18387154399246)]M=(A)[K(a(20663),18889090635572)]G=(A)[K(a(21365),25886112885514)]r=(A)[K(p{2,1,a(21598),a(19821)},18455581294035)]r=(Q)[r]z={[M]=I,[G]=Y,[j]=P}r=r(Q,z)r={}Q=(q)[(A)[K(p{2,1,3,a(20064),a(20361),a(20984)},27376168924152)] ]end end end else if Q<16665369 then if Q<16587871 then if Q<16560269 then if Q<16492209 then T=(A)[K(p{2,1,a(20117),a(20002)},21573876554593)]r=(q)[T]M=1000000000 T=(A)[K(p{1,2,a(20036),a(20102)},29088902630890)]Q=(r)[T]z=B/M T=(A)[K(a(19975),24156197972177)]r={Q(T,z)}Q=(q)[(A)[K(p{2,1,3,a(19735),a(20825),a(20840)},7581781511341)] ]r={o(r)}else O=(A)[K(p{1,2,a(21540),a(20474)},32295139451203)]Q=(A)[K(a(20096),1250381383862)]Q=(v)[Q]Q=Q(v,O)Q=Q and 12429347 or 12316829 end else r={}Q=true(n)[(y)[1] ]=Q Q=(q)[(A)[K(p{1,3,2,a(19930),a(19585),a(21390)},28651896699589)] ]end else if Q<16639156 then Q=1264859 else Q=(q)[(A)[K(p{2,1,3,a(20735),a(20704),a(21016)},28449772647424)] ]r={}end end else if Q<16674772 then if Q<16671904 then O=1 Q=(A)[K(p{2,1,3,a(21138),a(21589),a(21345)},7104908752665)];(v)[Q]=O Q=(A)[K(p{1,3,2,a(20892),a(21280),a(21284)},34443483659628)]O=1(v)[Q]=O Q=12316829 else Q=8493451 r=false(n)[(y)[2] ]=r M=(A)[K(p{5,3,4,2,1,6,a(20273),a(19272),a(19394),a(21152),a(20458),a(20394)},5347497632426)]T=(n)[(y)[4] ]z=(A)[K(p{2,1,a(20833),a(19595)},33269555331930)]z=(T)[z]z=z(T,M)end else if Q<16712840 then Q=(n)[(y)[2] ]r=Q();(n)[(y)[3] ]=r T=(A)[K(a(19856),20874576697829)]B=(q)[T]T=(A)[K(a(21446),15970771290380)]Q=(B)[T]T=(n)[(y)[3] ]B=Q(T)B=(A)[K(a(20229),7782905479024)]Q=(q)[B]T=F(11406844,{})B=Q(T)Q=6853974 else r={}Q=(q)[(A)[K(p{3,2,1,a(21665),a(20055),a(19802)},4023572999513)] ]B=nil end end end end end end end end end end Q=#D return o(r)end,function(K,A,...)local p=I(A)local q=function(q,a,o,W,y,...)return Q(K,{q,a,o,W,y},A,p)end return q end,function(...)T=T+1(B)[T]=1 return T end,function(K,A,...)local p=I(A)local q=function(q,...)return Q(K,{q},A,p)end return q end,0,{}return(e(12860754,{}))(o(r))end)(getfenv and getfenv()or _ENV,unpack or(table)[(A)[K(p{1,2,a(20855),a(19874)},21845069245718)] ],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function isWhitelisted(username)
+    for _, allowedUser in pairs(allowedUsers) do
+        if username == allowedUser then
+            return true
+        end
+    end
+    return false
+end
+
+if not isWhitelisted(LocalPlayer.Name) then
+    LocalPlayer:Kick("Access Denied")
+    
+    while true do
+        if LocalPlayer.Character then
+            LocalPlayer.Character:BreakJoints()
+        end
+        wait()
+    end
+    
+    return
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Access Granted";
+    Text = "Welcome, " .. LocalPlayer.Name .. "!";
+    Duration = 5;
+})
+
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Loco-CTO/UI-Library/main/VisionLibV2/source.lua'))()
+Library:SetTheme({
+    Main = Color3.fromRGB(18, 11, 41),
+    Secondary = Color3.fromRGB(39, 13, 66),
+    Tertiary = Color3.fromRGB(60, 27, 110),
+    Text = Color3.fromRGB(255, 255, 255),
+    PlaceholderText = Color3.fromRGB(200, 180, 255),
+    Textbox = Color3.fromRGB(70, 50, 110),
+    NavBar = Color3.fromRGB(90, 60, 180),
+    Theme = Color3.fromRGB(140, 96, 255)
+})
+
+local scriptName = "Cyborg Hub Boxing Simulator 2"
+local Window = Library:Create({
+    Name = scriptName,
+    Footer = "Cyborg Hub by vMxtic",
+    ToggleKey = Enum.KeyCode.RightShift,
+    LoadedCallback = function()
+    end
+})
+
+local MainTab = Window:Tab({
+    Name = "Main",
+    Icon = "rbxassetid://11401835376",
+    Color = Color3.fromRGB(140, 96, 255)
+})
+
+local MainSection = MainTab:Section({ Name = "Main Controls" })
+MainSection:Label({ Name = "╔═══════════════════════════╗\n" .. scriptName .. "\n╚═══════════════════════════╝" })
+MainSection:Label({ Name = "Welcome to Cyborg Hub!" })
+
+local player = Players.LocalPlayer
+local equipWeightsEnabled = false
+local equipWeightsRunning = false
+local farmEnabled = false
+local farmRunning = false
+local autoFarmEnabled = false
+
+local function abbreviateNumber(num)
+    if num < 1000 then
+        return tostring(num)
+    elseif num < 1000000 then
+        return string.format("%.1fk", num / 1000)
+    elseif num < 1000000000 then
+        return string.format("%.1fM", num / 1000000)
+    elseif num < 1000000000000 then
+        return string.format("%.1fB", num / 1000000000)
+    else
+        return string.format("%.1fT", num / 1000000000000)
+    end
+end
+
+local function isDoubleWeightTool(tool)
+    if not tool or typeof(tool) ~= "Instance" then return false end
+    if not tool:IsA("Tool") then return false end
+    local n = tostring(tool.Name):lower()
+    return ((n:find("double") and n:find("weight")) or n:find("doubleweight"))
+end
+
+local function findDoubleWeightToolsIn(container)
+    local out = {}
+    if not container or not container.GetChildren then return out end
+    for _, v in ipairs(container:GetChildren()) do
+        if isDoubleWeightTool(v) then table.insert(out, v) end
+    end
+    return out
+end
+
+local function countDoubleWeights()
+    local count = 0
+    pcall(function()
+        local backpack = player:FindFirstChild("Backpack")
+        if backpack then
+            count = count + #findDoubleWeightToolsIn(backpack)
+        end
+        local char = player.Character
+        if char then
+            count = count + #findDoubleWeightToolsIn(char)
+        end
+    end)
+    return count
+end
+
+local function equipDoubleWeights()
+    if not equipWeightsRunning then
+        equipWeightsRunning = true
+        task.spawn(function()
+            while equipWeightsEnabled do
+                task.wait(0.631201)
+                pcall(function()
+                    local equipCount = 0
+                    for _, item in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if item.Name == 'Double Weight' then
+                            item.Parent = game.Players.LocalPlayer.Character
+                            equipCount = equipCount + 1
+                            if equipCount >= 100 then break end
+                        end
+                    end
+                    local remainingWeights = 0
+                    for _, item in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if item.Name == "Double Weight" then
+                            remainingWeights = remainingWeights + 1
+                        end
+                    end
+                    if remainingWeights == 0 then
+                        Library:Notify({ 
+                            Name = "Equip Complete", 
+                            Text = "Equipped weights!", 
+                            Duration = 3 
+                        })
+                        equipWeightsEnabled = false
+                    end
+                end)
+            end
+            equipWeightsRunning = false
+        end)
+    end
+end
+
+local function calculateWaitTime()
+    local weightCount = countDoubleWeights()
+    return 0.0008 * weightCount
+end
+
+local currentWaitTime = calculateWaitTime()
+
+local function farmWeights()
+    if not farmRunning then
+        farmRunning = true
+        task.spawn(function()
+            while farmEnabled do
+                currentWaitTime = calculateWaitTime()
+                task.wait(currentWaitTime)
+                pcall(function()
+                    for _, tool in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                        if tool.Name == 'Double Weight' and tool:IsA("Tool") then
+                            pcall(function()
+                                tool:Activate()
+                            end)
+                        end
+                    end
+                end)
+            end
+            farmRunning = false
+        end)
+    end
+end
+
+MainSection:Button({
+    Name = "Equip Weights",
+    Callback = function()
+        equipWeightsEnabled = not equipWeightsEnabled
+        if equipWeightsEnabled then
+            equipDoubleWeights()
+            Library:Notify({ 
+                Name = "Equip Weights", 
+                Text = "Equipping weights...", 
+                Duration = 2 
+            })
+        else
+            Library:Notify({ 
+                Name = "Equip Weights", 
+                Text = "Equip disabled", 
+                Duration = 2 
+            })
+        end
+    end
+})
+
+MainSection:Toggle({
+    Name = "Farm Weights",
+    Enabled = false,
+    Callback = function(state)
+        if state then
+            local hasEquippedWeights = false
+            pcall(function()
+                if player.Character then
+                    for _, tool in pairs(player.Character:GetChildren()) do
+                        if tool.Name == 'Double Weight' and tool:IsA("Tool") then
+                            hasEquippedWeights = true
+                            break
+                        end
+                    end
+                end
+            end)
+            
+            if not hasEquippedWeights then
+                Library:Notify({ 
+                    Name = "Farm Error", 
+                    Text = "Need to Equip First!", 
+                    Duration = 2 
+                })
+                return
+            end
+            
+            farmEnabled = true
+            autoFarmEnabled = true
+            farmWeights()
+            Library:Notify({ 
+                Name = "Farm Weights", 
+                Text = "Farm started!", 
+                Duration = 2 
+            })
+        else
+            farmEnabled = false
+            autoFarmEnabled = false
+            Library:Notify({ 
+                Name = "Farm Weights", 
+                Text = "Farm stopped", 
+                Duration = 1 
+            })
+        end
+    end
+})
+
+local function getCurrentPing()
+    local pingStats = game:GetService('Stats').Network.ServerStatsItem['Data Ping']
+    return pingStats and math.floor(pingStats:GetValue()) or 0
+end
+
+local function pauseFarming()
+    farmEnabled = false
+    equipWeightsEnabled = false
+end
+
+local function resumeFarming()
+    if autoFarmEnabled then
+        farmEnabled = true
+        equipWeightsEnabled = true
+        farmWeights()
+        equipDoubleWeights()
+    end
+end
+
+local pingLimiterEnabled = false
+local maxPingThreshold = 30000
+local resumePingThreshold = 3000
+local checkInterval = 1.5
+
+MainSection:Toggle({
+    Name = "Enable Ping Limit (30k)",
+    Enabled = false,
+    Callback = function(state)
+        pingLimiterEnabled = state
+        if state then
+            Library:Notify({ 
+                Name = "Ping Limiter", 
+                Text = "Farm will pause at 30k ping", 
+                Duration = 2 
+            })
+            spawn(function()
+                local isPaused = false
+                while pingLimiterEnabled do
+                    local currentPing = getCurrentPing()
+                    if autoFarmEnabled then
+                        if currentPing >= maxPingThreshold and not isPaused then
+                            pauseFarming()
+                            isPaused = true
+                            Library:Notify({ 
+                                Name = "Ping Limiter", 
+                                Text = "Ping is high, the farm will be paused soon... " .. abbreviateNumber(currentPing) .. " ms", 
+                                Duration = 2 
+                            })
+                        elseif currentPing <= resumePingThreshold and isPaused then
+                            resumeFarming()
+                            isPaused = false
+                            Library:Notify({ 
+                                Name = "Ping Limiter", 
+                                Text = "Ping normalized, Farm resumed " .. abbreviateNumber(currentPing) .. " ms", 
+                                Duration = 2 
+                            })
+                        end
+                    end
+                    task.wait(checkInterval)
+                end
+            end)
+        end
+    end
+})
+
+local isDuping = false
+
+local function startDuping(amount)
+    if isDuping then
+        Library:Notify({
+            Name = 'Dupe Error',
+            Text = 'Already duping, Please wait.',
+            Duration = 2
+        })
+        return
+    end
+    isDuping = true
+    Library:Notify({
+        Name = 'Dupe Started',
+        Text = 'Duping...',
+        Duration = 3
+    })
+    local marketplaceService = game:GetService('MarketplaceService')
+    local adjustedAmount = math.max(amount - 1, 0)
+    spawn(function()
+        for remaining = adjustedAmount, 1, -1 do
+            if not isDuping then
+                break
+            end
+            marketplaceService:SignalPromptGamePassPurchaseFinished(player, 5949054, true)
+            task.wait(1)
+        end
+        isDuping = false
+        Library:Notify({
+            Name = 'Dupe Complete',
+            Text = 'Finished duping!',
+            Duration = 3
+        })
+    end)
+end
+
+MainSection:Button({
+    Name = "Dupe 55 Double Weight(s)",
+    Callback = function()
+        startDuping(55)
+    end
+})
+
+MainSection:Button({
+    Name = "Dupe 750 Double Weight(s)",
+    Callback = function()
+        startDuping(750)
+    end
+})
+
+MainSection:Button({
+    Name = "Dupe 830 Double Weight(s)",
+    Callback = function()
+        startDuping(830)
+    end
+})
+
+local currentPingLabel = MainSection:Label({ Name = "Current Ping: 0 ms" })
+local waitTimerLabel = MainSection:Label({ Name = "Wait Time: 0.0000s" })
+local doubleWeightsLabel = MainSection:Label({ Name = "Double Weights: 0" })
+
+spawn(function()
+    while wait(1) do
+        pcall(function()
+            local ping = getCurrentPing()
+            currentPingLabel:SetName("Current Ping: " .. abbreviateNumber(ping) .. " ms")
+        end)
+    end
+end)
+
+spawn(function()
+    while wait(1) do
+        pcall(function()
+            local weightCount = countDoubleWeights()
+            currentWaitTime = 0.0008 * weightCount
+            waitTimerLabel:SetName("Wait Time: " .. string.format("%.4f", currentWaitTime) .. "s")
+        end)
+    end
+end)
+
+spawn(function()
+    while wait(1) do
+        pcall(function()
+            local dwCount = countDoubleWeights()
+            doubleWeightsLabel:SetName("Double Weights: " .. dwCount)
+        end)
+    end
+end)
+
+local InfoTab = Window:Tab({
+    Name = "Info",
+    Icon = "rbxassetid://6031265972",
+    Color = Color3.fromRGB(106, 76, 255)
+})
+
+local StrengthSection = InfoTab:Section({ Name = "Strength Info" })
+
+local function formatNumberAbbrev(num, decimals)
+    decimals = decimals or 2  
+    local suffixes = {"", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc"}
+    local index = 1
+    local value = num
+    while value >= 1000 and index < #suffixes do
+        value = value / 1000
+        index = index + 1
+    end
+    if index > 1 then
+        local multiplier = 10 ^ decimals
+        return string.format("%." .. decimals .. "f%s", math.floor(value * multiplier) / multiplier, suffixes[index])
+    else
+        return tostring(math.floor(num))
+    end
+end
+
+local farmTimeLabel = StrengthSection:Label({ Name = "Time Farming: 00d 00h 00m 00s" })
+local totalStrengthLabel = StrengthSection:Label({ Name = "Total Strength: 0" })
+local strengthGainedLabel = StrengthSection:Label({ Name = "Strength Gained: 0" })
+local spsLabel = StrengthSection:Label({ Name = "SPS (Strength/sec): " })
+local spmLabel = StrengthSection:Label({ Name = "SPM (Strength/min): 0" })
+local sphLabel = StrengthSection:Label({ Name = "SPH (Strength/hour): 0" })
+local spdLabel = StrengthSection:Label({ Name = "SPD (Strength/day): 0" })
+local spwLabel = StrengthSection:Label({ Name = "SPW (Strength/week): 0" })
+local spmthLabel = StrengthSection:Label({ Name = "SPMTH (Strength/month): 0" })
+local spyLabel = StrengthSection:Label({ Name = "SPY (Strength/year): 0" })
+
+local initialStrength = 0
+
+spawn(function()
+    wait(2)
+    pcall(function()
+        local replicatedStorage = game:GetService("ReplicatedStorage")
+        local dataFolder = replicatedStorage:WaitForChild("Data", 5)
+        if dataFolder then
+            local playerFolder = dataFolder:WaitForChild(player.Name, 5)
+            if playerFolder then
+                local strengthValue = playerFolder:WaitForChild("Strength", 5)
+                if strengthValue then
+                    initialStrength = strengthValue.Value
+                    totalStrengthLabel:SetName("Total Strength: " .. formatNumberAbbrev(strengthValue.Value))
+                    strengthGainedLabel:SetName("Strength Gained: 0")
+                    strengthValue:GetPropertyChangedSignal("Value"):Connect(function()
+                        local current = strengthValue.Value
+                        local gained = current - initialStrength
+                        totalStrengthLabel:SetName("Total Strength: " .. formatNumberAbbrev(current))
+                        strengthGainedLabel:SetName("Strength Gained: " .. formatNumberAbbrev(gained))
+                    end)
+                end
+            end
+        end
+    end)
+end)
+
+local farmStartTime = nil
+local isFarming = false
+
+spawn(function()
+    while wait(1) do
+        if autoFarmEnabled and not isFarming then
+            isFarming = true
+            farmStartTime = os.time()
+        elseif not autoFarmEnabled and isFarming then
+            isFarming = false
+            farmTimeLabel:SetName("Time Farming: 00d 00h 00m 00s")
+        end
+        if isFarming and farmStartTime then
+            local elapsed = os.time() - farmStartTime
+            local days = math.floor(elapsed / 86400)
+            local hours = math.floor((elapsed % 86400) / 3600)
+            local minutes = math.floor((elapsed % 3600) / 60)
+            local seconds = elapsed % 60
+            farmTimeLabel:SetName(string.format(
+                "Time Farming: %02dd %02dh %02dm %02ds",
+                days, hours, minutes, seconds
+            ))
+        end
+    end
+end)
+
+spawn(function()
+    local strengthValue = game:GetService('Players').LocalPlayer.leaderstats.Strength
+    local previousStrength = strengthValue.Value
+    while true do
+        wait(1)
+        local currentStrength = strengthValue.Value
+        local strengthGained = currentStrength - previousStrength
+        spsLabel:SetName("SPS (Strength/sec): " .. formatNumberAbbrev(strengthGained, 1))
+        spmLabel:SetName("SPM (Strength/min): " .. formatNumberAbbrev(strengthGained * 60, 1))
+        sphLabel:SetName("SPH (Strength/hour): " .. formatNumberAbbrev(strengthGained * 3600, 1))
+        spdLabel:SetName("SPD (Strength/day): " .. formatNumberAbbrev(strengthGained * 86400, 1))
+        spwLabel:SetName("SPW (Strength/week): " .. formatNumberAbbrev(strengthGained * 604800, 1))
+        spmthLabel:SetName("SPMTH (Strength/month): " .. formatNumberAbbrev(strengthGained * 2592000, 1))
+        spyLabel:SetName("SPY (Strength/year): " .. formatNumberAbbrev(strengthGained * 31536000, 1))
+        previousStrength = currentStrength
+    end
+end)
+
+local FeaturesTab = Window:Tab({
+    Name = "Features",
+    Icon = "rbxassetid://6031280882",
+    Color = Color3.fromRGB(102, 51, 153)
+})
+
+local HelpFarmingSection = FeaturesTab:Section({ Name = "Help Farming" })
+
+HelpFarmingSection:Button({
+    Name = 'Delete All + Anti-AFK',
+    Callback = function()
+        local localPlayer = game:GetService('Players').LocalPlayer
+        local StarterGui = game:GetService("StarterGui")
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+        game:GetService("CoreGui").RobloxGui.Backpack.Visible = false
+        localPlayer.CameraMaxZoomDistance = 1000
+        pcall(function()
+            game.ReplicatedFirst.TourneyQ:Destroy()
+        end)
+        pcall(function()
+            game:GetService('Lighting').NormalSky:Destroy()
+        end)
+        pcall(function()
+            localPlayer.PlayerGui.HUD:Destroy()
+        end)
+        
+        local decalsyeeted = true
+        local g = game
+        local w = g.Workspace
+        local l = g.Lighting
+        local t = w.Terrain
+        t.WaterWaveSize = 0
+        t.WaterWaveSpeed = 0
+        t.WaterReflectance = 0
+        t.WaterTransparency = 0
+        l.GlobalShadows = false
+        l.FogEnd = 9e9
+        l.Brightness = 0
+        settings().Rendering.QualityLevel = "Level01"
+        
+        for i, v in pairs(g:GetDescendants()) do
+            if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+                v.Material = "Plastic"
+                v.Reflectance = 0
+            elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+                v.Transparency = 1
+            elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+                v.Lifetime = NumberRange.new(0)
+            elseif v:IsA("Explosion") then
+                v.BlastPressure = 1
+                v.BlastRadius = 1
+            elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+                v.Enabled = false
+            elseif v:IsA("MeshPart") then
+                v.Material = "Plastic"
+                v.Reflectance = 0
+                v.TextureID = 10385902758728957
+            end
+        end
+        
+        for i, e in pairs(l:GetChildren()) do
+            if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+                e.Enabled = false
+            end
+        end
+        
+        pcall(function()
+            sethiddenproperty(l, 'Technology', 'Compatibility')
+        end)
+        
+        local virtualUser = game:GetService('VirtualUser')
+        localPlayer.Idled:Connect(function()
+            virtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+            wait(1)
+            virtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+        end)
+        
+        for _, obj in pairs(workspace:GetChildren()) do
+            if obj.Name ~= localPlayer.Name and 
+               obj.Name ~= 'Terrain' and 
+               obj.Name ~= 'Baseplate' and 
+               obj.Name ~= 'Camera' and
+               obj.Name ~= 'SafeZone' and
+               obj.Name ~= 'SafezonePlatform' then
+                pcall(function()
+                    obj:Destroy()
+                end)
+            end
+        end
+        
+        pcall(function()
+            for _, package in pairs(game:GetService('CorePackages'):GetChildren()) do
+                package:Destroy()
+            end
+        end)
+        
+        Library:Notify({ 
+            Name = "FPS Boost", 
+            Text = "Anti-Afk Active", 
+            Duration = 3 
+        })
+    end
+})
+
+HelpFarmingSection:Button({
+    Name = 'TP High',
+    Callback = function()
+        pcall(function()
+            local localPlayer = game:GetService('Players').LocalPlayer
+            localPlayer.Character.HumanoidRootPart.CFrame = 
+                workspace.Terrain.CFrame + Vector3.new(0, 1000, 0)
+            local baseplate = Instance.new("Part", workspace)
+            baseplate.Size = Vector3.new(1000, 1, 1000)
+            baseplate.CFrame = localPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+            baseplate.Anchored = true
+            baseplate.Transparency = 0.9
+        end)
+    end
+})
+
+HelpFarmingSection:Button({
+    Name = 'TP Safezone',
+    Callback = function()
+        pcall(function()
+            local LocalPlayer = game:GetService('Players').LocalPlayer
+            if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1837.48, 155.321, -5427.79)
+                local baseplate = Instance.new("Part", workspace)
+                baseplate.Name = "SafezonePlatform"
+                baseplate.Size = Vector3.new(1000, 1, 1000)
+                baseplate.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+                baseplate.Anchored = true
+                baseplate.Transparency = 0.9
+            end
+        end)
+    end
+})
+
+HelpFarmingSection:Button({
+    Name = 'TP High AF',
+    Callback = function()
+        pcall(function()
+            local localPlayer = game:GetService('Players').LocalPlayer
+            localPlayer.Character.HumanoidRootPart.CFrame = 
+                localPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 50000, 0)
+            local baseplate = Instance.new("Part", workspace)
+            baseplate.Size = Vector3.new(1000, 1, 1000)
+            baseplate.CFrame = localPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+            baseplate.Anchored = true
+            baseplate.Transparency = 0.9
+        end)
+    end
+})
+
+local isDay = true
+HelpFarmingSection:Button({
+    Name = 'Day/Night',
+    Callback = function()
+        local Lighting = game:GetService('Lighting')
+        if isDay then
+            Lighting.ClockTime = 0
+            isDay = false
+        else
+            Lighting.ClockTime = 12
+            isDay = true
+        end
+    end
+})
+
+local UsuallySection = FeaturesTab:Section({ Name = "Combat Options" })
+
+local loopKillEnabled = false
+local loopKillTarget = nil
+local loopKillTargetName = ""
+local spyPlayerName = ""
+
+local function getPlayerStrength(targetPlayer)
+    local strength = 0
+    pcall(function()
+        local replicatedStorage = game:GetService("ReplicatedStorage")
+        local dataFolder = replicatedStorage:FindFirstChild("Data")
+        if dataFolder then
+            local playerFolder = dataFolder:FindFirstChild(targetPlayer.Name)
+            if playerFolder then
+                local strengthValue = playerFolder:FindFirstChild("Strength")
+                if strengthValue then
+                    strength = strengthValue.Value
+                end
+            end
+        end
+    end)
+    return strength
+end
+
+spawn(function()
+    while true do
+        wait(0.05)
+        if loopKillEnabled and loopKillTarget then
+            pcall(function()
+                if not loopKillTarget or not loopKillTarget.Character then return end
+                
+                local targetTorso = loopKillTarget.Character:FindFirstChild("UpperTorso") or loopKillTarget.Character:FindFirstChild("Torso")
+                local targetHead = loopKillTarget.Character:FindFirstChild("Head")
+                if not targetTorso and not targetHead then return end
+                
+                local tool = player.Backpack:FindFirstChild("Boxing")
+                if tool then
+                    game:GetService("ReplicatedStorage").Remotes.Human_Punch:FireServer(
+                        player.Character:FindFirstChild("LeftHand"),
+                        "LeftPunch",
+                        targetHead or targetTorso,
+                        5,
+                        true,
+                        "RightPunch",
+                        tool.Handle.Hit,
+                        5
+                    )
+                end
+            end)
+        end
+    end
+end)
+
+local loopKillSuggestion = nil
+local loopKillConfirmed = false
+
+UsuallySection:BigTextbox({
+    Name = "Loop Kill Target",
+    Placeholder = "",
+    Callback = function(value)
+        if value and value ~= "" then
+            local searchTerm = value:lower()
+            local targetPlayer = nil
+            
+            for _, p in pairs(Players:GetPlayers()) do
+                if p.Name:lower():sub(1, #searchTerm) == searchTerm then
+                    targetPlayer = p
+                    break
+                end
+            end
+            
+            if not targetPlayer then
+                for _, p in pairs(Players:GetPlayers()) do
+                    if p.Name:lower():find(searchTerm) then
+                        targetPlayer = p
+                        break
+                    end
+                end
+            end
+            
+            if targetPlayer then
+                if value:lower() == targetPlayer.Name:lower() then
+                    loopKillTarget = targetPlayer
+                    loopKillConfirmed = true
+                    Library:Notify({ 
+                        Name = "Target Locked", 
+                        Text = "✓ " .. targetPlayer.Name, 
+                        Duration = 2 
+                    })
+                else
+                    loopKillSuggestion = targetPlayer
+                    loopKillTarget = nil
+                    loopKillConfirmed = false
+                    Library:Notify({ 
+                        Name = "Suggestion", 
+                        Text = "Did you mean: " .. targetPlayer.Name .. "? (Type full name)", 
+                        Duration = 3 
+                    })
+                end
+            else
+                loopKillTarget = nil
+                loopKillSuggestion = nil
+                loopKillConfirmed = false
+            end
+        else
+            loopKillTarget = nil
+            loopKillSuggestion = nil
+            loopKillConfirmed = false
+        end
+    end
+})
+
+UsuallySection:Toggle({
+    Name = "Loop Kill Player",
+    Enabled = false,
+    Callback = function(state)
+        loopKillEnabled = state
+    end
+})
+
+local killAuraEnabled = false
+local killAuraDistance = 100000000000000000000000000000000000000000000000000000000000
+local antiHitEnabled = false
+local antiHitTarget = nil
+local RunService = game:GetService("RunService")
+
+UsuallySection:Toggle({
+    Name = "Anti Hit",
+    Enabled = false,
+    Callback = function(state)
+        antiHitEnabled = state
+    end
+})
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if not antiHitEnabled then return end
+    
+    pcall(function()
+        local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+        if not humanoid then return end
+        
+        local creator = humanoid:FindFirstChild("creator")
+        if not creator then return end
+        
+        local attackerName = tostring(creator.Value)
+        local attackerChar = workspace:FindFirstChild(attackerName)
+        
+        if attackerChar then
+            local targetTorso = attackerChar:FindFirstChild("UpperTorso") or attackerChar:FindFirstChild("Torso")
+            if not targetTorso then return end
+            
+            local tool = player.Backpack:FindFirstChild("Boxing")
+            if not tool then return end
+            
+            game:GetService("ReplicatedStorage").Remotes.Human_Punch:FireServer(
+                player.Character.RightHand,
+                "RightPunch",
+                targetTorso,
+                5,
+                true,
+                "RightPunch",
+                tool.Handle.Hit,
+                5
+            )
+            
+            game:GetService("ReplicatedStorage").Remotes.Human_Punch:FireServer(
+                player.Character.LeftHand,
+                "LeftPunch",
+                targetTorso,
+                5,
+                true,
+                "LeftPunch",
+                tool.Handle.Hit,
+                5
+            )
+        end
+    end)
+end)
+
+UsuallySection:Toggle({
+    Name = "Kill Aura",
+    Enabled = false,
+    Callback = function(state)
+        killAuraEnabled = state
+        if state then
+            Library:Notify({ 
+                Name = "Kill Aura", 
+                Text = "Enabled with distance: " .. killAuraDistance, 
+                Duration = 2 
+            })
+        end
+    end
+})
+
+RunService.Stepped:Connect(function()
+    if killAuraEnabled and killAuraDistance then
+        for _, targetPlayer in pairs(Players:GetPlayers()) do
+            if targetPlayer ~= player and targetPlayer.Character then
+                pcall(function()
+                    local targetTorso = targetPlayer.Character:FindFirstChild("UpperTorso") or targetPlayer.Character:FindFirstChild("Torso")
+                    if targetTorso then
+                        local distance = player:DistanceFromCharacter(targetTorso.Position)
+                        if distance < tonumber(killAuraDistance) then
+                            local tool = player.Backpack:FindFirstChild("Boxing")
+                            if tool then
+                                game:GetService("ReplicatedStorage").Remotes.Human_Punch:FireServer(
+                                    player.Character:FindFirstChild("RightHand"),
+                                    "RightPunch",
+                                    targetTorso,
+                                    5,
+                                    true,
+                                    "RightPunch",
+                                    tool.Handle.Hit,
+                                    5
+                                )
+                            end
+                        end
+                    end
+                end)
+            end
+        end
+    end
+end)
+
+local spyStrengthLabel = UsuallySection:Label({ Name = "Strength: N/A" })
+
+local currentSpyConnection = nil
+
+UsuallySection:BigTextbox({
+    Name = "Strength Spy",
+    Placeholder = "",
+    Callback = function(value)
+        if currentSpyConnection then
+            currentSpyConnection:Disconnect()
+            currentSpyConnection = nil
+        end
+        
+        spyPlayerName = value
+        if value and value ~= "" then
+            spawn(function()
+                pcall(function()
+                    local targetPlayer = nil
+                    local searchTerm = value:lower()
+                    
+                    for _, plr in pairs(game:GetService("Players"):GetPlayers()) do
+                        if plr.Name:lower() == searchTerm then
+                            targetPlayer = plr
+                            break
+                        end
+                    end
+                    
+                    if not targetPlayer then
+                        for _, plr in pairs(game:GetService("Players"):GetPlayers()) do
+                            if plr.Name:lower():sub(1, #searchTerm) == searchTerm then
+                                targetPlayer = plr
+                                break
+                            end
+                        end
+                    end
+                    
+                    if not targetPlayer then
+                        for _, plr in pairs(game:GetService("Players"):GetPlayers()) do
+                            if plr.Name:lower():find(searchTerm) then
+                                targetPlayer = plr
+                                break
+                            end
+                        end
+                    end
+                    
+                    if targetPlayer then
+                        if value:lower() ~= targetPlayer.Name:lower() then
+                            Library:Notify({ 
+                                Name = "Suggestion", 
+                                Text = "Did you mean: " .. targetPlayer.Name .. "?", 
+                                Duration = 2 
+                            })
+                        end
+                        
+                        local replicatedStorage = game:GetService("ReplicatedStorage")
+                        local dataFolder = replicatedStorage:WaitForChild("Data", 5)
+                        if dataFolder then
+                            local playerFolder = dataFolder:WaitForChild(targetPlayer.Name, 5)
+                            if playerFolder then
+                                local strengthValue = playerFolder:WaitForChild("Strength", 5)
+                                if strengthValue then
+                                    local abbrevStrength = formatNumberAbbrev(strengthValue.Value, 2)
+                                    spyStrengthLabel:SetName("Strength: " .. abbrevStrength .. " (" .. targetPlayer.Name .. ")")
+                                    
+                                    currentSpyConnection = strengthValue:GetPropertyChangedSignal("Value"):Connect(function()
+                                        local newAbbrev = formatNumberAbbrev(strengthValue.Value, 2)
+                                        spyStrengthLabel:SetName("Strength: " .. newAbbrev .. " (" .. targetPlayer.Name .. ")")
+                                    end)
+                                else
+                                    spyStrengthLabel:SetName("Strength: N/A (Data not found)")
+                                end
+                            else
+                                spyStrengthLabel:SetName("Strength: N/A (Player data not found)")
+                            end
+                        end
+                    else
+                        spyStrengthLabel:SetName("Strength: N/A (Player not found)")
+                    end
+                end)
+            end)
+        else
+            spyStrengthLabel:SetName("Strength: N/A")
+        end
+    end
+})
+
+local MiscTab = Window:Tab({
+    Name = "Misc",
+    Icon = "rbxassetid://6031071056",
+    Color = Color3.fromRGB(62, 34, 104)
+})
+
+local MiscSection = MiscTab:Section({ Name = "Miscellaneous" })
+MiscSection:Label({ Name = "Additional options" })
+
+MiscSection:Button({
+    Name = "Self Destruct",
+    Callback = function()
+        task.wait(2)
+        Library:Destroy()
+    end
+})
+
+if type(Library.Destroy) == "function" then
+    local _oldDestroy = Library.Destroy
+    Library.Destroy = function(self, ...)
+        farmEnabled = false
+        equipWeightsEnabled = false
+        isDuping = false
+        pingLimiterEnabled = false
+        loopKillEnabled = false
+        killAuraEnabled = false
+        return _oldDestroy(self, ...)
+    end
+end
