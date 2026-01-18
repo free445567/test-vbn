@@ -2,7 +2,7 @@ local allowedUsers = {
     "vMxtic",
     "26y_PE",
     "tros2point0",
-    "OlizeO",
+    "OIizeO",
     "JACKNDUKE555",
     "bigscarystorm",
     "tros2point03",
