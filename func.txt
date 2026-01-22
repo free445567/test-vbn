@@ -2,10 +2,12 @@ local allowedUsers = {
     "vMxtic",
     "26y_PE",
     "tros2point0",
-    "OlizeO",
+    "OIizeO",
     "JACKNDUKE555",
-    "bigscarystorm"
-    "tros2point03"
+    "bigscarystorm",
+    "tros2point03",
+    "Oliz_aIt",
+    "MIKZINXN22"
 }
 
 local Players = game:GetService("Players")
@@ -76,6 +78,7 @@ local equipWeightsRunning = false
 local farmEnabled = false
 local farmRunning = false
 local autoFarmEnabled = false
+local autoFarmAfterDupe = false
 
 local function abbreviateNumber(num)
     if num < 1000 then
@@ -254,6 +257,27 @@ MainSection:Toggle({
     end
 })
 
+MainSection:Toggle({
+    Name = "Auto Farm After Dupe",
+    Enabled = false,
+    Callback = function(state)
+        autoFarmAfterDupe = state
+        if state then
+            Library:Notify({ 
+                Name = "Auto Farm After Dupe", 
+                Text = "Will start farming after dupe!", 
+                Duration = 2 
+            })
+        else
+            Library:Notify({ 
+                Name = "Auto Farm After Dupe", 
+                Text = "Disabled", 
+                Duration = 1 
+            })
+        end
+    end
+})
+
 local function getCurrentPing()
     local pingStats = game:GetService('Stats').Network.ServerStatsItem['Data Ping']
     return pingStats and math.floor(pingStats:GetValue()) or 0
@@ -352,6 +376,53 @@ local function startDuping(amount)
             Text = 'Finished duping!',
             Duration = 3
         })
+        
+        -- Auto Farm After Dupe
+        if autoFarmAfterDupe then
+            task.wait(2)
+            Library:Notify({
+                Name = 'Auto Farm',
+                Text = 'Starting auto farm process...',
+                Duration = 2
+            })
+            
+            -- Equipar pesos
+            equipWeightsEnabled = true
+            equipDoubleWeights()
+            
+            -- Aguardar equipar
+            task.wait(5)
+            
+            -- Verificar se tem pesos equipados
+            local hasEquippedWeights = false
+            pcall(function()
+                if player.Character then
+                    for _, tool in pairs(player.Character:GetChildren()) do
+                        if tool.Name == 'Double Weight' and tool:IsA("Tool") then
+                            hasEquippedWeights = true
+                            break
+                        end
+                    end
+                end
+            end)
+            
+            if hasEquippedWeights then
+                farmEnabled = true
+                autoFarmEnabled = true
+                farmWeights()
+                Library:Notify({ 
+                    Name = "Auto Farm", 
+                    Text = "Farm started automatically!", 
+                    Duration = 3 
+                })
+            else
+                Library:Notify({ 
+                    Name = "Auto Farm Error", 
+                    Text = "Failed to equip weights!", 
+                    Duration = 3 
+                })
+            end
+        end
     end)
 end
 
@@ -433,16 +504,56 @@ local function formatNumberAbbrev(num, decimals)
     end
 end
 
-local farmTimeLabel = StrengthSection:Label({ Name = "Time Farming: 00d 00h 00m 00s" })
+local function formatWithSeparator(num, decimals)
+    decimals = decimals or 2
+    local abbreviated = formatNumberAbbrev(num, decimals)
+    local total = tostring(math.floor(num))
+    return abbreviated .. " | (+" .. total .. ")"
+end
+
+local function formatFarmTime(seconds)
+    if seconds == 0 then
+        return "0s"
+    end
+    
+    local days = math.floor(seconds / 86400)
+    local hours = math.floor((seconds % 86400) / 3600)
+    local minutes = math.floor((seconds % 3600) / 60)
+    local secs = seconds % 60
+    
+    local parts = {}
+    
+    if days > 0 then
+        table.insert(parts, days .. " Day" .. (days > 1 and "s" or ""))
+    end
+    if hours > 0 then
+        table.insert(parts, hours .. " Hour" .. (hours > 1 and "s" or ""))
+    end
+    if minutes > 0 then
+        table.insert(parts, minutes .. " Minute" .. (minutes > 1 and "s" or ""))
+    end
+    if secs > 0 or #parts == 0 then
+        table.insert(parts, secs .. " Second" .. (secs > 1 and "s" or ""))
+    end
+    
+    return table.concat(parts, ", ")
+end
+
+local farmTimeLabel = StrengthSection:Label({ Name = "Time Farming: 0s" })
 local totalStrengthLabel = StrengthSection:Label({ Name = "Total Strength: 0" })
+local sizeLabel = StrengthSection:Label({ Name = "Size: 0" })
 local strengthGainedLabel = StrengthSection:Label({ Name = "Strength Gained: 0" })
-local spsLabel = StrengthSection:Label({ Name = "SPS (Strength/sec): " })
+local spsLabel = StrengthSection:Label({ Name = "SPS (Strength/sec): 0" })
 local spmLabel = StrengthSection:Label({ Name = "SPM (Strength/min): 0" })
 local sphLabel = StrengthSection:Label({ Name = "SPH (Strength/hour): 0" })
 local spdLabel = StrengthSection:Label({ Name = "SPD (Strength/day): 0" })
 local spwLabel = StrengthSection:Label({ Name = "SPW (Strength/week): 0" })
 local spmthLabel = StrengthSection:Label({ Name = "SPMTH (Strength/month): 0" })
 local spyLabel = StrengthSection:Label({ Name = "SPY (Strength/year): 0" })
+
+pcall(function()
+    strengthGainedLabel["7b"].TextColor3 = Color3.fromRGB(0, 255, 0)
+end)
 
 local initialStrength = 0
 
@@ -457,13 +568,26 @@ spawn(function()
                 local strengthValue = playerFolder:WaitForChild("Strength", 5)
                 if strengthValue then
                     initialStrength = strengthValue.Value
-                    totalStrengthLabel:SetName("Total Strength: " .. formatNumberAbbrev(strengthValue.Value))
-                    strengthGainedLabel:SetName("Strength Gained: 0")
+                    
+                    local leaderstats = player:WaitForChild("leaderstats", 5)
+                    if leaderstats then
+                        local sizeValue = leaderstats:WaitForChild("Strength", 5)
+                        if sizeValue then
+                            sizeLabel:SetName("Size: " .. formatNumberAbbrev(sizeValue.Value))
+                            sizeValue:GetPropertyChangedSignal("Value"):Connect(function()
+                                sizeLabel:SetName("Size: " .. formatNumberAbbrev(sizeValue.Value))
+                            end)
+                        end
+                    end
+                    
+                    totalStrengthLabel:SetName("Total Strength: " .. formatNumberAbbrev(strengthValue.Value) .. " | (" .. tostring(math.floor(strengthValue.Value)) .. ")")
+                    strengthGainedLabel:SetName("Strength Gained: 0 | (+0)")
+                    
                     strengthValue:GetPropertyChangedSignal("Value"):Connect(function()
                         local current = strengthValue.Value
                         local gained = current - initialStrength
-                        totalStrengthLabel:SetName("Total Strength: " .. formatNumberAbbrev(current))
-                        strengthGainedLabel:SetName("Strength Gained: " .. formatNumberAbbrev(gained))
+                        totalStrengthLabel:SetName("Total Strength: " .. formatNumberAbbrev(current) .. " | (" .. tostring(math.floor(current)) .. ")")
+                        strengthGainedLabel:SetName("Strength Gained: " .. formatWithSeparator(gained))
                     end)
                 end
             end
@@ -481,18 +605,11 @@ spawn(function()
             farmStartTime = os.time()
         elseif not autoFarmEnabled and isFarming then
             isFarming = false
-            farmTimeLabel:SetName("Time Farming: 00d 00h 00m 00s")
+            farmTimeLabel:SetName("Time Farming: 0s")
         end
         if isFarming and farmStartTime then
             local elapsed = os.time() - farmStartTime
-            local days = math.floor(elapsed / 86400)
-            local hours = math.floor((elapsed % 86400) / 3600)
-            local minutes = math.floor((elapsed % 3600) / 60)
-            local seconds = elapsed % 60
-            farmTimeLabel:SetName(string.format(
-                "Time Farming: %02dd %02dh %02dm %02ds",
-                days, hours, minutes, seconds
-            ))
+            farmTimeLabel:SetName("Time Farming: " .. formatFarmTime(elapsed))
         end
     end
 end)
@@ -504,13 +621,13 @@ spawn(function()
         wait(1)
         local currentStrength = strengthValue.Value
         local strengthGained = currentStrength - previousStrength
-        spsLabel:SetName("SPS (Strength/sec): " .. formatNumberAbbrev(strengthGained, 1))
-        spmLabel:SetName("SPM (Strength/min): " .. formatNumberAbbrev(strengthGained * 60, 1))
-        sphLabel:SetName("SPH (Strength/hour): " .. formatNumberAbbrev(strengthGained * 3600, 1))
-        spdLabel:SetName("SPD (Strength/day): " .. formatNumberAbbrev(strengthGained * 86400, 1))
-        spwLabel:SetName("SPW (Strength/week): " .. formatNumberAbbrev(strengthGained * 604800, 1))
-        spmthLabel:SetName("SPMTH (Strength/month): " .. formatNumberAbbrev(strengthGained * 2592000, 1))
-        spyLabel:SetName("SPY (Strength/year): " .. formatNumberAbbrev(strengthGained * 31536000, 1))
+        spsLabel:SetName("SPS (Strength/sec): " .. formatWithSeparator(strengthGained, 1))
+        spmLabel:SetName("SPM (Strength/min): " .. formatWithSeparator(strengthGained * 60, 1))
+        sphLabel:SetName("SPH (Strength/hour): " .. formatWithSeparator(strengthGained * 3600, 1))
+        spdLabel:SetName("SPD (Strength/day): " .. formatWithSeparator(strengthGained * 86400, 1))
+        spwLabel:SetName("SPW (Strength/week): " .. formatWithSeparator(strengthGained * 604800, 1))
+        spmthLabel:SetName("SPMTH (Strength/month): " .. formatWithSeparator(strengthGained * 2592000, 1))
+        spyLabel:SetName("SPY (Strength/year): " .. formatWithSeparator(strengthGained * 31536000, 1))
         previousStrength = currentStrength
     end
 end)
@@ -1022,6 +1139,6 @@ if type(Library.Destroy) == "function" then
         pingLimiterEnabled = false
         loopKillEnabled = false
         killAuraEnabled = false
-        return _oldDestroy(self, ...
+        return _oldDestroy(self, ...)
     end
 end
