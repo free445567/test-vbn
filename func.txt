@@ -6,7 +6,8 @@ local allowedUsers = {
     "JACKNDUKE555",
     "bigscarystorm",
     "tros2point03",
-    "Oliz_aIt"
+    "Oliz_aIt",
+    "IXDarkNess_KnightIX"
 }
 
 local Players = game:GetService("Players")
@@ -1141,3 +1142,4 @@ if type(Library.Destroy) == "function" then
         return _oldDestroy(self, ...)
     end
 end
+
